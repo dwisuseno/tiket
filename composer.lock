@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "caf74c8dab729fefac435b4499b6eb6e",
-    "content-hash": "1f595e7edbfe1366976248f8fde26ff7",
+    "hash": "9a43f4d2e8dd90a6c680cc85dfd60f79",
+    "content-hash": "96c2bd926285e302d58007a5288c027d",
     "packages": [
         {
             "name": "2amigos/yii2-qrcode-helper",
@@ -3053,17 +3053,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-swiftmailer.git",
-                "reference": "b0f7f9fa13554384ee9bc6135ac7f31a5f503b27"
+                "reference": "8e3e92f032e7400c2593fe26e1832c4d0a832b65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/b0f7f9fa13554384ee9bc6135ac7f31a5f503b27",
-                "reference": "b0f7f9fa13554384ee9bc6135ac7f31a5f503b27",
+                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/8e3e92f032e7400c2593fe26e1832c4d0a832b65",
+                "reference": "8e3e92f032e7400c2593fe26e1832c4d0a832b65",
                 "shasum": ""
             },
             "require": {
                 "swiftmailer/swiftmailer": "~5.0",
-                "yiisoft/yii2": ">=2.0.4"
+                "yiisoft/yii2": "~2.0.4"
             },
             "type": "yii2-extension",
             "extra": {
@@ -3095,7 +3095,7 @@
                 "swiftmailer",
                 "yii2"
             ],
-            "time": "2016-08-29 13:51:22"
+            "time": "2016-09-09 11:48:36"
         }
     ],
     "packages-dev": [

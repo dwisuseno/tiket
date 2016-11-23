@@ -16,7 +16,7 @@ class JenisTiket extends BaseJenisTiket
     {
         return array_replace_recursive(parent::rules(),
 	    [
-            [['harga'], 'integer'],
+            [['id_tiket', 'harga'], 'integer'],
             [['kode_jenis'], 'string', 'max' => 10],
             [['nama', 'created_at', 'updated_at'], 'string', 'max' => 255]
         ]);

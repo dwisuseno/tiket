@@ -16,9 +16,8 @@ class Tiket extends BaseTiket
     {
         return array_replace_recursive(parent::rules(),
 	    [
-            [['event_id', 'jenis_id','jumlah_tiket'], 'integer'],
+            [['event_id'], 'integer'],
             [['status'], 'string'],
-            [['jumlah_tiket', 'jenis_id'], 'required'],
             [['kode_pembayaran', 'kode_tiket', 'created_at', 'updated_at'], 'string', 'max' => 255]
         ]);
     }

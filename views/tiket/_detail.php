@@ -24,10 +24,7 @@ use kartik\grid\GridView;
             'attribute' => 'event.nama_event',
             'label' => 'Event',
         ],
-         [ 
-           'attribute' => 'jenis.id', 
-           'label' => 'Jenis', 
-       ],
+        'kode_pembayaran',
         'kode_tiket',
         'status',
     ];

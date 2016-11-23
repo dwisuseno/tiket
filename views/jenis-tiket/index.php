@@ -1,7 +1,6 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\JenisTiketSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 use yii\helpers\Html;
@@ -16,34 +15,30 @@ $search = "$('.search-button').click(function(){
 });";
 $this->registerJs($search);
 ?>
-<div class="jenis-tiket">
+<div class="jenis-tiket-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <?= Html::a('Create Jenis Tiket', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Advance Search', '#', ['class' => 'btn btn-info search-button']) ?>
     </p>
-    <div class="search-form" style="display:none">
-        <?=  $this->render('_search', ['model' => $searchModel]); ?>
-    </div>
-    <?php 
+<?php 
     $gridColumn = [
         ['class' => 'yii\grid\SerialColumn'],
-        [
-            'class' => 'kartik\grid\ExpandRowColumn',
-            'width' => '50px',
-            'value' => function ($model, $key, $index, $column) {
-                return GridView::ROW_COLLAPSED;
-            },
-            'detail' => function ($model, $key, $index, $column) {
-                return Yii::$app->controller->renderPartial('_expand', ['model' => $model]);
-            },
-            'headerOptions' => ['class' => 'kartik-sheet-style'],
-            'expandOneOnly' => true
-        ],
         ['attribute' => 'id', 'visible' => false],
+        [
+                'attribute' => 'id_tiket',
+                'label' => 'Id Tiket',
+                'value' => function($model){
+                    return $model->tiket->id;
+                },
+                'filterType' => GridView::FILTER_SELECT2,
+                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Tiket::find()->asArray()->all(), 'id', 'id'),
+                'filterWidgetOptions' => [
+                    'pluginOptions' => ['allowClear' => true],
+                ],
+                'filterInputOptions' => ['placeholder' => 'Tiket', 'id' => 'grid--id_tiket']
+            ],
         'kode_jenis',
         'nama',
         'harga',
@@ -60,7 +55,6 @@ $this->registerJs($search);
     ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
         'columns' => $gridColumn,
         'pjax' => true,
         'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-jenis-tiket']],
@@ -68,6 +62,7 @@ $this->registerJs($search);
             'type' => GridView::TYPE_PRIMARY,
             'heading' => '<span class="glyphicon glyphicon-book"></span>  ' . Html::encode($this->title),
         ],
+        'export' => false,
         // your toolbar can include the additional full export menu
         'toolbar' => [
             '{export}',
@@ -83,6 +78,9 @@ $this->registerJs($search);
                         '<li class="dropdown-header">Export All Data</li>',
                     ],
                 ],
+                'exportConfig' => [
+                    ExportMenu::FORMAT_PDF => false
+                ]
             ]) ,
         ],
     ]); ?>

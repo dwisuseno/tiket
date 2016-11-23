@@ -24,6 +24,7 @@ use kartik\grid\GridView;
         'tgl_event',
         'waktu_event',
         'jumlah_tiket',
+        'deskripsi', 
     ];
     echo DetailView::widget([
         'model' => $model,

@@ -5,14 +5,10 @@ namespace app\controllers;
 use Yii;
 use app\models\Tiket;
 use app\models\Event;
-use app\models\EventSearch;
 use app\models\TiketSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
-use dosamigos\qrcode\QrCode;
-
 
 /**
  * TiketController implements the CRUD actions for Tiket model.
@@ -22,26 +18,12 @@ class TiketController extends Controller
     public function behaviors()
     {
         return [
-            // 'verbs' => [
-            //     'class' => VerbFilter::className(),
-            //     'actions' => [
-            //         'delete' => ['post'],
-            //     ],
-            // ],
-            'access' => [
-                'class' => \yii\filters\AccessControl::className(),
-                //'only' => [],
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'actions' => ['index','pemesanan','lihatevent'],
-                        'roles' => ['@']
-                    ],
-                    [
-                        'allow' => false
-                    ]
-                ]
-            ]
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['post'],
+                ],
+            ],
         ];
     }
 
@@ -68,8 +50,12 @@ class TiketController extends Controller
     public function actionView($id)
     {
         $model = $this->findModel($id);
+        $providerJenisTiket = new \yii\data\ArrayDataProvider([
+            'allModels' => $model->jenisTikets,
+        ]);
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'providerJenisTiket' => $providerJenisTiket,
         ]);
     }
 
@@ -78,38 +64,11 @@ class TiketController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-
-    public function generateUniqueRandomString( $length) {
-            
-        $randomString = Yii::$app->getSecurity()->generateRandomString($length);
-        //$model = Tiket::findOne($randomString);
-        $model = Tiket::find()->where(['kode_tiket' => $randomString])->count(); 
-        // var_dump($model);
-        // exit();
-        if($model == "0")
-            return $randomString;
-        else
-            return $this->generateUniqueRandomString( $length);
-                
-    }
-
     public function actionCreate()
     {
         $model = new Tiket();
-        //$modelEvent = new Event();
 
-        if ($model->loadAll(Yii::$app->request->post())) {
-            // generate random string
-            $model->kode_pembayaran = $this->generateUniqueRandomString(5);
-
-            // mengupdate data tiket untuk dikurangi - 1
-            $event = Event::findOne((int)$model->event_id);
-            $event->jumlah_tiket = $event->jumlah_tiket - 1;
-            $event->update();
-            $model->save(false);
-
-            
-            $model->saveAll();
+        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -132,8 +91,7 @@ class TiketController extends Controller
             $model = $this->findModel($id);
         }
 
-        if ($model->loadAll(Yii::$app->request->post()) ) {
-            $model->saveAll();
+        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -163,9 +121,13 @@ class TiketController extends Controller
      */
     public function actionPdf($id) {
         $model = $this->findModel($id);
+        $providerJenisTiket = new \yii\data\ArrayDataProvider([
+            'allModels' => $model->jenisTikets,
+        ]);
 
         $content = $this->renderAjax('_pdf', [
             'model' => $model,
+            'providerJenisTiket' => $providerJenisTiket,
         ]);
 
         $pdf = new \kartik\mpdf\Pdf([
@@ -225,15 +187,28 @@ class TiketController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-
-    public function actionQrcode($id) {
-        $model = Tiket::findOne($id);
-        return QrCode::png($model->kode_tiket);
-        // you could also use the following
-        // return return QrCode::png($mailTo);
+    
+    /**
+    * Action to load a tabular form grid
+    * for JenisTiket
+    * @author Yohanes Candrajaya <moo.tensai@gmail.com>
+    * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
+    *
+    * @return mixed
+    */
+    public function actionAddJenisTiket()
+    {
+        if (Yii::$app->request->isAjax) {
+            $row = Yii::$app->request->post('JenisTiket');
+            if((Yii::$app->request->post('isNewRecord') && Yii::$app->request->post('_action') == 'load' && empty($row)) || Yii::$app->request->post('_action') == 'add')
+                $row[] = [];
+            return $this->renderAjax('_formJenisTiket', ['row' => $row]);
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
     }
 
-    public function actionLihatevent(){
+       public function actionLihatevent(){
         $model = Event::find()->asArray()->orderBy('tgl_event')->all();
         return $this->render('event',[
                 'model' => $model,
@@ -258,23 +233,43 @@ class TiketController extends Controller
 
             // mengupdate data tiket untuk dikurangi - 1
             $event = Event::findOne($model->event_id);
-            $event->jumlah_tiket = $event->jumlah_tiket - $model->jumlah_tiket;
+            // var_dump($model->jumlah_tiket);
+            // exit();
+            $event->jumlah_tiket = $event->jumlah_tiket - 1;
             $event->save(false);
             $event->update();
 
             $model->event_id = (int)$model->event_id;
-            $model->save(false);
+            $flag = $model->save(false);
             // echo "<pre>";
             // var_dump($tiket->kode_pembayaran);
             // echo "</pre>";
             // exit();
 
             $model->saveAll();
+            if($flag){
+                Yii::$app->session->setFlash('warning', 'Data Berhasil Disimpan');
+            } else {
+                Yii::$app->session->setFlash('warning', 'Data Gagal Disimpan');
+            }
+            
             return $this->render('pembayaran');
         } else {
             
         }
     }
-    
-    
+
+    public function generateUniqueRandomString( $length) {
+            
+        $randomString = Yii::$app->getSecurity()->generateRandomString($length);
+        //$model = Tiket::findOne($randomString);
+        $model = Tiket::find()->where(['kode_tiket' => $randomString])->count(); 
+        // var_dump($model);
+        // exit();
+        if($model == "0")
+            return $randomString;
+        else
+            return $this->generateUniqueRandomString( $length);
+                
+    }
 }

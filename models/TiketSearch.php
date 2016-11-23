@@ -18,8 +18,8 @@ use app\models\Tiket;
     public function rules()
     {
         return [
-            [['id', 'event_id', 'jenis_id','jumlah_tiket'], 'integer'],
-            [['kode_tiket', 'status', 'created_at', 'updated_at'], 'safe'],
+            [['id', 'event_id'], 'integer'],
+            [['kode_pembayaran', 'kode_tiket', 'status', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -58,10 +58,10 @@ use app\models\Tiket;
         $query->andFilterWhere([
             'id' => $this->id,
             'event_id' => $this->event_id,
-            'jenis_id' => $this->jenis_id, 
         ]);
 
-        $query->andFilterWhere(['like', 'kode_tiket', $this->kode_tiket])
+        $query->andFilterWhere(['like', 'kode_pembayaran', $this->kode_pembayaran])
+            ->andFilterWhere(['like', 'kode_tiket', $this->kode_tiket])
             ->andFilterWhere(['like', 'status', $this->status])
             ->andFilterWhere(['like', 'created_at', $this->created_at])
             ->andFilterWhere(['like', 'updated_at', $this->updated_at]);

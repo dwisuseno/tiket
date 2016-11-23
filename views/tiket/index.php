@@ -33,7 +33,7 @@ $this->registerJs($search);
         ['class' => 'yii\grid\SerialColumn'],
         [
             'class' => 'kartik\grid\ExpandRowColumn',
-            'width' => '20px',
+            'width' => '50px',
             'value' => function ($model, $key, $index, $column) {
                 return GridView::ROW_COLLAPSED;
             },
@@ -44,26 +44,22 @@ $this->registerJs($search);
             'expandOneOnly' => true
         ],
         ['attribute' => 'id', 'visible' => false],
-        ['attribute' => 'event_id', 'visible' => false],
-        ['attribute' => 'jenis_id', 'visible' => false],
-        
+        [
+                'attribute' => 'event_id',
+                'label' => 'Event',
+                'value' => function($model){
+                    return $model->event->nama_event;
+                },
+                'filterType' => GridView::FILTER_SELECT2,
+                'filter' => \yii\helpers\ArrayHelper::map(\app\models\Event::find()->asArray()->all(), 'id', 'nama_event'),
+                'filterWidgetOptions' => [
+                    'pluginOptions' => ['allowClear' => true],
+                ],
+                'filterInputOptions' => ['placeholder' => 'Event', 'id' => 'grid-tiket-search-event_id']
+            ],
         'kode_pembayaran',
         'kode_tiket',
-        [
-            'attribute' => 'status',
-
-            'width' => '50px',
-            // 'value' => function ($model) {
-            //     if($model->status == 0){
-            //         return Html::tag('span', Html::encode("Sudah Bayar"), ['class' => 'label label-success']) ;
-            //     } else if($model->status == 1) {
-            //         return "<span class='label label-success'>Sudah Bayar</span>";
-            //     } else {
-            //         return "<span class='label label-primary'>Tiket Sudah Digunakan</span>";
-            //     }
-                 
-            // },
-        ],
+        'status',
         [
             'class' => 'yii\grid\ActionColumn',
             'template' => '{save-as-new} {view} {update} {delete}',
@@ -72,7 +68,7 @@ $this->registerJs($search);
                     return Html::a('<span class="glyphicon glyphicon-copy"></span>', $url, ['title' => 'Save As New']);
                 },
             ],
-        ]
+        ],
     ]; 
     ?>
     <?= GridView::widget([

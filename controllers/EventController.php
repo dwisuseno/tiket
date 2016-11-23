@@ -35,10 +35,12 @@ class EventController extends Controller
     {
         $searchModel = new EventSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $nama = "Andi Anak Bapak";
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'budi' => $nama,
         ]);
     }
 

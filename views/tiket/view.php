@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use kartik\grid\GridView;
-use yii\helpers\url;
+
 /* @var $this yii\web\View */
 /* @var $model app\models\Tiket */
 
@@ -17,41 +17,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-sm-8">
             <h2><?= 'Tiket'.' '. Html::encode($this->title) ?></h2>
         </div>
-        
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <?php 
-                $gridColumn = [
-                    ['attribute' => 'id', 'visible' => false],
-                    [
-                        'attribute' => 'event.nama_event',
-                        'label' => 'Event',
-                    ],
-                    [
-                       'attribute' => 'jenis.kode_jenis',
-                       'label' => 'Jenis',
-                   ],
-                    'kode_pembayaran',
-                    'kode_tiket',
-                    'status',
-                ];
-                echo DetailView::widget([
-                    'model' => $model,
-                    'attributes' => $gridColumn
-                ]); 
-            ?>
-        </div>
-        <div class="col-md-2">
-            <img src="<?= Url::to(['tiket/qrcode', 'id' => $model->id])?>" />
-        </div>
-        
-
-    </div>
-    <div class="row">
         <div class="col-sm-4" style="margin-top: 15px">
-        <?=             
+<?=             
              Html::a('<i class="fa glyphicon glyphicon-hand-up"></i> ' . 'PDF', 
                 ['pdf', 'id' => $model->id],
                 [
@@ -73,5 +40,47 @@ $this->params['breadcrumbs'][] = $this->title;
             ?>
         </div>
     </div>
+
+    <div class="row">
+<?php 
+    $gridColumn = [
+        ['attribute' => 'id', 'visible' => false],
+        [
+            'attribute' => 'event.nama_event',
+            'label' => 'Event',
+        ],
+        'kode_pembayaran',
+        'kode_tiket',
+        'status',
+    ];
+    echo DetailView::widget([
+        'model' => $model,
+        'attributes' => $gridColumn
+    ]); 
+?>
+    </div>
     
+    <div class="row">
+<?php
+if($providerJenisTiket->totalCount){
+    $gridColumnJenisTiket = [
+        ['class' => 'yii\grid\SerialColumn'],
+            ['attribute' => 'id', 'visible' => false],
+                        'kode_jenis',
+            'nama',
+            'harga',
+    ];
+    echo Gridview::widget([
+        'dataProvider' => $providerJenisTiket,
+        'pjax' => true,
+        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-jenis-tiket']],
+        'panel' => [
+            'type' => GridView::TYPE_PRIMARY,
+            'heading' => '<span class="glyphicon glyphicon-book"></span> ' . Html::encode('Jenis Tiket'),
+        ],
+        'columns' => $gridColumnJenisTiket
+    ]);
+}
+?>
+    </div>
 </div>

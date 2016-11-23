@@ -9,7 +9,14 @@ $items = [
             'model' => $model,
         ]),
     ],
-    ];
+        [
+        'label' => '<i class="glyphicon glyphicon-book"></i> '. Html::encode('Jenis Tiket'),
+        'content' => $this->render('_dataJenisTiket', [
+            'model' => $model,
+            'row' => $model->jenisTikets,
+        ]),
+    ],
+        ];
 echo TabsX::widget([
     'items' => $items,
     'position' => TabsX::POS_ABOVE,

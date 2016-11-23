@@ -18,16 +18,6 @@ $this->params['breadcrumbs'][] = $this->title;
             <h2><?= 'Jenis Tiket'.' '. Html::encode($this->title) ?></h2>
         </div>
         <div class="col-sm-4" style="margin-top: 15px">
-<?=             
-             Html::a('<i class="fa glyphicon glyphicon-hand-up"></i> ' . 'PDF', 
-                ['pdf', 'id' => $model->id],
-                [
-                    'class' => 'btn btn-danger',
-                    'target' => '_blank',
-                    'data-toggle' => 'tooltip',
-                    'title' => 'Will open the generated PDF file in a new window'
-                ]
-            )?>
             <?= Html::a('Save As New', ['save-as-new', 'id' => $model->id], ['class' => 'btn btn-info']) ?>            
             <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
             <?= Html::a('Delete', ['delete', 'id' => $model->id], [
@@ -45,6 +35,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php 
     $gridColumn = [
         ['attribute' => 'id', 'visible' => false],
+        [
+            'attribute' => 'tiket.id',
+            'label' => 'Id Tiket',
+        ],
         'kode_jenis',
         'nama',
         'harga',
@@ -53,33 +47,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => $gridColumn
     ]); 
-?>
-    </div>
-    
-    <div class="row">
-<?php
-if($providerTiket->totalCount){
-    $gridColumnTiket = [
-        ['class' => 'yii\grid\SerialColumn'],
-            ['attribute' => 'id', 'visible' => false],
-            [
-                'attribute' => 'event.id',
-                'label' => 'Event'
-            ],
-                        'kode_tiket',
-            'status',
-    ];
-    echo Gridview::widget([
-        'dataProvider' => $providerTiket,
-        'pjax' => true,
-        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-tiket']],
-        'panel' => [
-            'type' => GridView::TYPE_PRIMARY,
-            'heading' => '<span class="glyphicon glyphicon-book"></span> ' . Html::encode('Tiket'),
-        ],
-        'columns' => $gridColumnTiket
-    ]);
-}
 ?>
     </div>
 </div>

@@ -9,13 +9,14 @@ use yii\behaviors\TimestampBehavior;
  * This is the base model class for table "jenis_tiket".
  *
  * @property integer $id
+ * @property integer $id_tiket
  * @property string $kode_jenis
  * @property string $nama
  * @property integer $harga
  * @property string $created_at
  * @property string $updated_at
  *
- * @property \app\models\Tiket[] $tikets
+ * @property \app\models\Tiket $tiket
  */
 class JenisTiket extends \yii\db\ActiveRecord
 {
@@ -27,7 +28,7 @@ class JenisTiket extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['harga'], 'integer'],
+            [['id_tiket', 'harga'], 'integer'],
             [['kode_jenis'], 'string', 'max' => 10],
             [['nama', 'created_at', 'updated_at'], 'string', 'max' => 255]
         ];
@@ -48,6 +49,7 @@ class JenisTiket extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'id_tiket' => 'Id Tiket',
             'kode_jenis' => 'Kode Jenis',
             'nama' => 'Nama',
             'harga' => 'Harga',
@@ -57,9 +59,9 @@ class JenisTiket extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getTikets()
+    public function getTiket()
     {
-        return $this->hasMany(\app\models\Tiket::className(), ['jenis_id' => 'id']);
+        return $this->hasOne(\app\models\Tiket::className(), ['id' => 'id_tiket']);
     }
     
 /**

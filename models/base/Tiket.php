@@ -10,31 +10,27 @@ use yii\behaviors\TimestampBehavior;
  *
  * @property integer $id
  * @property integer $event_id
- * @property integer $jenis_id
  * @property string $kode_pembayaran
  * @property string $kode_tiket
  * @property string $status
  * @property string $created_at
  * @property string $updated_at
  *
+ * @property \app\models\JenisTiket[] $jenisTikets
  * @property \app\models\Event $event
- * @property \app\models\JenisTiket $jenis
  */
 class Tiket extends \yii\db\ActiveRecord
 {
     use \mootensai\relation\RelationTrait;
-    public $jumlah_tiket;
-
+    
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['event_id', 'jenis_id','jumlah_tiket'], 'integer'],
+            [['event_id'], 'integer'],
             [['status'], 'string'],
-            [['jumlah_tiket', 'jenis_id'],'required'],
-            //[['jumlah_tiket'], 'min'=>1],
             [['kode_pembayaran', 'kode_tiket', 'created_at', 'updated_at'], 'string', 'max' => 255]
         ];
     }
@@ -54,39 +50,27 @@ class Tiket extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            //'user_id' => 'User ID', 
             'event_id' => 'Event ID',
-            'jenis_id' => 'Jenis ID',
             'kode_pembayaran' => 'Kode Pembayaran',
             'kode_tiket' => 'Kode Tiket',
             'status' => 'Status',
-            'jumlah_tiket' => 'Jumlah Tiket',
         ];
     }
-
-    /** 
-    * @return \yii\db\ActiveQuery 
-    */ 
-       // public function getUser() 
-       // { 
-       //     return $this->hasOne(\app\models\User::className(), ['id' => 'user_id']); 
-       // } 
-        
     
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getJenisTikets()
+    {
+        return $this->hasMany(\app\models\JenisTiket::className(), ['id_tiket' => 'id']);
+    }
+        
     /**
      * @return \yii\db\ActiveQuery
      */
     public function getEvent()
     {
         return $this->hasOne(\app\models\Event::className(), ['id' => 'event_id']);
-    }
-        
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getJenis()
-    {
-        return $this->hasOne(\app\models\JenisTiket::className(), ['id' => 'jenis_id']);
     }
     
 /**

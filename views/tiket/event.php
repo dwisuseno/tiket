@@ -22,7 +22,7 @@ $this->title = "Choose Event";
 	      <img style="height:200px" src="<?= $model[$i]['path_gambar'] ?>" alt="<?= $model[$i]['nama_event'] ?>">
 	      <div class="caption">
 	        <h4><?= $model[$i]['nama_event'] ?></h4>
-	        <p><?= $model[$i]['jumlah_tiket'] ?></p>
+	        <p><?= $model[$i]['jumlah_tiket'] ?> tickets</p>
 	        <p><?= date("D, j F Y", strtotime($model[$i]['tgl_event'])) ?></p>
 	        <p><?= date("g:i a", strtotime($model[$i]['waktu_event'])) ?></p>
             <p><?= $model[$i]['alamat'] ?></p>

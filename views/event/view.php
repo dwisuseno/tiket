@@ -50,6 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'waktu_event',
         'alamat',
         'jumlah_tiket',
+        'deskripsi',
     ];
     echo DetailView::widget([
         'model' => $model,

@@ -68,6 +68,13 @@ use yii\widgets\ActiveForm;
         <div class="col-md-6">
             <?= $form->field($model, 'alamat')->textInput(['placeholder' => 'Alamat']) ?>
         </div>
+        
+        
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <?= $form->field($model, 'deskripsi')->textArea(['rows' => '6','placeholder' => 'Description']) ?>
+        </div>
     </div>
    
     <?= $form->field($model, 'file') -> fileInput(); ?>

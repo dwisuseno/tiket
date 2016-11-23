@@ -124,4 +124,12 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionRegister(){
+        $model = new LoginForm();
+        return $this->render('register',
+            [
+                'model' => $model,
+            ]);
+    }
 }

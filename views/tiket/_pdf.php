@@ -3,7 +3,6 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use kartik\grid\GridView;
-use yii\helpers\url;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Tiket */
@@ -28,10 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'event.nama_event',
                 'label' => 'Event'
             ],
-            [ 
-               'attribute' => 'jenis.kode_jenis', 
-               'label' => 'Jenis' 
-           ],
+        'kode_pembayaran',
         'kode_tiket',
         'status',
     ];
@@ -41,8 +37,28 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); 
 ?>
     </div>
-
-    <div class="col-md-2">
-            <img src="<?= Url::to(['tiket/qrcode', 'id' => $model->id])?>" />
+    
+    <div class="row">
+<?php
+if($providerJenisTiket->totalCount){
+    $gridColumnJenisTiket = [
+        ['class' => 'yii\grid\SerialColumn'],
+        ['attribute' => 'id', 'visible' => false],
+                'kode_jenis',
+        'nama',
+        'harga',
+    ];
+    echo Gridview::widget([
+        'dataProvider' => $providerJenisTiket,
+        'panel' => [
+            'type' => GridView::TYPE_PRIMARY,
+            'heading' => Html::encode('Jenis Tiket'),
+        ],
+        'panelHeadingTemplate' => '<h4>{heading}</h4>{summary}',
+        'toggleData' => false,
+        'columns' => $gridColumnJenisTiket
+    ]);
+}
+?>
     </div>
 </div>

@@ -30,21 +30,22 @@ AppAsset::register($this);
         'brandLabel' => 'TIKET ONLINE',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar navbar navbar-fixed-top h2',
+            'class' => 'navbar navbar-default navbar-fixed-top',
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right h4'],
+        'options' => ['class' => 'navbar-nav navbar-right'],
         //'activateParents' => true,
         'items' => [
-            ['label' => 'Event', 'url' => ['/tiket/lihatevent']],
+            ['label' => 'Lihat Event', 'url' => ['/tiket/lihatevent']],
             ['label' => 'About', 'url' => ['/site/about']],
-            // ['label' => 'Tiket', 'url' => ['/tiket/create']],
+            ['label' => 'Event', 'url' => ['/event']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
+                
             ) : (
                 '<li>'
-                . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form h4'])
+                . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
                 . Html::submitButton(
                     'Logout (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link']

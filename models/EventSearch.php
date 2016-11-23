@@ -19,7 +19,7 @@ use app\models\Event;
     {
         return [
             [['id', 'jumlah_tiket'], 'integer'],
-            [['nama_event', 'tgl_event', 'waktu_event', 'created_at', 'updated_at'], 'safe'],
+            [['nama_event','deskripsi', 'tgl_event', 'waktu_event', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 

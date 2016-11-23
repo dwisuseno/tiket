@@ -18,6 +18,7 @@ class Event extends BaseEvent
 	    [
             [['tgl_event', 'waktu_event'], 'safe'],
             [['jumlah_tiket'], 'integer'],
+            [['deskripsi'], 'string'],
             [['file'],'file'],
             [['nama_event', 'path_gambar', 'created_at', 'updated_at'], 'string', 'max' => 255],
             [['alamat'], 'string', 'max' => 300]

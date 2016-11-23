@@ -7,3 +7,8 @@ use yii\helpers\url;
 $this->title = "Pembayaran";
 
 ?>
+<?php if(Yii::$app->session->getFlash('warning')){ ?>
+<div class="alert alert-success">
+  <strong>Success!</strong> <?= Yii::$app->session->getFlash('warning'); ?>.
+</div>
+<?php }?>

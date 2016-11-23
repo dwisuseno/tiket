@@ -11,7 +11,7 @@ $this->title = 'About';
     <h1><?= Html::encode($this->title) ?></h1>
 
     <div class="row">
-    	
+    	<p>Aplikasi Dibuat untuk memenuhi Syarat Tugas Akhir</p>
     </div>
 
 </div>

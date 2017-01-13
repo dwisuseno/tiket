@@ -63,6 +63,7 @@ $this->registerJs($search);
         ],
         'alamat',
         'jumlah_tiket',
+        'deskripsi',
         [
             'class' => 'yii\grid\ActionColumn',
             'template' => '{save-as-new} {view} {update} {delete}',

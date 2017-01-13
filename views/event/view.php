@@ -80,5 +80,9 @@ if($providerTiket->totalCount){
     ]);
 }
 ?>
+    
+    </div>
+    <div class="row">
+        <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" ></div>
     </div>
 </div>

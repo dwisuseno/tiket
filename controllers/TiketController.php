@@ -208,7 +208,7 @@ class TiketController extends Controller
         }
     }
 
-       public function actionLihatevent(){
+    public function actionLihatevent(){
         $model = Event::find()->asArray()->orderBy('tgl_event')->all();
         return $this->render('event',[
                 'model' => $model,
@@ -233,19 +233,14 @@ class TiketController extends Controller
 
             // mengupdate data tiket untuk dikurangi - 1
             $event = Event::findOne($model->event_id);
-            // var_dump($model->jumlah_tiket);
-            // exit();
+         
             $event->jumlah_tiket = $event->jumlah_tiket - 1;
             $event->save(false);
             $event->update();
 
             $model->event_id = (int)$model->event_id;
             $flag = $model->save(false);
-            // echo "<pre>";
-            // var_dump($tiket->kode_pembayaran);
-            // echo "</pre>";
-            // exit();
-
+           
             $model->saveAll();
             if($flag){
                 Yii::$app->session->setFlash('warning', 'Data Berhasil Disimpan');

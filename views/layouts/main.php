@@ -19,11 +19,118 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <?php $this->head() ?>
+
 </head>
 <body>
 <?php $this->beginBody() ?>
 <div id="fb-root"></div>
+<div class="wrap">
+    <?php
+    NavBar::begin([
+        'brandLabel' => 'TIKET ONLINE',
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+            'class' => 'navbar navbar-default navbar-fixed-top',
+        ],
+    ]);
+    if(Yii::$app->user->identity == null){
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            'activateParents' => true,
+            'items' => [
+                ['label' => 'Beranda', 'url' => ['/site']],
+                ['label' => 'Tentang', 'url' => ['site/about']],
+                Yii::$app->user->isGuest ? (
+                    ['label' => 'Login', 'url' => ['/site/login']]
+                ) : (
+                    '<li>'
+                    . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
+                    . Html::submitButton(
+                        'Logout (' . Yii::$app->user->identity->username . ' - ' . Yii::$app->user->identity->role . ')',
+                        ['class' => 'btn btn-link']
+                    )
+                    . Html::endForm()
+                    . '</li>'
+                )
+            ],
+        ]);
+    } else {
+      if(Yii::$app->user->identity->role == 'admin'){
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            //'activateParents' => true,
+            'items' => [
+                ['label' => 'Beranda', 'url' => ['/site']],
+                ['label' => 'Event', 'url' => ['/event']],
+                ['label' => 'Gallery', 'url' => ['/tiket/lihatevent']],
+                ['label' => 'Tentang', 'url' => ['site/about']],
+                Yii::$app->user->isGuest ? (
+                    ['label' => 'Login', 'url' => ['/site/login']]
+                    
+                ) : (
+                    '<li>'
+                    . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
+                    . Html::submitButton(
+                        'Logout (' . Yii::$app->user->identity->username . ')',
+                        ['class' => 'btn btn-link']
+                    )
+                    . Html::endForm()
+                    . '</li>'
+                )
+            ],
+        ]);
+      } else if(Yii::$app->user->identity->role == 'user'){
+          echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            //'activateParents' => true,
+            'items' => [
+                ['label' => 'Beranda', 'url' => ['/site']],
+                ['label' => 'Gallery', 'url' => ['/tiket/lihatevent']],
+                ['label' => 'Tentang', 'url' => ['site/about']],
+                ['label' => 'Tiket Anda', 'url' => ['/tiket/cektiket']],
+                Yii::$app->user->isGuest ? (
+                    ['label' => 'Login', 'url' => ['/site/login']]
+                    
+                ) : (
+                    '<li>'
+                    . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
+                    . Html::submitButton(
+                        'Logout (' . Yii::$app->user->identity->username . ')',
+                        ['class' => 'btn btn-link']
+                    )
+                    . Html::endForm()
+                    . '</li>'
+                )
+            ],
+        ]);
+      }
+    }
+    NavBar::end();
+    ?>
+
+    <div class="container">
+    
+        <?= Breadcrumbs::widget([
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ]) ?>
+        <?= $content ?>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="pull-left">&copy; Tiket Online </p>
+
+        
+    </div>
+</footer>
+
+<?php $this->endBody() ?>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -49,6 +156,8 @@ AppAsset::register($this);
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+  
+
 </script>
 
 <script>(function(d, s, id) {
@@ -57,60 +166,17 @@ AppAsset::register($this);
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1250905544984552";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+  
+  $(document).ready(function() {
+      $('#test').DataTable({
+          "paging":   true,
+          "ordering": false,
+          "info":     false
+      });
+  } );
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'TIKET ONLINE',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar navbar-default navbar-fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        //'activateParents' => true,
-        'items' => [
-            ['label' => 'Lihat Event', 'url' => ['/tiket/lihatevent']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Event', 'url' => ['/event']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-                
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
-        ],
-    ]);
-    NavBar::end();
-    ?>
-
-    <div class="container">
-    
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= $content ?>
-    </div>
-</div>
-
-<!-- <footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; Tiket Online </p>
-
-        
-    </div>
-</footer> -->
-
-<?php $this->endBody() ?>
+</script>
 </body>
 </html>
 <?php $this->endPage() ?>

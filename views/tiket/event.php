@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\helpers\url;
+use yii\helpers\Url;
 
 $this->title = "Choose Event";
 

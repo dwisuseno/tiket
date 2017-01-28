@@ -18,12 +18,20 @@ class TiketController extends Controller
     public function behaviors()
     {
         return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['post'],
-                ],
-            ],
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                //'only' => [],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index','view','create','update','delete','saveAsNew','lihatevent','pemesanan','pesantiket','cektiket'],
+                        'roles' => ['@']
+                    ],
+                    [
+                        'allow' => false
+                    ]
+                ]
+            ]
         ];
     }
 
@@ -239,6 +247,7 @@ class TiketController extends Controller
             $event->update();
 
             $model->event_id = (int)$model->event_id;
+            $model->user_id = Yii::$app->user->identity->id;
             $flag = $model->save(false);
            
             $model->saveAll();
@@ -266,5 +275,15 @@ class TiketController extends Controller
         else
             return $this->generateUniqueRandomString( $length);
                 
+    }
+
+    public function actionCektiket(){
+        $model = Tiket::find()->asArray()->orderBy('created_at')->where(['user_id' => Yii::$app->user->identity->id])->all();
+        // echo "<pre>";
+        // var_dump($model);
+        // echo "</pre>";
+        return $this->render('cektiket',[
+                'model' => $model,
+            ]);
     }
 }

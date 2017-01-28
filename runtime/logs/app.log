@@ -29342,3 +29342,961 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1481105401.104
     'REQUEST_TIME' => 1481105401
 ]
+2017-01-28 08:27:59 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "tiket/lihat/event".' in C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('tiket/lihat/eve...', Array)
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php:104
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-01-28 08:27:59 [::1][-][-][info][application] $_GET = [
+    'r' => 'tiket/lihat/event'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=event'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '50632'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Flihat%2Fevent'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Flihat%2Fevent'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485588479.204
+    'REQUEST_TIME' => 1485588479
+]
+2017-01-28 08:28:09 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "tiket/lihat/event".' in C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('tiket/lihat/eve...', Array)
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php:104
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-01-28 08:28:09 [::1][-][-][info][application] $_GET = [
+    'r' => 'tiket/lihat/event'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=event'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '50732'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Flihat%2Fevent'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Flihat%2Fevent'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485588489.418
+    'REQUEST_TIME' => 1485588489
+]
+2017-01-28 08:34:30 [::1][2][k0n4tcdgoqag795fj744pdp4u7][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Component.php(540): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#8 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('event', Array)
+#9 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2017-01-28 08:34:29 [::1][2][k0n4tcdgoqag795fj744pdp4u7][info][application] $_GET = [
+    'r' => 'event'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => 'k0n4tcdgoqag795fj744pdp4u7'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=event'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=k0n4tcdgoqag795fj744pdp4u7; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '52291'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=event'
+    'REQUEST_URI' => '/tiket/web/index.php?r=event'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485588869.966
+    'REQUEST_TIME' => 1485588869
+]
+2017-01-28 08:34:35 [::1][2][k0n4tcdgoqag795fj744pdp4u7][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Component.php(540): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#8 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('event', Array)
+#9 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2017-01-28 08:34:35 [::1][2][k0n4tcdgoqag795fj744pdp4u7][info][application] $_GET = [
+    'r' => 'event'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => 'k0n4tcdgoqag795fj744pdp4u7'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=event'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=k0n4tcdgoqag795fj744pdp4u7; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '52291'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=event'
+    'REQUEST_URI' => '/tiket/web/index.php?r=event'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485588875.096
+    'REQUEST_TIME' => 1485588875
+]
+2017-01-28 08:53:24 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ','' in C:\wamp\www\tiket\views\layouts\main.php:77
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile()
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent()
+#2 C:\wamp\www\tiket\controllers\SiteController.php(65): yii\base\Controller->render()
+#3 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#4 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp\www\tiket\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#5 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#6 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#7 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction()
+#8 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#9 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-01-28 08:53:23 [::1][-][-][info][application] $_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => 'k0n4tcdgoqag795fj744pdp4u7'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=event'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=k0n4tcdgoqag795fj744pdp4u7; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '57278'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tiket/web/index.php'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485590003.901
+    'REQUEST_TIME' => 1485590003
+]
+2017-01-28 08:53:32 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ','' in C:\wamp\www\tiket\views\layouts\main.php:77
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile()
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent()
+#2 C:\wamp\www\tiket\controllers\SiteController.php(65): yii\base\Controller->render()
+#3 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionIndex()
+#4 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp\www\tiket\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#5 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#6 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#7 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction()
+#8 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#9 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-01-28 08:53:32 [::1][-][-][info][application] $_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => 'k0n4tcdgoqag795fj744pdp4u7'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=event'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=k0n4tcdgoqag795fj744pdp4u7; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '57280'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/tiket/web/index.php'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485590012.587
+    'REQUEST_TIME' => 1485590012
+]
+2017-01-28 08:54:21 [::1][-][s7gnp1o9sh5qnbup0vm8enr1h1][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in C:\wamp\www\tiket\views\tiket\pemesanan.php:85
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\View.php(248): yii\base\View->renderPhpFile()
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile()
+#2 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 C:\wamp\www\tiket\controllers\TiketController.php(224): yii\base\Controller->render()
+#4 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\TiketController->actionPemesanan()
+#5 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp\www\tiket\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction()
+#9 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2017-01-28 08:54:20 [::1][-][s7gnp1o9sh5qnbup0vm8enr1h1][info][application] $_GET = [
+    'r' => 'tiket/pemesanan'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => 's7gnp1o9sh5qnbup0vm8enr1h1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket/lihatevent'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=s7gnp1o9sh5qnbup0vm8enr1h1'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '57413'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Fpemesanan&id=1'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Fpemesanan&id=1'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485590060.946
+    'REQUEST_TIME' => 1485590060
+]
+2017-01-28 09:41:53 [::1][2][llu3rcmm1q5j8igdbc7g9a7k22][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Component.php(540): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('pemesanan', Array)
+#8 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('tiket/pemesanan', Array)
+#9 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2017-01-28 09:41:53 [::1][2][llu3rcmm1q5j8igdbc7g9a7k22][info][application] $_GET = [
+    'r' => 'tiket/pemesanan'
+    'id' => '2'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => 'llu3rcmm1q5j8igdbc7g9a7k22'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/tiket/web/index.php?r=tiket/lihatevent'
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket/lihatevent'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=llu3rcmm1q5j8igdbc7g9a7k22; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '63708'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Fpemesanan&id=2'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Fpemesanan&id=2'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485592913.255
+    'REQUEST_TIME' => 1485592913
+]
+2017-01-28 09:42:23 [::1][2][llu3rcmm1q5j8igdbc7g9a7k22][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Component.php(540): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('pesantiket', Array)
+#8 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('tiket/pesantike...', Array)
+#9 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2017-01-28 09:42:23 [::1][2][llu3rcmm1q5j8igdbc7g9a7k22][info][application] $_GET = [
+    'r' => 'tiket/pesantiket'
+]
+
+$_POST = [
+    '_csrf' => 'UGo5cGM4SlY3OnIGNlEHHz1eUwgmCAUnDzhNFwlZITQmDFg4BF0Mbw=='
+    'Tiket' => [
+        'id' => ''
+        'event_id' => '2'
+    ]
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => 'llu3rcmm1q5j8igdbc7g9a7k22'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/tiket/web/index.php?r=tiket/lihatevent'
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '103'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket%2Fpemesanan&id=2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=llu3rcmm1q5j8igdbc7g9a7k22; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '63800'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=tiket%2Fpesantiket'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Fpesantiket'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485592943.465
+    'REQUEST_TIME' => 1485592943
+]
+2017-01-28 09:48:54 [::1][2][llu3rcmm1q5j8igdbc7g9a7k22][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Component.php(540): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#8 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('event', Array)
+#9 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2017-01-28 09:48:54 [::1][2][llu3rcmm1q5j8igdbc7g9a7k22][info][application] $_GET = [
+    'r' => 'event'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => 'llu3rcmm1q5j8igdbc7g9a7k22'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/tiket/web/index.php?r=tiket/lihatevent'
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket%2Fpesantiket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=llu3rcmm1q5j8igdbc7g9a7k22; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '64601'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=event'
+    'REQUEST_URI' => '/tiket/web/index.php?r=event'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485593334.585
+    'REQUEST_TIME' => 1485593334
+]
+2017-01-28 09:48:57 [::1][2][llu3rcmm1q5j8igdbc7g9a7k22][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php:151
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\filters\AccessControl.php(126): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Component.php(540): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#8 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('event', Array)
+#9 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2017-01-28 09:48:57 [::1][2][llu3rcmm1q5j8igdbc7g9a7k22][info][application] $_GET = [
+    'r' => 'event'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => 'llu3rcmm1q5j8igdbc7g9a7k22'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/tiket/web/index.php?r=tiket/lihatevent'
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=event'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=llu3rcmm1q5j8igdbc7g9a7k22; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '64601'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=event'
+    'REQUEST_URI' => '/tiket/web/index.php?r=event'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485593337.356
+    'REQUEST_TIME' => 1485593337
+]
+2017-01-28 10:01:50 [::1][3][0eiqeep207g3s2jq876k2i69s7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: tiket/cektiket' in C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('cektiket', Array)
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('tiket/cektiket', Array)
+#2 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php:104
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-01-28 10:01:50 [::1][3][0eiqeep207g3s2jq876k2i69s7][info][application] $_GET = [
+    'r' => 'tiket/cektiket'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => '0eiqeep207g3s2jq876k2i69s7'
+    '_identity' => '733845a79c51895135001c636d90bdc7f65ed4c36b363a5aa32828f2bc4eb23aa:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[3,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=0eiqeep207g3s2jq876k2i69s7; _identity=733845a79c51895135001c636d90bdc7f65ed4c36b363a5aa32828f2bc4eb23aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B3%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '49892'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Fcektiket'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Fcektiket'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485594110.251
+    'REQUEST_TIME' => 1485594110
+]
+2017-01-28 10:02:28 [::1][3][0eiqeep207g3s2jq876k2i69s7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: tiket/tiket' in C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('tiket', Array)
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('tiket/tiket', Array)
+#2 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php:104
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-01-28 10:02:28 [::1][3][0eiqeep207g3s2jq876k2i69s7][info][application] $_GET = [
+    'r' => 'tiket/tiket'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => '0eiqeep207g3s2jq876k2i69s7'
+    '_identity' => '733845a79c51895135001c636d90bdc7f65ed4c36b363a5aa32828f2bc4eb23aa:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[3,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket%2Flihatevent'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=0eiqeep207g3s2jq876k2i69s7; _identity=733845a79c51895135001c636d90bdc7f65ed4c36b363a5aa32828f2bc4eb23aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B3%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '49995'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Ftiket'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Ftiket'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485594148.273
+    'REQUEST_TIME' => 1485594148
+]
+2017-01-28 10:07:34 [::1][3][0eiqeep207g3s2jq876k2i69s7][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: C:\wamp\www\tiket\views\tiket\cektiket.php' in C:\wamp\www\tiket\vendor\yiisoft\yii2\base\View.php:227
+Stack trace:
+#0 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\View.php(150): yii\base\View->renderFile('C:\\wamp\\www\\tik...', Array, Object(app\controllers\TiketController))
+#1 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('cektiket', Array, Object(app\controllers\TiketController))
+#2 C:\wamp\www\tiket\controllers\TiketController.php(287): yii\base\Controller->render('cektiket', Array)
+#3 [internal function]: app\controllers\TiketController->actionCektiket()
+#4 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('cektiket', Array)
+#7 C:\wamp\www\tiket\vendor\yiisoft\yii2\web\Application.php(92): yii\base\Module->runAction('tiket/cektiket', Array)
+#8 C:\wamp\www\tiket\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp\www\tiket\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-01-28 10:07:34 [::1][3][0eiqeep207g3s2jq876k2i69s7][info][application] $_GET = [
+    'r' => 'tiket/cektiket'
+]
+
+$_COOKIE = [
+    'session_id' => '8af704c9e846986161e6158d5a1952b675dca083'
+    '_ga' => 'GA1.1.1482718977.1477131021'
+    '_csrf' => '0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9\";}'
+    'PHPSESSID' => '0eiqeep207g3s2jq876k2i69s7'
+    '_identity' => '733845a79c51895135001c636d90bdc7f65ed4c36b363a5aa32828f2bc4eb23aa:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[3,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4,ms;q=0.2'
+    'HTTP_COOKIE' => 'session_id=8af704c9e846986161e6158d5a1952b675dca083; _ga=GA1.1.1482718977.1477131021; _csrf=0db70e2218b18bfaf75f2d9f2d652696ab615e983a8cde6ec73d97cfc2180a20a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gPKvUiMIm4jxE0Oq_RtgjakbvfaHgeF9%22%3B%7D; PHPSESSID=0eiqeep207g3s2jq876k2i69s7; _identity=733845a79c51895135001c636d90bdc7f65ed4c36b363a5aa32828f2bc4eb23aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B3%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\CUBRID\\bin\\;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp-lar\\php;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\path\\to\\java\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin\\java.exe;C:\\Program Files\\Eclipse Che\\eclipse-che-4.0.0-RC3\\tools\\jre\\bin;C:\\Program Files (x86)\\Java\\jre1.8.0_73\\bin;C:\\Program Files (x86)\\Java\\jdk1.7.0_05\\bin;C:\\Program Files\\Java\\jdk1.8.0_60\\bin;CLASSPATH=C:\\CUBRID\\jdbc\\cubrid_jdbc.jar;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\GtkSharp\\2.12\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\VXIPNP\\WinNT\\Bin;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Users\\AL AJI\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\wamp\\bin\\php\\php7.0.14;C:\\xampp\\php;C:\\wamp\\bin\\php\\php5.5.12;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/tiket/web/index.php'
+    'REMOTE_PORT' => '50632'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Fcektiket'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Fcektiket'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1485594454.424
+    'REQUEST_TIME' => 1485594454
+]

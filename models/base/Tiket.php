@@ -29,7 +29,7 @@ class Tiket extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['event_id'], 'integer'],
+            [['event_id','user_id'], 'integer'],
             [['status'], 'string'],
             [['kode_pembayaran', 'kode_tiket', 'created_at', 'updated_at'], 'string', 'max' => 255]
         ];
@@ -51,6 +51,7 @@ class Tiket extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'event_id' => 'Event ID',
+            'user_id' => 'User ID',
             'kode_pembayaran' => 'Kode Pembayaran',
             'kode_tiket' => 'Kode Tiket',
             'status' => 'Status',

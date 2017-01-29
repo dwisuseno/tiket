@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Tiket;
 use app\models\Event;
+use app\models\Review;
 use app\models\TiketSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -24,7 +25,7 @@ class TiketController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index','view','create','update','delete','saveAsNew','lihatevent','pemesanan','pesantiket','cektiket'],
+                        'actions' => ['review','index','view','create','update','delete','saveAsNew','lihatevent','pemesanan','pesantiket','cektiket'],
                         'roles' => ['@']
                     ],
                     [
@@ -226,10 +227,25 @@ class TiketController extends Controller
     public function actionPemesanan($id){
         $model = Event::find()->where(['id' => $id])->asArray()->one();
         $tiket = new Tiket();
+        $reviewContent =Review::find()->where(['event_id' => $id])->asArray()->all();
+        $modelreview = new Review();
+
         return $this->render('pemesanan',[
                 'model' => $model,
                 'tiket' => $tiket,
+                'reviewContent' => $reviewContent,
+                'modelreview' => $modelreview,
             ]);
+    }
+
+    public function actionReview($id){
+        $model = new Review();
+
+        if ($model->load(Yii::$app->request->post())) {
+            $model->event_id = $id;
+            $model->save();   
+        }
+        return $this->redirect(['pemesanan', 'id' => $id]);
     }
     
     // fungsi pemesanan tiket

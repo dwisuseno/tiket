@@ -65,6 +65,7 @@ AppAsset::register($this);
             'items' => [
                 ['label' => 'Beranda', 'url' => ['/site']],
                 ['label' => 'Event', 'url' => ['/event']],
+                ['label' => 'Tiket Pemesanan', 'url' => ['/tiket']],
                 ['label' => 'Gallery', 'url' => ['/tiket/lihatevent']],
                 ['label' => 'Tentang', 'url' => ['site/about']],
                 Yii::$app->user->isGuest ? (
@@ -170,9 +171,6 @@ AppAsset::register($this);
   
   $(document).ready(function() {
       $('#test').DataTable({
-          "paging":   true,
-          "ordering": false,
-          "info":     false
       });
   } );
 

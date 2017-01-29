@@ -100,7 +100,11 @@ class TiketController extends Controller
             $model = $this->findModel($id);
         }
 
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+        if ($model->loadAll(Yii::$app->request->post())) {
+            if($model->status == 1){
+                $model->kode_tiket = $this->generateUniqueRandomString(5);
+            }
+            $model->saveAll();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

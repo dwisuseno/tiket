@@ -130,8 +130,8 @@ AppAsset::register($this);
 </footer>
 
 <?php $this->endBody() ?>
-<!-- <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> -->
+<!-- <script src="//code.jquery.com/jquery-1.12.4.js"></script> -->
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> 
 
 <script>
   

@@ -7,6 +7,7 @@
 use yii\helpers\Html;
 use kartik\export\ExportMenu;
 use kartik\grid\GridView;
+use app\models\Login;
 
 $this->title = 'Tiket';
 $this->params['breadcrumbs'][] = $this->title;
@@ -57,13 +58,28 @@ $this->registerJs($search);
                 ],
                 'filterInputOptions' => ['placeholder' => 'Event', 'id' => 'grid-tiket-search-event_id']
             ],
-        'user_id',
+        [
+            'attribute' => 'user_id',
+            'value' => function($model){
+                $username = Login::find()->where(['id' => $model->user_id])->asArray()->one();
+                //var_dump($username);
+                return $username['username'];
+            }, 
+        ],
         'kode_pembayaran',
         'kode_tiket',
-        'status',
+        [
+            'attribute' => 'status',
+            'value' => function($model){
+                if($model->status == 0)
+                    return 'Belum Bayar';
+                else
+                    return 'Sudah Bayar';
+            }, 
+        ],
         [
             'class' => 'yii\grid\ActionColumn',
-            'template' => '{save-as-new} {view} {update} {delete}',
+            'template' => '{update} {delete}',
             'buttons' => [
                 'save-as-new' => function ($url) {
                     return Html::a('<span class="glyphicon glyphicon-copy"></span>', $url, ['title' => 'Save As New']);

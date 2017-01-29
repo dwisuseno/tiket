@@ -57,6 +57,7 @@ $this->registerJs($search);
                 ],
                 'filterInputOptions' => ['placeholder' => 'Event', 'id' => 'grid-tiket-search-event_id']
             ],
+        'user_id',
         'kode_pembayaran',
         'kode_tiket',
         'status',

@@ -10,6 +10,7 @@ use yii\behaviors\TimestampBehavior;
  *
  * @property integer $id
  * @property integer $event_id
+ * @property integer $user_id
  * @property string $kode_pembayaran
  * @property string $kode_tiket
  * @property string $status
@@ -22,14 +23,14 @@ use yii\behaviors\TimestampBehavior;
 class Tiket extends \yii\db\ActiveRecord
 {
     use \mootensai\relation\RelationTrait;
-    
+
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['event_id','user_id'], 'integer'],
+            [['event_id', 'user_id'], 'integer'],
             [['status'], 'string'],
             [['kode_pembayaran', 'kode_tiket', 'created_at', 'updated_at'], 'string', 'max' => 255]
         ];

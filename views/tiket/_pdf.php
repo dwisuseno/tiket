@@ -27,6 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'event.nama_event',
                 'label' => 'Event'
             ],
+        'user_id',
         'kode_pembayaran',
         'kode_tiket',
         'status',

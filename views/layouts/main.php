@@ -68,6 +68,7 @@ AppAsset::register($this);
                 ['label' => 'Tiket Pemesanan', 'url' => ['/tiket']],
                 ['label' => 'Gallery', 'url' => ['/tiket/lihatevent']],
                 ['label' => 'Tentang', 'url' => ['site/about']],
+                ['label' => 'User Setting', 'url' => ['/tiket/user']],
                 Yii::$app->user->isGuest ? (
                     ['label' => 'Login', 'url' => ['/site/login']]
                     
@@ -92,6 +93,7 @@ AppAsset::register($this);
                 ['label' => 'Gallery', 'url' => ['/tiket/lihatevent']],
                 ['label' => 'Tentang', 'url' => ['site/about']],
                 ['label' => 'Tiket Anda', 'url' => ['/tiket/cektiket']],
+                ['label' => 'User Setting', 'url' => ['/tiket/user']],
                 Yii::$app->user->isGuest ? (
                     ['label' => 'Login', 'url' => ['/site/login']]
                     

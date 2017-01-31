@@ -6,6 +6,7 @@ use Yii;
 use app\models\Tiket;
 use app\models\Event;
 use app\models\Review;
+use app\models\Login;
 use app\models\TiketSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -25,7 +26,7 @@ class TiketController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['review','index','view','create','update','delete','saveAsNew','lihatevent','pemesanan','pesantiket','cektiket'],
+                        'actions' => ['updateuser','user','review','index','view','create','update','delete','saveAsNew','lihatevent','pemesanan','pesantiket','cektiket'],
                         'roles' => ['@']
                     ],
                     [
@@ -34,6 +35,27 @@ class TiketController extends Controller
                 ]
             ]
         ];
+    }
+
+    public function actionUser(){
+        $model = Login::findOne(Yii::$app->user->identity->id);
+        return $this->render('user_update', [
+            'model' => $model,
+        ]);
+
+    }
+
+    public function actionUpdateuser(){
+        $model = Login::findOne(Yii::$app->user->identity->id);
+        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+            return $this->render('user_update', [
+                'model' => $model,
+            ]);
+        } else {
+            return $this->render('user_update', [
+                'model' => $model,
+            ]);
+        }
     }
 
     /**

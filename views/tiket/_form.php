@@ -33,7 +33,7 @@ use yii\widgets\ActiveForm;
         ],
     ]); ?>
 
-    <?= $form->field($model, 'user_id')->textInput(['placeholder' => 'User']) ?>
+    <?php // $form->field($model, 'user_id')->textInput(['placeholder' => 'User']) ?>
 
     <?= $form->field($model, 'kode_pembayaran')->textInput(['maxlength' => true, 'placeholder' => 'Kode Pembayaran']) ?>
 
@@ -42,24 +42,24 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'status')->dropDownList([ '0', '1', '2', ], ['prompt' => '']) ?>
 
     <?php
-    $forms = [
-        [
-            'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('JenisTiket'),
-            'content' => $this->render('_formJenisTiket', [
-                'row' => \yii\helpers\ArrayHelper::toArray($model->jenisTikets),
-            ]),
-        ],
-    ];
-    echo kartik\tabs\TabsX::widget([
-        'items' => $forms,
-        'position' => kartik\tabs\TabsX::POS_ABOVE,
-        'encodeLabels' => false,
-        'pluginOptions' => [
-            'bordered' => true,
-            'sideways' => true,
-            'enableCache' => false,
-        ],
-    ]);
+    // $forms = [
+    //     [
+    //         'label' => '<i class="glyphicon glyphicon-book"></i> ' . Html::encode('JenisTiket'),
+    //         'content' => $this->render('_formJenisTiket', [
+    //             'row' => \yii\helpers\ArrayHelper::toArray($model->jenisTikets),
+    //         ]),
+    //     ],
+    // ];
+    // echo kartik\tabs\TabsX::widget([
+    //     'items' => $forms,
+    //     'position' => kartik\tabs\TabsX::POS_ABOVE,
+    //     'encodeLabels' => false,
+    //     'pluginOptions' => [
+    //         'bordered' => true,
+    //         'sideways' => true,
+    //         'enableCache' => false,
+    //     ],
+    // ]);
     ?>
     <div class="form-group">
     <?php if(Yii::$app->controller->action->id != 'save-as-new'): ?>

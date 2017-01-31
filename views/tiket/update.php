@@ -5,9 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Tiket */
 
-$this->title = 'Update Tiket: ' . ' ' . $model->id;
+$this->title = 'Update Tiket: ' . ' ' . $model->kode_pembayaran;
 $this->params['breadcrumbs'][] = ['label' => 'Tiket', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="tiket-update">

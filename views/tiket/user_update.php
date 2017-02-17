@@ -7,6 +7,8 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Tiket */
 /* @var $form yii\widgets\ActiveForm */
 
+$this->title = "Change Password";
+
 ?>
 
 <div class="tiket-form">

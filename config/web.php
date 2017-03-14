@@ -24,7 +24,9 @@ $config = [
      // 'admin' => [
      //        'class' => 'app\modules\admin\AdminModule',
      //    ],
-    
+      // 'tiket' => [
+      //       'class' => 'app\modules\tiket\Module',
+      //   ],
     ],
     'components' => [
         'request' => [

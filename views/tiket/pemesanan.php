@@ -26,6 +26,7 @@ $this->title = "Pemesanan";
 				//'layout' => 'horizontal',
 			    'method' => 'post',
 			    'action' => ['tiket/pesantiket'],
+			    'id' => $model['id'],
 
 			]); ?>
 			<?= $form->errorSummary($tiket); ?>

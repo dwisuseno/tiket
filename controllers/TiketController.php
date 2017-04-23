@@ -279,6 +279,7 @@ class TiketController extends Controller
     
     // fungsi pemesanan tiket
     public function actionPesantiket(){
+
         $model = new Tiket();
 
         if ($model->loadAll(Yii::$app->request->post())) {
@@ -286,8 +287,10 @@ class TiketController extends Controller
 
             // mengupdate data tiket untuk dikurangi - 1
             $event = Event::findOne($model->event_id);
+            
          
             $event->jumlah_tiket = $event->jumlah_tiket - 1;
+            $event->tiket_terjual = $event->tiket_terjual + 1;
             $event->save(false);
             $event->update();
 

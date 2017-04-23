@@ -65,8 +65,9 @@ $this->registerJs($search);
         'jumlah_tiket',
         'deskripsi',
         'count',
+        'tiket_terjual',
         [
-            'class' => 'yii\grid\ActionColumn',
+            'class' => 'kartik\grid\ActionColumn',
             'template' => '{save-as-new} {view} {update} {delete}',
             'buttons' => [
                 'save-as-new' => function ($url) {

@@ -30,7 +30,7 @@ class Event extends \yii\db\ActiveRecord
     {
         return [
             [['tgl_event', 'waktu_event'], 'safe'],
-            [['jumlah_tiket'], 'integer'],
+            [['jumlah_tiket', 'count'], 'integer'],
             [['deskripsi'], 'string'],
             [['file'],'file'],
             [['nama_event', 'path_gambar', 'created_at', 'updated_at'], 'string', 'max' => 255],
@@ -61,6 +61,7 @@ class Event extends \yii\db\ActiveRecord
             'path_gambar' => 'Path Gambar',
             'file' => 'Foto',
             'deskripsi' => 'Description',
+            'count' => 'Viewed',
         ];
     }
     

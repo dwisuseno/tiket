@@ -18,7 +18,7 @@ use app\models\Event;
     public function rules()
     {
         return [
-            [['id', 'jumlah_tiket'], 'integer'],
+            [['id', 'jumlah_tiket', 'count'], 'integer'],
             [['nama_event','deskripsi', 'tgl_event', 'waktu_event', 'created_at', 'updated_at'], 'safe'],
         ];
     }

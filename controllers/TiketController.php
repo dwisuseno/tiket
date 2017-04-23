@@ -252,6 +252,9 @@ class TiketController extends Controller
 
     public function actionPemesanan($id){
         $model = Event::find()->where(['id' => $id])->asArray()->one();
+        $c = Event::findOne($id);
+        $c->count = $c->count + 1;
+        $c->save();
         $tiket = new Tiket();
         $reviewContent =Review::find()->where(['event_id' => $id])->asArray()->all();
         $modelreview = new Review();

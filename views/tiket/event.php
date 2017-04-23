@@ -14,6 +14,7 @@ $this->title = "Choose Event";
 	<?php 
 		for ($i=0; $i < sizeof($model); $i++) { 
 	?>
+	
 	<?php $form = ActiveForm::begin(); ?>
 	
 
@@ -27,7 +28,8 @@ $this->title = "Choose Event";
 	        <p><?= date("g:i a", strtotime($model[$i]['waktu_event'])) ?></p>
             <p><?= $model[$i]['alamat'] ?></p>
             <p><?= $model[$i]['deskripsi'] ?></p>
-	        <p><a href="<?= Url::to(['tiket/pemesanan', 'id' => $model[$i]['id']])?>" class="btn btn-success" role="button">Pesan Tiket</a></p>
+            <?php $id = $model[$i]['id'];?>
+	        <p><a href="<?= Url::to(['tiket/pemesanan', 'id' => $model[$i]['id']])?>" class="btn btn-success" role="button" >Pesan Tiket</a></p>
 	      </div>
 	    </div>
 	  </div>

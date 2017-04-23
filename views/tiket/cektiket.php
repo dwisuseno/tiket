@@ -20,6 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
       <tr>
         <th>No</th>
         <th>Kode Pembayaran</th>
+        <th>Kode Tiket</th>
         <th>Status</th>
       </tr>
     </thead>
@@ -27,8 +28,20 @@ $this->params['breadcrumbs'][] = $this->title;
     	<?php for($i=0;$i<sizeof($model);$i++){ ?>
       <tr>
         <td><?= $i+1 ?></td>
-        <td><?= $model[$i]['kode_pembayaran']?></td>
-        <td><?php if($model[$i]['status'] == '0') echo "Belum Dibayar"; else echo "Sudah Dibaayar";?></td>
+        <td><?php echo $model[$i]['kode_pembayaran'];?>
+          </td>
+          <td><?php if($model[$i]['status'] == '0'){ 
+          echo 'Silahkan melakukan pembayaran'; }
+          else {
+          echo $model[$i]['kode_tiket'];
+        }?>
+          </td>
+        <td><?php if($model[$i]['status'] == '0'){ 
+          echo "Belum Dibayar"; }
+          else {
+          echo "Sudah Dibayar | ";
+          echo "<a target='_blank' href='index.php?r=tiket/cetaktiket&id=".$model[$i]['id']."'>Cetak Tiket</a>";
+        }?></td>
       </tr>
       <?php } ?>
     </tbody>

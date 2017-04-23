@@ -1,13 +1,10 @@
 <?php
 
-namespace app\controllers;
+namespace app\modules\tiket\controllers;
 
 use Yii;
-use app\models\Tiket;
-use app\models\Event;
-use app\models\Review;
-use app\models\Login;
-use app\models\TiketSearch;
+use app\modules\tiket\models\Tiket;
+use app\modules\tiket\models\TiketSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -20,42 +17,13 @@ class TiketController extends Controller
     public function behaviors()
     {
         return [
-            'access' => [
-                'class' => \yii\filters\AccessControl::className(),
-                //'only' => [],
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'actions' => ['updateuser','user','review','index','view','create','update','delete','saveAsNew','lihatevent','pemesanan','pesantiket','cektiket','cetaktiket'],
-                        'roles' => ['@']
-                    ],
-                    [
-                        'allow' => false
-                    ]
-                ]
-            ]
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['post'],
+                ],
+            ],
         ];
-    }
-
-    public function actionUser(){
-        $model = Login::findOne(Yii::$app->user->identity->id);
-        return $this->render('user_update', [
-            'model' => $model,
-        ]);
-
-    }
-
-    public function actionUpdateuser(){
-        $model = Login::findOne(Yii::$app->user->identity->id);
-        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
-            return $this->render('user_update', [
-                'model' => $model,
-            ]);
-        } else {
-            return $this->render('user_update', [
-                'model' => $model,
-            ]);
-        }
     }
 
     /**
@@ -122,11 +90,7 @@ class TiketController extends Controller
             $model = $this->findModel($id);
         }
 
-        if ($model->loadAll(Yii::$app->request->post())) {
-            if($model->status == 1){
-                $model->kode_tiket = $this->generateUniqueRandomString(5);
-            }
-            $model->saveAll();
+        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -241,119 +205,5 @@ class TiketController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
-    }
-
-    public function actionLihatevent(){
-        $model = Event::find()->asArray()->orderBy('tgl_event')->all();
-        return $this->render('event',[
-                'model' => $model,
-            ]);
-    }
-
-    public function actionPemesanan($id){
-        $model = Event::find()->where(['id' => $id])->asArray()->one();
-        $c = Event::findOne($id);
-        $c->count = $c->count + 1;
-        $c->save();
-        $tiket = new Tiket();
-        $reviewContent =Review::find()->where(['event_id' => $id])->asArray()->all();
-        $modelreview = new Review();
-
-        return $this->render('pemesanan',[
-                'model' => $model,
-                'tiket' => $tiket,
-                'reviewContent' => $reviewContent,
-                'modelreview' => $modelreview,
-            ]);
-    }
-
-    public function actionReview($id){
-        $model = new Review();
-
-        if ($model->load(Yii::$app->request->post())) {
-            $model->event_id = $id;
-            $model->save();   
-        }
-        return $this->redirect(['pemesanan', 'id' => $id]);
-    }
-    
-    // fungsi pemesanan tiket
-    public function actionPesantiket(){
-        $model = new Tiket();
-
-        if ($model->loadAll(Yii::$app->request->post())) {
-            $model->kode_pembayaran = $this->generateUniqueRandomString(5);
-
-            // mengupdate data tiket untuk dikurangi - 1
-            $event = Event::findOne($model->event_id);
-         
-            $event->jumlah_tiket = $event->jumlah_tiket - 1;
-            $event->save(false);
-            $event->update();
-
-            $model->event_id = (int)$model->event_id;
-            $model->user_id = Yii::$app->user->identity->id;
-            $flag = $model->save(false);
-           
-            $model->saveAll();
-            if($flag){
-                Yii::$app->session->setFlash('warning', 'Data Berhasil Disimpan');
-            } else {
-                Yii::$app->session->setFlash('warning', 'Data Gagal Disimpan');
-            }
-            
-            return $this->render('pembayaran');
-        } else {
-            
-        }
-    }
-
-    public function generateUniqueRandomString( $length) {
-            
-        $randomString = Yii::$app->getSecurity()->generateRandomString($length);
-        //$model = Tiket::findOne($randomString);
-        $model = Tiket::find()->where(['kode_tiket' => $randomString])->count(); 
-        // var_dump($model);
-        // exit();
-        if($model == "0")
-            return $randomString;
-        else
-            return $this->generateUniqueRandomString( $length);
-                
-    }
-
-    public function actionCektiket(){
-        $model = Tiket::find()->asArray()->orderBy('created_at')->where(['user_id' => Yii::$app->user->identity->id])->all();
-        // echo "<pre>";
-        // var_dump($model);
-        // echo "</pre>";
-        return $this->render('cektiket',[
-                'model' => $model,
-            ]);
-    }
-
-    public function actionCetaktiket($id){
-        $model = $this->findModel($id);
-
-        $content = $this->renderAjax('_cetaktiket', [
-            'model' => $model,
-        ]);
-
-        $pdf = new \kartik\mpdf\Pdf([
-            'mode' => \kartik\mpdf\Pdf::MODE_UTF8,
-            'format' => \kartik\mpdf\Pdf::FORMAT_A4,
-            'orientation' => \kartik\mpdf\Pdf::ORIENT_PORTRAIT,
-            'destination' => \kartik\mpdf\Pdf::DEST_BROWSER,
-            'content' => $content,
-            'cssFile' => '@vendor/kartik-v/yii2-mpdf/assets/kv-mpdf-bootstrap.min.css',
-            'cssInline' => '.kv-heading-1{font-size:18px}',
-            'options' => ['title' => \Yii::$app->name],
-            'methods' => [
-                'SetHeader' => [\Yii::$app->name],
-                'SetFooter' => ['{PAGENO}'],
-            ]
-        ]);
-
-        return $pdf->render();
     }
 }

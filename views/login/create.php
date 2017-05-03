@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Login */
 
-$this->title = 'Create Login';
-$this->params['breadcrumbs'][] = ['label' => 'Login', 'url' => ['index']];
+$this->title = 'Create User';
+$this->params['breadcrumbs'][] = ['label' => 'User', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="login-create">

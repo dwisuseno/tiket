@@ -244,7 +244,7 @@ class TiketController extends Controller
     }
 
     public function actionLihatevent(){
-        $model = Event::find()->asArray()->orderBy('tgl_event')->all();
+        $model = Event::find()->asArray()->orderBy(['tgl_event' => SORT_DESC])->all();
         return $this->render('event',[
                 'model' => $model,
             ]);
@@ -337,9 +337,11 @@ class TiketController extends Controller
 
     public function actionCetaktiket($id){
         $model = $this->findModel($id);
+        $namauser = Login::find()->where(['id' => $model->user_id])->asArray()->one();
 
         $content = $this->renderAjax('_cetaktiket', [
             'model' => $model,
+            'namauser' => $namauser,
         ]);
 
         $pdf = new \kartik\mpdf\Pdf([

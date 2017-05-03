@@ -30,7 +30,7 @@ $this->registerJs($search);
     </div>
     <?php 
     $gridColumn = [
-        ['class' => 'yii\grid\SerialColumn'],
+        ['class' => 'kartik\grid\SerialColumn'],
         [
             'class' => 'kartik\grid\ExpandRowColumn',
             'width' => '50px',
@@ -68,7 +68,7 @@ $this->registerJs($search);
         'tiket_terjual',
         [
             'class' => 'kartik\grid\ActionColumn',
-            'template' => '{save-as-new} {view} {update} {delete}',
+            'template' => '{view} {update} {delete}',
             'buttons' => [
                 'save-as-new' => function ($url) {
                     return Html::a('<span class="glyphicon glyphicon-copy"></span>', $url, ['title' => 'Save As New']);

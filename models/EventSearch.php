@@ -19,7 +19,7 @@ use app\models\Event;
     {
         return [
             [['id', 'jumlah_tiket', 'count', 'tiket_terjual'], 'integer'],
-            [['nama_event','deskripsi', 'tgl_event', 'waktu_event', 'created_at', 'updated_at'], 'safe'],
+            [['nama_event', 'alamat','deskripsi', 'tgl_event', 'waktu_event', 'created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -58,6 +58,7 @@ use app\models\Event;
         $query->andFilterWhere([
             'id' => $this->id,
             'tgl_event' => $this->tgl_event,
+            'alamat' => $this->alamat,
             'waktu_event' => $this->waktu_event,
             'jumlah_tiket' => $this->jumlah_tiket,
         ]);

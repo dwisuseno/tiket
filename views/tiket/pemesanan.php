@@ -17,16 +17,16 @@ $this->title = "Pemesanan";
 			<img style="height:200px" src="<?= $model['path_gambar'] ?>" alt="<?= $model['nama_event'] ?>">
 		</div>
 		<div class="col-md-8">
-			<font size="6"><?= $model['nama_event'] ?></font><br>
+			<font size="6"><b><?= $model['nama_event'] ?></b></font><br>
+			<font size="3"><b><?= $model['deskripsi'] ?> </b></font><br>
 			<font size="3"><?= $model['jumlah_tiket'] ?> tickets</font><br>
-			<font size="4">Date: <?= date("D, j F Y", strtotime($model['tgl_event'])) ?></font><br>
+			<font size="4"><b>Date: <?= date("D, j F Y", strtotime($model['tgl_event'])) ?></b></font><br>
 			<font size="3">Open Gate: <?= date("g:i a", strtotime($model['waktu_event'])) ?></font><br>
             <font size="3"><?= $model['alamat'] ?> </font><br>
             <?php $form = ActiveForm::begin([
 				//'layout' => 'horizontal',
 			    'method' => 'post',
 			    'action' => ['tiket/pesantiket'],
-			    'id' => $model['id'],
 
 			]); ?>
 			<?= $form->errorSummary($tiket); ?>

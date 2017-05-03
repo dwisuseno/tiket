@@ -21,11 +21,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'password')->passwordInput(['maxlength' => true, 'placeholder' => 'Password']) ?>
 
-    <?= $form->field($model, 'authKey')->textInput(['maxlength' => true, 'placeholder' => 'AuthKey']) ?>
-
-    <?= $form->field($model, 'accessToken')->textInput(['maxlength' => true, 'placeholder' => 'AccessToken']) ?>
-
-    <?php /* echo $form->field($model, 'role')->textInput(['maxlength' => true, 'placeholder' => 'Role']) */ ?>
+    <?php  echo $form->field($model, 'role')->textInput(['maxlength' => true, 'placeholder' => 'Role']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

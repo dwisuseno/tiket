@@ -31,7 +31,7 @@ $this->registerJs($search);
     </div>
     <?php 
     $gridColumn = [
-        ['class' => 'yii\grid\SerialColumn'],
+        ['class' => 'kartik\grid\SerialColumn'],
         [
             'class' => 'kartik\grid\ExpandRowColumn',
             'width' => '50px',
@@ -73,12 +73,14 @@ $this->registerJs($search);
             'value' => function($model){
                 if($model->status == 0)
                     return 'Belum Bayar';
-                else
+                else if($model->status == 1)
                     return 'Sudah Bayar';
+                else
+                    return 'Sudah Digunakan';
             }, 
         ],
         [
-            'class' => 'yii\grid\ActionColumn',
+            'class' => 'kartik\grid\ActionColumn',
             'template' => '{update} {delete}',
             'buttons' => [
                 'save-as-new' => function ($url) {

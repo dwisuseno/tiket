@@ -17149,7 +17149,7 @@
 <XPD:ATTR name="Left" type="integer">108</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">312</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">116</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">225</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">238</XPD:ATTR>
 <XPD:REF name="Model">qfFincte7E21uq9R4St7PQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="3ykeCRcCR02QvhSomNcKHwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="fhFyCb7OKk2gNYRC45Z0VgAA">
@@ -17665,7 +17665,7 @@
 <XPD:ATTR name="Name" type="string">actionSaveAsNew</XPD:ATTR>
 <XPD:REF name="Owner">qfFincte7E21uq9R4St7PQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:ATTR name="#Attributes" type="integer">9</XPD:ATTR>
+<XPD:ATTR name="#Attributes" type="integer">10</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="rB19y7c+wkWp4d87CfKDIwAA">
 <XPD:ATTR name="Name" type="string">id_event</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
@@ -17715,7 +17715,15 @@
 <XPD:REF name="Owner">qfFincte7E21uq9R4St7PQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[8]" type="UMLAttribute" guid="LLiQmRg1vUWJz29UY34fswAA">
-<XPD:ATTR name="Name" type="string">Attribute1</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">count</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="Owner">qfFincte7E21uq9R4St7PQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[9]" type="UMLAttribute" guid="YscB0vUFf0+REAHKlelmRwAA">
+<XPD:ATTR name="Name" type="string">tiket_terjual</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
 <XPD:REF name="Owner">qfFincte7E21uq9R4St7PQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>

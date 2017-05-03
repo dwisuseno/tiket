@@ -37,9 +37,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'kode_pembayaran')->textInput(['maxlength' => true, 'placeholder' => 'Kode Pembayaran']) ?>
 
-    <?= $form->field($model, 'kode_tiket')->textInput(['maxlength' => true, 'placeholder' => 'Kode Tiket']) ?>
+    <?php // $form->field($model, 'kode_tiket')->textInput(['maxlength' => true, 'placeholder' => 'Kode Tiket']) ?>
 
-    <?= $form->field($model, 'status')->dropDownList([ '0', '1', '2', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'status')->dropDownList([ '0'=>'Belum Bayar', '1'=>'Sudah Bayar', '2'=>'Telah Digunakan', ], ['prompt' => '']) ?>
 
     <?php
     // $forms = [

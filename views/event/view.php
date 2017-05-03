@@ -7,9 +7,9 @@ use kartik\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Event */
 
-$this->title = $model->id;
+$this->title = $model->nama_event;
 $this->params['breadcrumbs'][] = ['label' => 'Event', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = $model->nama_event;
 ?>
 <div class="event-view">
 
@@ -40,7 +40,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ?>
         </div>
     </div>
-
+    <div class="row">    
+        <img style="height:200px" src="<?= $model['path_gambar'] ?>" alt="<?= $model['path_gambar'] ?>">
+        
+    </div>
+    </br>
     <div class="row">
 <?php 
     $gridColumn = [

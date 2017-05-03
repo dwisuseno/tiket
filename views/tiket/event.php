@@ -27,7 +27,7 @@ $this->title = "Choose Event";
 	        <p><?= date("D, j F Y", strtotime($model[$i]['tgl_event'])) ?></p>
 	        <p><?= date("g:i a", strtotime($model[$i]['waktu_event'])) ?></p>
             <p><?= $model[$i]['alamat'] ?></p>
-            <p><?= $model[$i]['deskripsi'] ?></p>
+            
             <?php $id = $model[$i]['id'];?>
 	        <p><a href="<?= Url::to(['tiket/pemesanan', 'id' => $model[$i]['id']])?>" class="btn btn-success" role="button" >Pesan Tiket</a></p>
 	      </div>

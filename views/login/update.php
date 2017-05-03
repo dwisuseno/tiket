@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Login */
 
-$this->title = 'Update Login: ' . ' ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Login', 'url' => ['index']];
+$this->title = 'Update User: ' . ' ' . $model->username;
+$this->params['breadcrumbs'][] = ['label' => 'User', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

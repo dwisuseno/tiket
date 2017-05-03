@@ -19,13 +19,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => true, 'placeholder' => 'Username']) ?>
 
-    <?= $form->field($model, 'password')->passwordInput(['maxlength' => true, 'placeholder' => 'Password']) ?>
+    <?= $form->field($model, 'password')->textInput(['maxlength' => true, 'placeholder' => 'Password']) ?>
 
-    <?= $form->field($model, 'authKey')->textInput(['maxlength' => true, 'placeholder' => 'AuthKey']) ?>
+    <?php $form->field($model, 'authKey')->textInput(['maxlength' => true, 'placeholder' => 'AuthKey']) ?>
 
-    <?= $form->field($model, 'accessToken')->textInput(['maxlength' => true, 'placeholder' => 'AccessToken']) ?>
+    <?php $form->field($model, 'accessToken')->textInput(['maxlength' => true, 'placeholder' => 'AccessToken']) ?>
 
-    <?= $form->field($model, 'role')->textInput(['maxlength' => true, 'placeholder' => 'Role']) ?>
+    <?= $form->field($model, 'role')->dropDownList([ 'admin'=>'admin', 'user'=>'user'], ['prompt' => '']) ?>
 
     <div class="form-group">
     <?php if(Yii::$app->controller->action->id != 'save-as-new'): ?>

@@ -8,7 +8,7 @@ use yii\helpers\Html;
 use kartik\export\ExportMenu;
 use kartik\grid\GridView;
 
-$this->title = 'Login';
+$this->title = 'User';
 $this->params['breadcrumbs'][] = $this->title;
 $search = "$('.search-button').click(function(){
 	$('.search-form').toggle(1000);
@@ -22,7 +22,7 @@ $this->registerJs($search);
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Login', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Advance Search', '#', ['class' => 'btn btn-info search-button']) ?>
     </p>
     <div class="search-form" style="display:none">
@@ -30,16 +30,14 @@ $this->registerJs($search);
     </div>
     <?php 
     $gridColumn = [
-        ['class' => 'yii\grid\SerialColumn'],
+        ['class' => 'kartik\grid\SerialColumn'],
         ['attribute' => 'id', 'visible' => false],
         'username',
         'password',
-        'authKey',
-        'accessToken',
         'role',
         [
-            'class' => 'yii\grid\ActionColumn',
-            'template' => '{save-as-new} {view} {update} {delete}',
+            'class' => 'kartik\grid\ActionColumn',
+            'template' => '{view} {update} {delete}',
             'buttons' => [
                 'save-as-new' => function ($url) {
                     return Html::a('<span class="glyphicon glyphicon-copy"></span>', $url, ['title' => 'Save As New']);

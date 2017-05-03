@@ -19,6 +19,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nama_event')->textInput(['maxlength' => true, 'placeholder' => 'Nama Event']) ?>
 
+    <?= $form->field($model, 'alamat')->textInput(['maxlength' => true, 'placeholder' => 'Alamat']) ?>
+
     <?= $form->field($model, 'tgl_event')->widget(\kartik\datecontrol\DateControl::classname(), [
         'type' => \kartik\datecontrol\DateControl::FORMAT_DATE,
         'saveFormat' => 'php:Y-m-d',

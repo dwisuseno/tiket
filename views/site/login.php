@@ -36,9 +36,14 @@ $this->title = 'Login';
             <div class="col-lg-offset-1 col-lg-11">
                 <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
             </div>
+            <div class="col-lg-offset-1 col-lg-11">
+                <br>
+                <p>Jika belum terdaftar member, silahkan <a href="index.php?r=site/register">mendaftar</a></p>
+            </div>
         </div>
 
     <?php ActiveForm::end(); ?>
 
+    
     
 </div>

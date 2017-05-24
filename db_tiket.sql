@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 27 Jan 2017 pada 05.10
--- Versi Server: 5.6.17
--- PHP Version: 5.5.12
+-- Generation Time: May 24, 2017 at 12:19 PM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `db_tiket`
@@ -23,73 +23,86 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `auth_assignment`
+-- Table structure for table `auth_assignment`
 --
 
-CREATE TABLE IF NOT EXISTS `auth_assignment` (
+CREATE TABLE `auth_assignment` (
   `item_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `user_id` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` int(11) DEFAULT NULL,
-  `updated_at` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`item_name`,`user_id`)
+  `updated_at` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `auth_item`
+-- Table structure for table `auth_item`
 --
 
-CREATE TABLE IF NOT EXISTS `auth_item` (
+CREATE TABLE `auth_item` (
   `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `type` int(11) NOT NULL,
   `description` text COLLATE utf8_unicode_ci,
   `rule_name` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
   `data` text COLLATE utf8_unicode_ci,
   `created_at` int(11) DEFAULT NULL,
-  `updated_at` int(11) DEFAULT NULL,
-  PRIMARY KEY (`name`),
-  KEY `rule_name` (`rule_name`),
-  KEY `idx-auth_item-type` (`type`)
+  `updated_at` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `auth_item_child`
+-- Table structure for table `auth_item_child`
 --
 
-CREATE TABLE IF NOT EXISTS `auth_item_child` (
+CREATE TABLE `auth_item_child` (
   `parent` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `child` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `updated_at` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`parent`,`child`),
-  KEY `child` (`child`)
+  `updated_at` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `auth_rule`
+-- Table structure for table `auth_rule`
 --
 
-CREATE TABLE IF NOT EXISTS `auth_rule` (
+CREATE TABLE `auth_rule` (
   `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `data` text COLLATE utf8_unicode_ci,
   `created_at` int(11) DEFAULT NULL,
-  `updated_at` int(11) DEFAULT NULL,
-  PRIMARY KEY (`name`)
+  `updated_at` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `event`
+-- Table structure for table `counter`
 --
 
-CREATE TABLE IF NOT EXISTS `event` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `counter` (
+  `id` int(11) NOT NULL,
+  `count_home` int(11) NOT NULL DEFAULT '0',
+  `created_at` varchar(255) DEFAULT NULL,
+  `updated_at` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `counter`
+--
+
+INSERT INTO `counter` (`id`, `count_home`, `created_at`, `updated_at`) VALUES
+(1, 2, NULL, '2017-05-24 12:08:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event`
+--
+
+CREATE TABLE `event` (
+  `id` int(11) NOT NULL,
   `nama_event` varchar(255) DEFAULT NULL,
   `tgl_event` date DEFAULT NULL,
   `waktu_event` time DEFAULT NULL,
@@ -97,42 +110,38 @@ CREATE TABLE IF NOT EXISTS `event` (
   `deskripsi` longtext,
   `jumlah_tiket` int(11) DEFAULT NULL,
   `path_gambar` varchar(255) DEFAULT NULL,
+  `count` int(11) DEFAULT '0',
+  `tiket_terjual` int(11) DEFAULT '0',
   `created_at` varchar(255) DEFAULT NULL,
-  `updated_at` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+  `updated_at` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `event`
+-- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`id`, `nama_event`, `tgl_event`, `waktu_event`, `alamat`, `deskripsi`, `jumlah_tiket`, `path_gambar`, `created_at`, `updated_at`) VALUES
-(1, 'Konser Musik Jamaika', '2016-09-30', '19:15:15', 'Jalan Diponegoro', 'Acara ini sangat bagus dan penting', 173, 'uploads/foto/Konser Musik Jamaika.jpg', '2016-09-03 19:21:22', '2016-12-02 09:55:26'),
-(2, 'Konser Musik Jepang', '2016-09-30', '09:30:30', 'Jalan Ahmad Yani Surabaya', 'Tempat berada di tempat', 93, 'uploads/foto/Konser Musik Jepang.jpg', '2016-09-03 19:28:15', '2016-12-02 09:58:03'),
-(3, 'Konser Tunggal Reva Yoga', '2016-10-31', '00:30:45', 'Jalan Teknik Informatika', 'dwadwa', 121, 'uploads/foto/Konser Tunggal Reva Yoga.jpg', '2016-09-04 00:03:28', '2016-12-02 10:08:44'),
-(4, 'Konser Musik Tunggal Rizkifika', '2016-09-17', '12:45:30', 'Jalan Tenik Kimia', NULL, 178, 'uploads/foto/Konser Musik Tunggal Rizkifika.jpg', '2016-09-04 12:22:38', '2016-11-07 21:53:23'),
-(5, 'Bazaar Musik', '2016-09-30', '19:15:15', 'Jalan Orchid ', NULL, 899, 'uploads/foto/Bazaar Musik.jpg', '2016-09-04 19:42:57', '2016-09-13 23:20:01');
+INSERT INTO `event` (`id`, `nama_event`, `tgl_event`, `waktu_event`, `alamat`, `deskripsi`, `jumlah_tiket`, `path_gambar`, `count`, `tiket_terjual`, `created_at`, `updated_at`) VALUES
+(6, 'Ten Music', '2017-04-29', '20:45:30', 'Surabaya', 'Ten Music merupakan koser musik terbesar se-Jawa Timur', 197, 'uploads/foto/Ten Music.png', 20, 3, '2017-04-27 19:50:11', '2017-05-23 14:03:26'),
+(7, 'Michael Buble Konser', '2017-05-27', '19:30:00', 'Indonesia Convention Exhibition Jakarta', 'Konser Musik Michael Buble pertama di Indonesia', 500, 'uploads/foto/Michael Buble Konser.jpg', 9, 0, '2017-05-22 09:39:41', '2017-05-23 14:03:51');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis_tiket`
+-- Table structure for table `jenis_tiket`
 --
 
-CREATE TABLE IF NOT EXISTS `jenis_tiket` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `jenis_tiket` (
+  `id` int(11) NOT NULL,
   `id_tiket` int(11) DEFAULT NULL,
   `kode_jenis` varchar(10) DEFAULT NULL,
   `nama` varchar(255) DEFAULT NULL,
   `harga` int(11) DEFAULT NULL,
   `created_at` varchar(255) DEFAULT NULL,
-  `updated_at` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_tiket` (`id_tiket`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+  `updated_at` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jenis_tiket`
+-- Dumping data for table `jenis_tiket`
 --
 
 INSERT INTO `jenis_tiket` (`id`, `id_tiket`, `kode_jenis`, `nama`, `harga`, `created_at`, `updated_at`) VALUES
@@ -142,59 +151,56 @@ INSERT INTO `jenis_tiket` (`id`, `id_tiket`, `kode_jenis`, `nama`, `harga`, `cre
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `login`
+-- Table structure for table `login`
 --
 
-CREATE TABLE IF NOT EXISTS `login` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL,
   `username` varchar(30) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
   `authKey` varchar(50) DEFAULT NULL,
   `accessToken` varchar(50) DEFAULT NULL,
-  `role` varchar(10) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  `role` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `login`
+-- Dumping data for table `login`
 --
 
 INSERT INTO `login` (`id`, `username`, `password`, `authKey`, `accessToken`, `role`) VALUES
-(1, 'mursit', 'bismillah', 'mursit-12345', 'mumu2937412912zzzz', 'Admin'),
-(2, 'admin', 'admin', 'admin999', 'dwlkopdwa', 'Admin'),
-(3, 'yunan', 'user', '', '', '');
+(1, 'mursit', 'bismillah', 'mursit-12345', 'mumu2937412912zzzz', 'admin'),
+(2, 'admin', 'admin', 'admin999', 'dwlkopdwa', 'admin'),
+(3, 'yunan', 'user', '', '', 'user'),
+(4, 'adi', 'adi', NULL, NULL, 'user');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `menu`
+-- Table structure for table `menu`
 --
 
-CREATE TABLE IF NOT EXISTS `menu` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `menu` (
+  `id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL,
   `parent` int(11) DEFAULT NULL,
   `route` varchar(255) DEFAULT NULL,
   `order` int(11) DEFAULT NULL,
-  `data` blob,
-  PRIMARY KEY (`id`),
-  KEY `parent` (`parent`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `data` blob
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `migration`
+-- Table structure for table `migration`
 --
 
-CREATE TABLE IF NOT EXISTS `migration` (
+CREATE TABLE `migration` (
   `version` varchar(180) NOT NULL,
-  `apply_time` int(11) DEFAULT NULL,
-  PRIMARY KEY (`version`)
+  `apply_time` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `migration`
+-- Dumping data for table `migration`
 --
 
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
@@ -206,99 +212,251 @@ INSERT INTO `migration` (`version`, `apply_time`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tiket`
+-- Table structure for table `review`
 --
 
-CREATE TABLE IF NOT EXISTS `tiket` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `review` (
+  `id` int(11) NOT NULL,
   `event_id` int(11) DEFAULT NULL,
-  `kode_pembayaran` varchar(255) DEFAULT NULL,
-  `kode_tiket` varchar(255) DEFAULT NULL,
-  `status` enum('0','1','2') DEFAULT '0',
-  `created_at` varchar(255) DEFAULT NULL,
-  `updated_at` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `event_id` (`event_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
+  `isi` longtext,
+  `created_at` varchar(50) DEFAULT NULL,
+  `updated_at` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tiket`
+-- Dumping data for table `review`
 --
 
-INSERT INTO `tiket` (`id`, `event_id`, `kode_pembayaran`, `kode_tiket`, `status`, `created_at`, `updated_at`) VALUES
-(3, 4, 'Hm1nB', NULL, '0', '2016-09-22 01:38:06', '2016-09-22 01:38:06'),
-(6, 4, '28iSA', NULL, '0', '2016-09-22 02:22:29', '2016-09-22 02:22:29'),
-(10, 4, '3o6Og', NULL, '0', '2016-10-18 00:45:52', '2016-10-18 00:45:52'),
-(13, 4, 'nCwzi', NULL, '0', '2016-11-07 17:33:14', '2016-11-07 17:33:14'),
-(14, 4, 'L2j_0', NULL, '0', '2016-11-07 17:33:23', '2016-11-07 17:33:23'),
-(19, 4, 'ZTAtf', NULL, '0', '2016-11-07 17:55:33', '2016-11-07 17:55:33'),
-(26, 1, 'ZuaUt', NULL, '0', '2016-11-07 21:53:11', '2016-11-07 21:53:11'),
-(27, 1, '9Y5Ug', NULL, '0', '2016-11-07 21:53:19', '2016-11-07 21:53:19'),
-(28, 4, 'Pw8wh', NULL, '0', '2016-11-07 21:53:24', '2016-11-07 21:53:24'),
-(31, 1, '0MSS9', NULL, '0', '2016-12-02 09:55:27', '2016-12-02 09:55:27');
+INSERT INTO `review` (`id`, `event_id`, `isi`, `created_at`, `updated_at`) VALUES
+(2, 6, 'Event yang bagus', '2017-05-19 15:30:44', '2017-05-19 15:30:44'),
+(3, 6, 'Buruan beli tiiketnya', '2017-05-19 15:33:00', '2017-05-19 15:33:00');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `tiket`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tiket` (
+  `id` int(11) NOT NULL,
+  `event_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `kode_pembayaran` varchar(255) DEFAULT NULL,
+  `kode_tiket` varchar(255) DEFAULT NULL,
+  `status` enum('0','1','2') DEFAULT '0',
+  `created_at` varchar(255) DEFAULT NULL,
+  `updated_at` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tiket`
+--
+
+INSERT INTO `tiket` (`id`, `event_id`, `user_id`, `kode_pembayaran`, `kode_tiket`, `status`, `created_at`, `updated_at`) VALUES
+(48, 6, 3, 'V2dP7', 'tHAlC', '1', '2017-04-28 06:24:12', '2017-05-02 15:17:28'),
+(49, 6, 2, 'TDnq5', NULL, '0', '2017-04-28 06:25:09', '2017-04-28 06:25:09'),
+(50, 6, 3, 'zaP03', NULL, '0', '2017-05-03 08:26:15', '2017-05-03 08:26:15');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
   `username` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `auth_key` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password_reset_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `status` smallint(6) NOT NULL DEFAULT '10',
-  `created_at` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+  `created_at` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`) VALUES
 (1, 'mursit', '', '', NULL, '', 10, NULL);
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Indexes for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `auth_assignment`
+-- Indexes for table `auth_assignment`
+--
+ALTER TABLE `auth_assignment`
+  ADD PRIMARY KEY (`item_name`,`user_id`);
+
+--
+-- Indexes for table `auth_item`
+--
+ALTER TABLE `auth_item`
+  ADD PRIMARY KEY (`name`),
+  ADD KEY `rule_name` (`rule_name`),
+  ADD KEY `idx-auth_item-type` (`type`);
+
+--
+-- Indexes for table `auth_item_child`
+--
+ALTER TABLE `auth_item_child`
+  ADD PRIMARY KEY (`parent`,`child`),
+  ADD KEY `child` (`child`);
+
+--
+-- Indexes for table `auth_rule`
+--
+ALTER TABLE `auth_rule`
+  ADD PRIMARY KEY (`name`);
+
+--
+-- Indexes for table `counter`
+--
+ALTER TABLE `counter`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `event`
+--
+ALTER TABLE `event`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `jenis_tiket`
+--
+ALTER TABLE `jenis_tiket`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_tiket` (`id_tiket`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `parent` (`parent`);
+
+--
+-- Indexes for table `migration`
+--
+ALTER TABLE `migration`
+  ADD PRIMARY KEY (`version`);
+
+--
+-- Indexes for table `review`
+--
+ALTER TABLE `review`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `event_id` (`event_id`);
+
+--
+-- Indexes for table `tiket`
+--
+ALTER TABLE `tiket`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `event_id` (`event_id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `counter`
+--
+ALTER TABLE `counter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `event`
+--
+ALTER TABLE `event`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `jenis_tiket`
+--
+ALTER TABLE `jenis_tiket`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `review`
+--
+ALTER TABLE `review`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `tiket`
+--
+ALTER TABLE `tiket`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `auth_assignment`
 --
 ALTER TABLE `auth_assignment`
   ADD CONSTRAINT `auth_assignment_ibfk_1` FOREIGN KEY (`item_name`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `auth_item`
+-- Constraints for table `auth_item`
 --
 ALTER TABLE `auth_item`
   ADD CONSTRAINT `auth_item_ibfk_1` FOREIGN KEY (`rule_name`) REFERENCES `auth_rule` (`name`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `auth_item_child`
+-- Constraints for table `auth_item_child`
 --
 ALTER TABLE `auth_item_child`
   ADD CONSTRAINT `auth_item_child_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `auth_item_child_ibfk_2` FOREIGN KEY (`child`) REFERENCES `auth_item` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `jenis_tiket`
+-- Constraints for table `jenis_tiket`
 --
 ALTER TABLE `jenis_tiket`
   ADD CONSTRAINT `jenis_tiket_ibfk_1` FOREIGN KEY (`id_tiket`) REFERENCES `tiket` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `menu`
+-- Constraints for table `menu`
 --
 ALTER TABLE `menu`
   ADD CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `menu` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `tiket`
+-- Constraints for table `review`
+--
+ALTER TABLE `review`
+  ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tiket`
 --
 ALTER TABLE `tiket`
   ADD CONSTRAINT `tiket_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;

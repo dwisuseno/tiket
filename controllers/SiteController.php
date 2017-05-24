@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Counter;
 
 class SiteController extends Controller
 {
@@ -62,6 +63,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $model = Counter::findOne(1);
+        $model->count_home = $model->count_home + 1;
+        $model->save();
         return $this->render('index');
     }
 

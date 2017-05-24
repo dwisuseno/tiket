@@ -335,6 +335,7 @@ class TiketController extends Controller
             ]);
     }
 
+    //FUngsi cetak tiket
     public function actionCetaktiket($id){
         $model = $this->findModel($id);
         $namauser = Login::find()->where(['id' => $model->user_id])->asArray()->one();

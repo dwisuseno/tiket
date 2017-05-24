@@ -13,24 +13,6 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
     public $accessToken;
     public $role;
 
-    // private static $users = [
-    //     '100' => [
-    //         'id' => '100',
-    //         'username' => 'admin',
-    //         'password' => 'admin',
-    //         'authKey' => 'test100key',
-    //         'accessToken' => '100-token',
-    //     ],
-    //     '101' => [
-    //         'id' => '101',
-    //         'username' => 'demo',
-    //         'password' => 'demo',
-    //         'authKey' => 'test101key',
-    //         'accessToken' => '101-token',
-    //     ],
-    // ];
-
-
     /**
      * @inheritdoc
      */
@@ -42,25 +24,6 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
         }
         return null;
         //return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public static function findIdentityByAccessToken($token, $type = null)
-    {
-        $user = Login::find()->where(['accessToken'=>$token])->one(); 
-        if(count($user)){
-            return new static($user);
-        }
-        return null;
-        // foreach (self::$users as $user) {
-        //     if ($user['accessToken'] === $token) {
-        //         return new static($user);
-        //     }
-        // }
-
-        // return null;
     }
 
     /**
@@ -78,6 +41,25 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
         return null;
         // foreach (self::$users as $user) {
         //     if (strcasecmp($user['username'], $username) === 0) {
+        //         return new static($user);
+        //     }
+        // }
+
+        // return null;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        $user = Login::find()->where(['accessToken'=>$token])->one(); 
+        if(count($user)){
+            return new static($user);
+        }
+        return null;
+        // foreach (self::$users as $user) {
+        //     if ($user['accessToken'] === $token) {
         //         return new static($user);
         //     }
         // }
@@ -119,4 +101,21 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
     {
         return $this->password === $password;
     }
+
+    // private static $users = [
+    //     '100' => [
+    //         'id' => '100',
+    //         'username' => 'admin',
+    //         'password' => 'admin',
+    //         'authKey' => 'test100key',
+    //         'accessToken' => '100-token',
+    //     ],
+    //     '101' => [
+    //         'id' => '101',
+    //         'username' => 'demo',
+    //         'password' => 'demo',
+    //         'authKey' => 'test101key',
+    //         'accessToken' => '101-token',
+    //     ],
+    // ];
 }

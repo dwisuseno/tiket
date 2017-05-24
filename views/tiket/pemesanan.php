@@ -13,10 +13,10 @@ $this->title = "Pemesanan";
 
 <div class="site-index">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-5">
 			<img style="height:200px" src="<?= $model['path_gambar'] ?>" alt="<?= $model['nama_event'] ?>">
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-7">
 			<font size="6"><b><?= $model['nama_event'] ?></b></font><br>
 			<font size="3"><b><?= $model['deskripsi'] ?> </b></font><br>
 			<font size="3"><?= $model['jumlah_tiket'] ?> tickets</font><br>

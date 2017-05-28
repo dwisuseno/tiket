@@ -11,19 +11,13 @@ use kartik\grid\GridView;
 function nama($model)
 {
     $username = Event::find()->where(['id' => $model->event_id])->asArray()->one();
-    //var_dump($username);
     return $username['nama_event'];
 }
-
 function user($model)
 {
     $user = Login::find()->where(['id' => $model->user_id])->asArray()->one();
-    //var_dump($username);
     return $user['username'];
 }
-
-
-
 $this->title = nama($model);
 $this->params['breadcrumbs'][] = ['label' => 'Tiket', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -35,7 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
             <h2><?= 'Tiket:'.' '. Html::encode($this->title) ?></h2>
         </div>
     </div>
-
     <div class="row">
 <?php 
     $gridColumn = [
@@ -55,7 +48,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Status',
                 'value' => 'Lunas'
         ],
-        //'status',
     ];
     echo DetailView::widget([
         'model' => $model,
@@ -63,9 +55,6 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); 
 ?>
     </div>
-    
     <div class="row">
-
-
     </div>
 </div>

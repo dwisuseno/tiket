@@ -29,7 +29,7 @@ $this->title = "Choose Event";
             <p><?= $model[$i]['alamat'] ?></p>
             
             <?php $id = $model[$i]['id'];?>
-	        <p><a href="<?= Url::to(['tiket/pemesanan', 'id' => $model[$i]['id']])?>" class="btn btn-success" role="button" >Pesan Tiket</a></p>
+	        <p><a href="<?= Url::to(['tiket/pemesanan', 'id' => $model[$i]['id']])?>" class="btn btn-success" role="button" >Detail Event</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -37,3 +37,4 @@ $this->title = "Choose Event";
 	 <?php } ?>
 	</div>
 </div>
+

@@ -16,9 +16,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row">
         <div class="col-sm-8">
             <h2><?= 'Login'.' '. Html::encode($this->title) ?></h2>
-        </div>
+        </div><!--
         <div class="col-sm-4" style="margin-top: 15px">
-<?=             
+            <?=             
              Html::a('<i class="fa glyphicon glyphicon-hand-up"></i> ' . 'PDF', 
                 ['pdf', 'id' => $model->id],
                 [
@@ -38,9 +38,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ])
             ?>
-        </div>
+        </div>-->
     </div>
-
     <div class="row">
 <?php 
     $gridColumn = [

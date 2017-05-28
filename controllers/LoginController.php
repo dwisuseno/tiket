@@ -28,7 +28,7 @@ class LoginController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view', 'create', 'update', 'delete', 'pdf', 'save-as-new'],
+                        'actions' => ['updateuser','user','index', 'view', 'create', 'update', 'delete', 'pdf', 'save-as-new'],
                         'roles' => ['@']
                     ],
                     [
@@ -37,6 +37,26 @@ class LoginController extends Controller
                 ]
             ]
         ];
+    }
+
+    public function actionUser(){
+        $model = Login::findOne(Yii::$app->user->identity->id);
+        return $this->render('user_update', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionUpdateuser(){
+        $model = Login::findOne(Yii::$app->user->identity->id);
+        if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
+            return $this->render('user_update', [
+                'model' => $model,
+            ]);
+        } else {
+            return $this->render('user_update', [
+                'model' => $model,
+            ]);
+        }
     }
 
     /**

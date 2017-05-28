@@ -22,7 +22,7 @@ class TiketController extends Controller
         return [
             'access' => [
                 'class' => \yii\filters\AccessControl::className(),
-                //'only' => [],
+                //'only' => ['lihatevent'],
                 'rules' => [
                     [
                         'allow' => true,
@@ -30,7 +30,9 @@ class TiketController extends Controller
                         'roles' => ['@']
                     ],
                     [
-                        'allow' => false
+                        'allow' => true,
+                        'actions' => ['lihatevent'],
+                        'roles' => ['?'],
                     ]
                 ]
             ]
@@ -42,7 +44,6 @@ class TiketController extends Controller
         return $this->render('user_update', [
             'model' => $model,
         ]);
-
     }
 
     public function actionUpdateuser(){

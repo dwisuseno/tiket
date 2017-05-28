@@ -56,7 +56,6 @@ $this->registerJs($search);
             'type' => GridView::TYPE_PRIMARY,
             'heading' => '<span class="glyphicon glyphicon-book"></span>  ' . Html::encode($this->title),
         ],
-        // your toolbar can include the additional full export menu
         'toolbar' => [
             '{export}',
             ExportMenu::widget([
@@ -74,5 +73,4 @@ $this->registerJs($search);
             ]) ,
         ],
     ]); ?>
-
 </div>

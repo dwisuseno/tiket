@@ -5,10 +5,6 @@ use yii\widgets\ActiveForm;
 use yii\helpers\url;
 
 $this->title = "Pemesanan";
-// echo "<pre>";
-// var_dump(Yii::$app->user->identity);
-// echo "</pre>";
-// exit();
 ?>
 
 <div class="site-index">
@@ -34,24 +30,23 @@ $this->title = "Pemesanan";
 			<?= $form->field($tiket, 'id', ['template' => '{input}'])->textInput(['style' => 'display:none']); ?>
 			<?= $form->field($tiket, 'event_id', ['template' => '{input}'])->textInput(['style' => 'display:none','value'=>$model['id']]); ?>
 			<div class="row">
-				<div class="col-md-3">
-					
-					
+				<div class="col-md-3">		
 				</div>
 				<div class="col-md-3 col-lg-3 col-sm-3">
 					<?php //echo $form->field($tiket, 'jumlah_tiket')->textInput(['placeholder' => 'Jumlah Tiket', 'type' => 'number']); ?>
-				</div>
-				
-				
+				</div>	
 			</div>
-			
 			<div class="row">
 				<div class="col-md-6">
-					<?= Html::submitButton('Reserve Ticket', ['class' => 'btn btn-success']) ?>
+					<?php 
+					if($model['tgl_event'] <= date("Y-m-d", time()))
+					{
+						Html::submitButton('Pesan TIket Sekarang', ['class' => 'btn btn-success']); 	
+					}
+					?>
 					<a href="index.php?r=tiket/lihatevent" class="btn btn-primary">Back</a>
 				</div>
 			</div>
-			
 			<?php ActiveForm::end(); ?>
 		</div>
 	</div>
@@ -87,8 +82,6 @@ $this->title = "Pemesanan";
 			  			<td>1 Ticket</td>
 			  		</tr>
 			  	</table>
-			    
-			    
 			  </div>
 			</div>
 		</div>
@@ -101,10 +94,8 @@ $this->title = "Pemesanan";
 			  </div>
 			  <div class="panel-body">
 			    <?php $form = ActiveForm::begin([
-					//'layout' => 'horizontal',
 				    'method' => 'post',
 				    'action' => ['tiket/review', 'id' => $model['id']],
-
 				]); ?>
 			    <div class="row">
 					<div class="col-md-12">
@@ -116,8 +107,7 @@ $this->title = "Pemesanan";
 						<?= Html::submitButton('Review', ['class' => 'btn btn-primary']) ?>
 					</div>
 				</div>
-				<?php ActiveForm::end(); ?>
-				<br><br>
+				<?php ActiveForm::end(); ?><br><br>
 				<div  class="table-responsive">          
 				  <table id='test' class="table">
 				    <thead>

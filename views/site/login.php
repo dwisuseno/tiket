@@ -43,7 +43,5 @@ $this->title = 'Login';
         </div>
 
     <?php ActiveForm::end(); ?>
-
-    
     
 </div>

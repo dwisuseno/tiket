@@ -42,7 +42,8 @@ AppAsset::register($this);
             'activateParents' => true,
             'items' => [
                 ['label' => 'Beranda', 'url' => ['/site']],
-                ['label' => 'Tentang', 'url' => ['site/about']],
+                ['label' => 'Event', 'url' => ['/tiket/lihatevent']],
+                //['label' => 'Tentang', 'url' => ['site/about']],
                 Yii::$app->user->isGuest ? (
                     ['label' => 'Login', 'url' => ['/site/login']]
                 ) : (
@@ -64,12 +65,12 @@ AppAsset::register($this);
             //'activateParents' => true,
             'items' => [
                 ['label' => 'Beranda', 'url' => ['/site']],
-                ['label' => 'Event', 'url' => ['/event']],
+                ['label' => 'Event  Detail', 'url' => ['/event']],
                 ['label' => 'Tiket Pemesanan', 'url' => ['/tiket']],
-                ['label' => 'Gallery', 'url' => ['/tiket/lihatevent']],
-                ['label' => 'Tentang', 'url' => ['site/about']],
+                ['label' => 'Event', 'url' => ['/tiket/lihatevent']],
+                //['label' => 'Tentang', 'url' => ['site/about']],
                 ['label' => 'User', 'url' => ['/login']],
-                ['label' => 'User Setting', 'url' => ['/tiket/user']],
+                ['label' => 'User Setting', 'url' => ['/login/user']],
                 Yii::$app->user->isGuest ? (
                     ['label' => 'Login', 'url' => ['/site/login']]
                     
@@ -91,10 +92,10 @@ AppAsset::register($this);
             //'activateParents' => true,
             'items' => [
                 ['label' => 'Beranda', 'url' => ['/site']],
-                ['label' => 'Gallery', 'url' => ['/tiket/lihatevent']],
-                ['label' => 'Tentang', 'url' => ['site/about']],
+                ['label' => 'Event', 'url' => ['/tiket/lihatevent']],
+                //['label' => 'Tentang', 'url' => ['site/about']],
                 ['label' => 'Tiket Anda', 'url' => ['/tiket/cektiket']],
-                ['label' => 'User Setting', 'url' => ['/tiket/user']],
+                ['label' => 'User Setting', 'url' => ['/login/user']],
                 Yii::$app->user->isGuest ? (
                     ['label' => 'Login', 'url' => ['/site/login']]
                     

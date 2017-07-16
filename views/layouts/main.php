@@ -69,6 +69,7 @@ AppAsset::register($this);
                 ['label' => 'Tiket Pemesanan', 'url' => ['/tiket']],
                 ['label' => 'Event', 'url' => ['/tiket/lihatevent']],
                 //['label' => 'Tentang', 'url' => ['site/about']],
+                 ['label' => 'Hasil Likert', 'url' => ['/likert']],
                 ['label' => 'User', 'url' => ['/login']],
                 ['label' => 'User Setting', 'url' => ['/login/user']],
                 Yii::$app->user->isGuest ? (

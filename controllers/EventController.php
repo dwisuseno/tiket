@@ -239,6 +239,6 @@ class EventController extends Controller
 
     public function add()
     {
-        
+        return;
     }
 }

@@ -1,14 +1,11 @@
 <?php
-
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\TiketSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-
 use yii\helpers\Html;
 use kartik\export\ExportMenu;
 use kartik\grid\GridView;
 use app\models\Login;
-
 $this->title = 'Tiket';
 $this->params['breadcrumbs'][] = $this->title;
 $search = "$('.search-button').click(function(){
@@ -18,10 +15,8 @@ $search = "$('.search-button').click(function(){
 $this->registerJs($search);
 ?>
 <div class="tiket-index">
-
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
     <p>
         <?= Html::a('Create Tiket', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Advance Search', '#', ['class' => 'btn btn-info search-button']) ?>
@@ -118,5 +113,4 @@ $this->registerJs($search);
             ]) ,
         ],
     ]); ?>
-
 </div>

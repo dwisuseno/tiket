@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -16,20 +15,15 @@ use yii\widgets\ActiveForm;
     ]
 ]);
 ?>
-
 <div class="event-form">
-
    <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
-
     <?= $form->errorSummary($model); ?>
-
     <?= $form->field($model, 'id', ['template' => '{input}'])->textInput(['style' => 'display:none']); ?>
     <div class="row">
         <div class="col-md-8">
             <?= $form->field($model, 'nama_event')->textInput(['maxlength' => true, 'placeholder' => 'Nama Event']) ?>
         </div>
     </div>
-    
     <div class="row">
         <div class="col-md-4">
             <?= $form->field($model, 'tgl_event')->widget(\kartik\datecontrol\DateControl::classname(), [
@@ -73,9 +67,7 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'deskripsi')->textArea(['rows' => '6','placeholder' => 'Description']) ?>
         </div>
     </div>
-   
     <?= $form->field($model, 'file') -> fileInput(); ?>
-
     <div class="form-group">
     <?php if(Yii::$app->controller->action->id != 'save-as-new'): ?>
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
@@ -85,9 +77,7 @@ use yii\widgets\ActiveForm;
     <?php endif; ?>
         <?= Html::a(Yii::t('app', 'Cancel'), Yii::$app->request->referrer , ['class'=> 'btn btn-danger']) ?>
     </div>
-
     <?php ActiveForm::end(); ?>
-
 </div>
 
 

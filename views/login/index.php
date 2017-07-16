@@ -1,13 +1,10 @@
 <?php
-
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\LoginSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-
 use yii\helpers\Html;
 use kartik\export\ExportMenu;
 use kartik\grid\GridView;
-
 $this->title = 'User';
 $this->params['breadcrumbs'][] = $this->title;
 $search = "$('.search-button').click(function(){
@@ -20,7 +17,6 @@ $this->registerJs($search);
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
     <p>
         <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Advance Search', '#', ['class' => 'btn btn-info search-button']) ?>

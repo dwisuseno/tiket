@@ -1,11 +1,9 @@
 <?php
-
 use yii\helpers\Html;
 use app\models\Login;
 use app\models\Event;
 use yii\widgets\DetailView;
 use kartik\grid\GridView;
-
 /* @var $this yii\web\View */
 /* @var $model app\models\Tiket */
 function nama($model)
@@ -23,7 +21,6 @@ $this->params['breadcrumbs'][] = ['label' => 'Tiket', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tiket-view">
-
     <div class="row">
         <div class="col-sm-9">
             <h2><?= 'Tiket:'.' '. Html::encode($this->title) ?></h2>
@@ -41,7 +38,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Nama User',
                 'value' => user($model)
         ],
-        //'user_id',
         'kode_pembayaran',
         'kode_tiket',
         [

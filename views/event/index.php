@@ -17,10 +17,8 @@ $search = "$('.search-button').click(function(){
 $this->registerJs($search);
 ?>
 <div class="event-index">
-
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-    
     <p>
         <?= Html::a('Create Event', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Advance Search', '#', ['class' => 'btn btn-info search-button']) ?>
@@ -69,8 +67,7 @@ $this->registerJs($search);
         [
             'class' => 'kartik\grid\ActionColumn',
             'template' => '{view} {update} {delete}',
-            'buttons' => [
-                'save-as-new' => function ($url) {
+            'buttons' => ['save-as-new' => function ($url) {
                     return Html::a('<span class="glyphicon glyphicon-copy"></span>', $url, ['title' => 'Save As New']);
                 },
             ],
@@ -87,7 +84,6 @@ $this->registerJs($search);
             'type' => GridView::TYPE_PRIMARY,
             'heading' => '<span class="glyphicon glyphicon-book"></span>  ' . Html::encode($this->title),
         ],
-        // your toolbar can include the additional full export menu
         'toolbar' => [
             '{export}',
             ExportMenu::widget([
@@ -105,5 +101,4 @@ $this->registerJs($search);
             ]) ,
         ],
     ]); ?>
-
 </div>

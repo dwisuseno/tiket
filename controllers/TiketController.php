@@ -26,7 +26,7 @@ class TiketController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['updateuser','user','review','index','view','create','update','delete','saveAsNew','lihatevent','pemesanan','pesantiket','cektiket','cetaktiket'],
+                        'actions' => ['updateuser','user','review','index','view','create','update','delete','saveAsNew','lihatevent','preview','pesantiket','cektiket','cetaktiket'],
                         'roles' => ['@']
                     ],
                     [
@@ -251,7 +251,7 @@ class TiketController extends Controller
             ]);
     }
 
-    public function actionPemesanan($id){
+    public function actionPreview($id){
         $model = Event::find()->where(['id' => $id])->asArray()->one();
         $c = Event::findOne($id);
         $c->count = $c->count + 1;
@@ -307,8 +307,7 @@ class TiketController extends Controller
             }
             
             return $this->render('pembayaran');
-        } else {
-            
+        } else {    
         }
     }
 

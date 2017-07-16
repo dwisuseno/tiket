@@ -1,12 +1,9 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\url;
-
 $this->title = "Pemesanan";
 ?>
-
 <div class="site-index">
 	<div class="row">
 		<div class="col-md-5">
@@ -26,7 +23,6 @@ $this->title = "Pemesanan";
 
 			]); ?>
 			<?= $form->errorSummary($tiket); ?>
-
 			<?= $form->field($tiket, 'id', ['template' => '{input}'])->textInput(['style' => 'display:none']); ?>
 			<?= $form->field($tiket, 'event_id', ['template' => '{input}'])->textInput(['style' => 'display:none','value'=>$model['id']]); ?>
 			<div class="row">
@@ -39,9 +35,9 @@ $this->title = "Pemesanan";
 			<div class="row">
 				<div class="col-md-6">
 					<?php 
-					if($model['tgl_event'] <= date("Y-m-d", time()))
+					if(time() - strtotime($model['tgl_event']) < 0)
 					{
-						Html::submitButton('Pesan TIket Sekarang', ['class' => 'btn btn-success']); 	
+						echo Html::submitButton('Pesan TIket Sekarang', ['class' => 'btn btn-success']); 	
 					}
 					?>
 					<a href="index.php?r=tiket/lihatevent" class="btn btn-primary">Back</a>

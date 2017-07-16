@@ -24,7 +24,7 @@ class EventController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index','view','create','update','delete','saveAsNew'],
+                        'actions' => ['index','view','create','update','delete','saveAsNew', 'preview'],
                         'roles' => ['@']
                     ],
                     [

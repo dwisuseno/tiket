@@ -805,3 +805,383 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1500282617.094
     'REQUEST_TIME' => 1500282617
 ]
+2017-07-17 11:30:11 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'public' (T_PUBLIC)' in C:\xampp\htdocs\tiket\controllers\TiketController.php:3
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-07-17 11:30:11 [::1][-][-][info][application] $_GET = [
+    'r' => 'tiket/lihatevent'
+]
+
+$_COOKIE = [
+    'syamrabu' => 'a2d0kh9rn0mn6eelgccrk5eq06'
+    'PHPSESSID' => '0ra1a2lp5jj6o36siucnqfrop0'
+    '_csrf' => 'f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1\";}'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket%2Fpesantiket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6,ms;q=0.4'
+    'HTTP_COOKIE' => 'syamrabu=a2d0kh9rn0mn6eelgccrk5eq06; PHPSESSID=0ra1a2lp5jj6o36siucnqfrop0; _csrf=f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1%22%3B%7D; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Broadcom\\Broadcom 802.11;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Python27;C:\\Python27\\Scripts;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\polyspace\\bin;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin\\;C:\\Program Files\\IVI Foundation\\VISA\\Win64\\Bin\\;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin;C:\\Program Files\\010 Editor;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Yunan\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Yunan\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/tiket/web/index.php'
+    'REMOTE_PORT' => '55385'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Flihatevent'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Flihatevent'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1500283811.282
+    'REQUEST_TIME' => 1500283811
+]
+2017-07-17 11:30:35 [::1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Namespace declaration statement has to be the very first statement in the script' in C:\xampp\htdocs\tiket\controllers\TiketController.php:19
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-07-17 11:30:35 [::1][-][-][info][application] $_GET = [
+    'r' => 'tiket/lihatevent'
+]
+
+$_COOKIE = [
+    'syamrabu' => 'a2d0kh9rn0mn6eelgccrk5eq06'
+    'PHPSESSID' => '0ra1a2lp5jj6o36siucnqfrop0'
+    '_csrf' => 'f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1\";}'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket%2Fpesantiket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6,ms;q=0.4'
+    'HTTP_COOKIE' => 'syamrabu=a2d0kh9rn0mn6eelgccrk5eq06; PHPSESSID=0ra1a2lp5jj6o36siucnqfrop0; _csrf=f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1%22%3B%7D; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Broadcom\\Broadcom 802.11;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Python27;C:\\Python27\\Scripts;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\polyspace\\bin;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin\\;C:\\Program Files\\IVI Foundation\\VISA\\Win64\\Bin\\;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin;C:\\Program Files\\010 Editor;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Yunan\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Yunan\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/tiket/web/index.php'
+    'REMOTE_PORT' => '55386'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Flihatevent'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Flihatevent'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1500283835.03
+    'REQUEST_TIME' => 1500283835
+]
+2017-07-17 11:31:17 [::1][2][0ra1a2lp5jj6o36siucnqfrop0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function app\controllers\hasil_likert()' in C:\xampp\htdocs\tiket\controllers\TiketController.php:270
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-07-17 11:31:16 [::1][2][0ra1a2lp5jj6o36siucnqfrop0][info][application] $_GET = [
+    'r' => 'tiket/lihatevent'
+]
+
+$_COOKIE = [
+    'syamrabu' => 'a2d0kh9rn0mn6eelgccrk5eq06'
+    'PHPSESSID' => '0ra1a2lp5jj6o36siucnqfrop0'
+    '_csrf' => 'f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1\";}'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket%2Fpesantiket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6,ms;q=0.4'
+    'HTTP_COOKIE' => 'syamrabu=a2d0kh9rn0mn6eelgccrk5eq06; PHPSESSID=0ra1a2lp5jj6o36siucnqfrop0; _csrf=f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1%22%3B%7D; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Broadcom\\Broadcom 802.11;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Python27;C:\\Python27\\Scripts;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\polyspace\\bin;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin\\;C:\\Program Files\\IVI Foundation\\VISA\\Win64\\Bin\\;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin;C:\\Program Files\\010 Editor;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Yunan\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Yunan\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/tiket/web/index.php'
+    'REMOTE_PORT' => '55389'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Flihatevent'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Flihatevent'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1500283876.988
+    'REQUEST_TIME' => 1500283876
+]
+2017-07-17 11:31:33 [::1][2][0ra1a2lp5jj6o36siucnqfrop0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function app\controllers\hasil_likert()' in C:\xampp\htdocs\tiket\controllers\TiketController.php:270
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-07-17 11:31:33 [::1][2][0ra1a2lp5jj6o36siucnqfrop0][info][application] $_GET = [
+    'r' => 'tiket/lihatevent'
+]
+
+$_COOKIE = [
+    'syamrabu' => 'a2d0kh9rn0mn6eelgccrk5eq06'
+    'PHPSESSID' => '0ra1a2lp5jj6o36siucnqfrop0'
+    '_csrf' => 'f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1\";}'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket%2Fpesantiket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6,ms;q=0.4'
+    'HTTP_COOKIE' => 'syamrabu=a2d0kh9rn0mn6eelgccrk5eq06; PHPSESSID=0ra1a2lp5jj6o36siucnqfrop0; _csrf=f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1%22%3B%7D; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Broadcom\\Broadcom 802.11;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Python27;C:\\Python27\\Scripts;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\polyspace\\bin;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin\\;C:\\Program Files\\IVI Foundation\\VISA\\Win64\\Bin\\;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin;C:\\Program Files\\010 Editor;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Yunan\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Yunan\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/tiket/web/index.php'
+    'REMOTE_PORT' => '55391'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Flihatevent'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Flihatevent'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1500283893.583
+    'REQUEST_TIME' => 1500283893
+]
+2017-07-17 11:31:40 [::1][2][0ra1a2lp5jj6o36siucnqfrop0][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function app\controllers\hasil_likert()' in C:\xampp\htdocs\tiket\controllers\TiketController.php:270
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-07-17 11:31:40 [::1][2][0ra1a2lp5jj6o36siucnqfrop0][info][application] $_GET = [
+    'r' => 'tiket/lihatevent'
+]
+
+$_COOKIE = [
+    'syamrabu' => 'a2d0kh9rn0mn6eelgccrk5eq06'
+    'PHPSESSID' => '0ra1a2lp5jj6o36siucnqfrop0'
+    '_csrf' => 'f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1\";}'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket%2Fpesantiket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6,ms;q=0.4'
+    'HTTP_COOKIE' => 'syamrabu=a2d0kh9rn0mn6eelgccrk5eq06; PHPSESSID=0ra1a2lp5jj6o36siucnqfrop0; _csrf=f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1%22%3B%7D; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Broadcom\\Broadcom 802.11;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Python27;C:\\Python27\\Scripts;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\polyspace\\bin;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin\\;C:\\Program Files\\IVI Foundation\\VISA\\Win64\\Bin\\;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin;C:\\Program Files\\010 Editor;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Yunan\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Yunan\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/tiket/web/index.php'
+    'REMOTE_PORT' => '55394'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Flihatevent'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Flihatevent'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1500283900.428
+    'REQUEST_TIME' => 1500283900
+]
+2017-07-17 11:37:49 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'public' (T_PUBLIC)' in C:\xampp\htdocs\tiket\controllers\TiketController.php:16
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-07-17 11:37:49 [::1][-][-][info][application] $_GET = [
+    'r' => 'tiket/lihatevent'
+]
+
+$_COOKIE = [
+    'syamrabu' => 'a2d0kh9rn0mn6eelgccrk5eq06'
+    'PHPSESSID' => '0ra1a2lp5jj6o36siucnqfrop0'
+    '_csrf' => 'f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1\";}'
+    '_identity' => '5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa:2:{i:0;s:9:\"_identity\";i:1;s:22:\"[2,\"admin999\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/tiket/web/index.php?r=tiket%2Fpesantiket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6,ms;q=0.4'
+    'HTTP_COOKIE' => 'syamrabu=a2d0kh9rn0mn6eelgccrk5eq06; PHPSESSID=0ra1a2lp5jj6o36siucnqfrop0; _csrf=f951137aa4e07e8ac2c1fa2d9391bd2dbe59182211fd052ccaafbd8c509419f0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hws7-WXqOpnXpErY3YrR0Hplj-UzAUw1%22%3B%7D; _identity=5b5377005c884863dd6254b1cb6c117d9242b994007f1192af16a89f2bf6e5caa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A22%3A%22%5B2%2C%22admin999%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\Broadcom\\Broadcom 802.11;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Python27;C:\\Python27\\Scripts;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\leJOS NXJ\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\runtime\\win64;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\bin;C:\\Program Files\\MATLAB\\MATLAB Production Server\\R2015a\\polyspace\\bin;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin\\;C:\\Program Files\\IVI Foundation\\VISA\\Win64\\Bin\\;C:\\Program Files (x86)\\IVI Foundation\\VISA\\WinNT\\Bin;C:\\Program Files\\010 Editor;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\Yunan\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Yunan\\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/5.6.24'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/tiket/web/index.php'
+    'REMOTE_PORT' => '55445'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tiket%2Flihatevent'
+    'REQUEST_URI' => '/tiket/web/index.php?r=tiket%2Flihatevent'
+    'SCRIPT_NAME' => '/tiket/web/index.php'
+    'PHP_SELF' => '/tiket/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1500284269.251
+    'REQUEST_TIME' => 1500284269
+]

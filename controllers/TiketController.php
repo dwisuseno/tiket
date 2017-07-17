@@ -13,11 +13,28 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+function hasil_likert($a, $b, $c, $d, $e, $total)
+    {
+        $Y = $total * 5;
+        $Sa = $a * 5;
+        $Sb = $b * 4;
+        $Sc = $c * 3;
+        $Sd = $d * 2;
+        $Se = $e * 1;
+
+        $TS = $Sa + $Sb + $Sc + $Sd + $Se;
+
+        $index = $TS * 100 / $Y;
+
+        return $index;
+    }
+
 /**
  * TiketController implements the CRUD actions for Tiket model.
  */
 class TiketController extends Controller
 {
+
     public function behaviors()
     {
         return [
@@ -27,7 +44,7 @@ class TiketController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['updateuser','user','review','index','view','create','update','delete','saveAsNew','lihatevent','preview','pesantiket','cektiket','cetaktiket', 'pesantiketlangsung', 'reviewsubmitted'],
+                        'actions' => ['updateuser','user','review','index','view','create','update','delete','saveAsNew','lihatevent','preview','pesantiket','cektiket','cetaktiket', 'pesantiketlangsung', 'reviewsubmitted', 'hasil_likert'],
                         'roles' => ['@']
                     ],
                     [
@@ -247,10 +264,13 @@ class TiketController extends Controller
 
     public function actionLihatevent(){
         $model = Event::find()->asArray()->orderBy(['tgl_event' => SORT_DESC])->all();
+
 		$likert = Likert::findOne(1);
 		$likert->kelas_e = $likert->kelas_e + 1;
 		$likert->total = $likert->total + 1;
+        $likert->hasil = hasil_likert($likert->kelas_a, $likert->kelas_b, $likert->kelas_c, $likert->kelas_d, $likert->kelas_e, $likert->total);
 		$likert->save();
+        
         return $this->render('event',[
                 'model' => $model,
             ]);
@@ -285,6 +305,7 @@ class TiketController extends Controller
         {
             $likert->kelas_a = $likert->kelas_a + 1;
             $likert->kelas_b = $likert->kelas_b - 1;
+            $likert->hasil = hasil_likert($likert->kelas_a, $likert->kelas_b, $likert->kelas_c, $likert->kelas_d, $likert->kelas_e, $likert->total);
             $likert->save();
 
             $model->event_id = $id;
@@ -331,9 +352,11 @@ class TiketController extends Controller
         $tiket = new Tiket();
 		$likert = Likert::findOne(1);
 		//Pesan Tiket melalui Detail Event
-        if ($tiket->loadAll(Yii::$app->request->post())) {
+        if ($tiket->loadAll(Yii::$app->request->post())) 
+        {
 			$likert->kelas_b = $likert->kelas_b + 1;
 			$likert->kelas_d = $likert->kelas_d - 1;
+            $likert->hasil = hasil_likert($likert->kelas_a, $likert->kelas_b, $likert->kelas_c, $likert->kelas_d, $likert->kelas_e, $likert->total);
 			$likert->save();
 			
             $tiket->kode_pembayaran = $this->generateUniqueRandomString(5);
@@ -367,6 +390,7 @@ class TiketController extends Controller
 		{
 			$likert->kelas_c = $likert->kelas_c + 1;
 			$likert->kelas_e = $likert->kelas_e - 1;
+            $likert->hasil = hasil_likert($likert->kelas_a, $likert->kelas_b, $likert->kelas_c, $likert->kelas_d, $likert->kelas_e, $likert->total);
 			$likert->save();
 		
 			$event = Event::findOne($event_id);

@@ -8,6 +8,7 @@ use app\models\Event;
 use app\models\Review;
 use app\models\Login;
 use app\models\TiketSearch;
+use app\models\Likert;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -26,7 +27,7 @@ class TiketController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['updateuser','user','review','index','view','create','update','delete','saveAsNew','lihatevent','preview','pesantiket','cektiket','cetaktiket'],
+                        'actions' => ['updateuser','user','review','index','view','create','update','delete','saveAsNew','lihatevent','preview','pesantiket','cektiket','cetaktiket', 'pesantiketlangsung', 'reviewsubmitted'],
                         'roles' => ['@']
                     ],
                     [
@@ -246,6 +247,10 @@ class TiketController extends Controller
 
     public function actionLihatevent(){
         $model = Event::find()->asArray()->orderBy(['tgl_event' => SORT_DESC])->all();
+		$likert = Likert::findOne(1);
+		$likert->kelas_e = $likert->kelas_e + 1;
+		$likert->total = $likert->total + 1;
+		$likert->save();
         return $this->render('event',[
                 'model' => $model,
             ]);
@@ -256,6 +261,10 @@ class TiketController extends Controller
         $c = Event::findOne($id);
         $c->count = $c->count + 1;
         $c->save();
+		$likert = Likert::findOne(1);
+		$likert->kelas_d = $likert->kelas_d + 1;
+		$likert->kelas_e = $likert->kelas_e - 1;
+		$likert->save();
         $tiket = new Tiket();
         $reviewContent =Review::find()->where(['event_id' => $id])->asArray()->all();
         $modelreview = new Review();
@@ -270,45 +279,138 @@ class TiketController extends Controller
 
     public function actionReview($id){
         $model = new Review();
+        $likert = Likert::findOne(1);
 
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post())) 
+        {
+            $likert->kelas_a = $likert->kelas_a + 1;
+            $likert->kelas_b = $likert->kelas_b - 1;
+            $likert->save();
+
             $model->event_id = $id;
-            $model->save();   
+            $model->save();
+            $flag = $model->save(false);
+
+            if($flag)
+            {
+                Yii::$app->session->setFlash('warning', 'Terima Kasih Sudah Mereview Event Ini');
+            } 
+            else 
+            {
+                Yii::$app->session->setFlash('warning', 'Data Gagal Disimpan');
+            }   
         }
-        return $this->redirect(['pemesanan', 'id' => $id]);
+        return $this->render('reviewsubmitted');
+        //return $this->redirect(['preview', 'id' => $id]);
+    }
+
+    public function actionReviewsubmitted($id){
+        $model = new Review();
+
+        if ($model->load(Yii::$app->request->post())) 
+        {
+            $model->event_id = $id;
+            $model->save();
+            $flag = $model->save(false);
+
+            if($flag)
+            {
+                Yii::$app->session->setFlash('warning', 'Terima Kasih Sudah Mereview Event Ini');
+            } 
+            else 
+            {
+                Yii::$app->session->setFlash('warning', 'Data Gagal Disimpan');
+            }
+        }
+        return $this->render('reviewsubmitted');
     }
     
     // fungsi pemesanan tiket
-    public function actionPesantiket(){
-
-        $model = new Tiket();
-
-        if ($model->loadAll(Yii::$app->request->post())) {
-            $model->kode_pembayaran = $this->generateUniqueRandomString(5);
+    public function actionPesantiket($event_id = FALSE){
+		
+        $tiket = new Tiket();
+		$likert = Likert::findOne(1);
+		//Pesan Tiket melalui Detail Event
+        if ($tiket->loadAll(Yii::$app->request->post())) {
+			$likert->kelas_b = $likert->kelas_b + 1;
+			$likert->kelas_d = $likert->kelas_d - 1;
+			$likert->save();
+			
+            $tiket->kode_pembayaran = $this->generateUniqueRandomString(5);
 
             // mengupdate data tiket untuk dikurangi - 1
-            $event = Event::findOne($model->event_id);
+			$event = Event::findOne($tiket->event_id);
             
-         
             $event->jumlah_tiket = $event->jumlah_tiket - 1;
             $event->tiket_terjual = $event->tiket_terjual + 1;
             $event->save(false);
             $event->update();
 
-            $model->event_id = (int)$model->event_id;
-            $model->user_id = Yii::$app->user->identity->id;
-            $flag = $model->save(false);
+            $tiket->event_id = (int)$tiket->event_id;
+            $tiket->user_id = Yii::$app->user->identity->id;
+            $flag = $tiket->save(false);
            
-            $model->saveAll();
+            $tiket->saveAll();
             if($flag){
-                Yii::$app->session->setFlash('warning', 'Data Berhasil Disimpan');
+                Yii::$app->session->setFlash('warning', 'Terima Kasih Sudah Membeli Tiket');
             } else {
                 Yii::$app->session->setFlash('warning', 'Data Gagal Disimpan');
             }
-            
-            return $this->render('pembayaran');
-        } else {    
+            $modelreview = new Review();
+            return $this->render('pembayaran',[
+                'model' => $event,
+                'modelreview' => $modelreview,
+                ]);
+        } 
+		//Pesan Tiket Langsung
+		else 
+		{
+			$likert->kelas_c = $likert->kelas_c + 1;
+			$likert->kelas_e = $likert->kelas_e - 1;
+			$likert->save();
+		
+			$event = Event::findOne($event_id);
+			$event->jumlah_tiket = $event->jumlah_tiket - 1;
+            $event->tiket_terjual = $event->tiket_terjual + 1;
+            $event->save(false);
+            $event->update();
+
+            $tiket->event_id = $event_id;
+            $tiket->user_id = Yii::$app->user->identity->id;
+            $flag = $tiket->save(false);
+           
+            $tiket->saveAll();
+            if($flag){
+                Yii::$app->session->setFlash('warning', 'Terima Kasih Sudah Membeli Tiket');
+            } else {
+                Yii::$app->session->setFlash('warning', 'Tiket Belum Terbeli');
+            }
+            return $this->render('success');
         }
+    }
+	public function actionPesantiketlangsung($event_id){
+		
+        $model = new Tiket();
+		$model->kode_pembayaran = $this->generateUniqueRandomString(5);
+		
+		$event = Event::findOne($event_id);
+		$event->jumlah_tiket = $event->jumlah_tiket - 1;
+		$event->tiket_terjual = $event->tiket_terjual + 1;
+		$event->save(false);
+		$event->update();
+		
+		$model->event_id = $event_id;
+		$model->user_id = Yii::$app->user->identity->id;
+		$flag = $model->save(false);
+	   
+		$model->saveAll();
+		if($flag){
+			Yii::$app->session->setFlash('warning', 'Tiket Berhasil Terbeli');
+		} else {
+			Yii::$app->session->setFlash('warning', 'Tiket Belum Terbeli');
+		}
+		
+		return $this->render('pembayaran');
     }
 
     public function generateUniqueRandomString( $length) {

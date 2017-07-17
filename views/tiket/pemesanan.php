@@ -35,7 +35,7 @@ $this->title = "Pemesanan";
 			<div class="row">
 				<div class="col-md-6">
 					<?php 
-					if(time() - strtotime($model['tgl_event']) < 0)
+					if(time() - strtotime($model['tgl_event']) <= 0)
 					{
 						echo Html::submitButton('Pesan TIket Sekarang', ['class' => 'btn btn-success']); 	
 					}
@@ -91,7 +91,7 @@ $this->title = "Pemesanan";
 			  <div class="panel-body">
 			    <?php $form = ActiveForm::begin([
 				    'method' => 'post',
-				    'action' => ['tiket/review', 'id' => $model['id']],
+				    'action' => ['tiket/reviewsubmitted', 'id' => $model['id']],
 				]); ?>
 			    <div class="row">
 					<div class="col-md-12">

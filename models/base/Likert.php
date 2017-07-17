@@ -51,7 +51,7 @@ class Likert extends \yii\db\ActiveRecord
             'kelas_c' => 'Kelas C',
             'kelas_d' => 'Kelas D',
             'kelas_e' => 'Kelas E',
-            'total' => 'Total',
+            'total' => 'Total Pengunjung',
             'hasil' => 'Hasil (%)',
         ];
     }

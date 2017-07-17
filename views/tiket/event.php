@@ -23,6 +23,14 @@ $this->title = "Choose Event";
             <p><?= $model[$i]['alamat'] ?></p> 
             <?php $id = $model[$i]['id'];?>
 	        <p><a href="<?= Url::to(['tiket/preview', 'id' => $model[$i]['id']])?>" class="btn btn-success" role="button" >Detail Event</a></p>
+			<?php
+				if(time() - strtotime($model[$i]['tgl_event']) <= 0)
+				{ 
+				?>
+					<p><a href="<?= Url::to(['tiket/pesantiket', 'event_id' => $model[$i]['id']])?>" class="btn btn-primary" role="button" >Beli Tiket</a></p>
+				<?php
+				}
+			?>
 	      </div>
 	    </div>
 	  </div>

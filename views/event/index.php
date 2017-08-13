@@ -61,7 +61,7 @@ $this->registerJs($search);
         ],
         'alamat',
         'jumlah_tiket',
-        'deskripsi',
+        //'deskripsi',
         'count',
         'tiket_terjual',
         [

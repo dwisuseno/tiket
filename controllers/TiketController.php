@@ -284,6 +284,7 @@ class TiketController extends Controller
 		$likert = Likert::findOne(1);
 		$likert->kelas_d = $likert->kelas_d + 1;
 		$likert->kelas_e = $likert->kelas_e - 1;
+        $likert->hasil = hasil_likert($likert->kelas_a, $likert->kelas_b, $likert->kelas_c, $likert->kelas_d, $likert->kelas_e, $likert->total);
 		$likert->save();
         $tiket = new Tiket();
         $reviewContent =Review::find()->where(['event_id' => $id])->asArray()->all();

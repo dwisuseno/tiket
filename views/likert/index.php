@@ -37,12 +37,16 @@ $this->registerJs($search);
         'kelas_d',
         'kelas_e',
         'total',
+        // [
+        //     'attribute' => 'hasil',
+        //     'format' => 'Open Gate',
+        // ],
         'hasil',
     ]; 
     ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel,
         'columns' => $gridColumn,
         'pjax' => true,
         'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-likert']],

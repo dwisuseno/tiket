@@ -37,11 +37,11 @@ $this->registerJs($search);
         'kelas_d',
         'kelas_e',
         'total',
-        // [
-        //     'attribute' => 'hasil',
-        //     'format' => 'Open Gate',
-        // ],
-        'hasil',
+        [
+            'attribute' => 'hasil',
+            'format' => ['decimal',2],
+        ],
+        //'hasil',
     ]; 
     ?>
     <?= GridView::widget([

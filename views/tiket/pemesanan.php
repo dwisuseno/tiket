@@ -16,12 +16,13 @@ $this->title = "Pemesanan";
 			<font size="4"><b>Date: <?= date("D, j F Y", strtotime($model['tgl_event'])) ?></b></font><br>
 			<font size="3">Open Gate: <?= date("g:i a", strtotime($model['waktu_event'])) ?></font><br>
             <font size="3"><?= $model['alamat'] ?> </font><br>
-            <?php $form = ActiveForm::begin([
+            <!--<?php //$form = ActiveForm::begin([
 				//'layout' => 'horizontal',
-			    'method' => 'post',
-			    'action' => ['tiket/pesantiket'],
+			    //'method' => 'post',
+			    //'action' => ['tiket/pesantiket'],
 
-			]); ?>
+			//]); ?>-->
+			<?php $form = ActiveForm::begin(); ?>
 			<?= $form->errorSummary($tiket); ?>
 			<?= $form->field($tiket, 'id', ['template' => '{input}'])->textInput(['style' => 'display:none']); ?>
 			<?= $form->field($tiket, 'event_id', ['template' => '{input}'])->textInput(['style' => 'display:none','value'=>$model['id']]); ?>
@@ -37,7 +38,10 @@ $this->title = "Pemesanan";
 					<?php 
 					if(time() - strtotime($model['tgl_event']) <= 0)
 					{
-						echo Html::submitButton('Pesan TIket Sekarang', ['class' => 'btn btn-success']); 	
+						//echo Html::submitButton('Pesan TIket Sekarang', ['class' => 'btn btn-success']); 
+					?>
+						<p><a class="btn btn-success" role="button" onclick="getConfirmation('<?php echo $model['id']?>');">Beli Tiket Sekarang</a></p>
+					<?php	
 					}
 					?>
 					<a href="index.php?r=tiket/lihatevent" class="btn btn-primary">Back</a>
@@ -127,3 +131,12 @@ $this->title = "Pemesanan";
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+function getConfirmation(id){
+   var retVal = confirm("Do you want to continue ?");
+   if( retVal == true ){
+      window.location.href='http://localhost/tiket/web/index.php?r=tiket%2Fpesantiket&event_id='+id;
+   }
+}
+</script>

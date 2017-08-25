@@ -27,7 +27,7 @@ $this->title = "Choose Event";
 				if(time() - strtotime($model[$i]['tgl_event']) <= 0)
 				{ 
 				?>
-					<p><a href="<?= Url::to(['tiket/pesantiket', 'event_id' => $model[$i]['id']])?>" class="btn btn-primary" role="button" >Beli Tiket</a></p>
+					<p><a class="btn btn-primary" role="button" onclick="getConfirmation('<?php echo $model[$i]['id']?>');">Beli Tiket</a></p>
 				<?php
 				}
 			?>
@@ -38,4 +38,13 @@ $this->title = "Choose Event";
 	 <?php } ?>
 	</div>
 </div>
+
+<script type="text/javascript">
+function getConfirmation(id){
+	var retVal = confirm("Do you want to continue ?");
+	if( retVal == true ){
+	  window.location.href='http://localhost/tiket/web/index.php?r=tiket%2Fpesantiketlangsung&event_id='+id;
+	}
+}
+</script>
 

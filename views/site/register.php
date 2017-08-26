@@ -15,6 +15,8 @@ $this->title = 'Register';
 
     <?php $form = ActiveForm::begin([
         'id' => 'login-form',
+        'method' => 'post',
+        'action' => ['site/doregister'],
         'options' => ['class' => 'form-horizontal'],
         'fieldConfig' => [
             'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",

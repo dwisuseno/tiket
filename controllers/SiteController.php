@@ -9,6 +9,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Counter;
+use app\models\User;
+use app\models\Login;
 
 class SiteController extends Controller
 {
@@ -129,11 +131,34 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionRegister(){
+    public function actionRegister()
+    {
         $model = new LoginForm();
         return $this->render('register',
             [
                 'model' => $model,
             ]);
+    }
+    
+    public function actionDoregister()
+    {
+        $model = new LoginForm();
+        if($model->load(Yii::$app->request->post()) && User::findByUsername($model->username) == NULL)
+        {
+            //$user = User::findByUsername($model->username);
+            $new_user = new Login();
+            $new_user->username = $model->username;
+            $new_user->password = $model->password;
+            $new_user->role = "user";
+            $new_user->save();
+            $this->redirect(['login']);
+        }
+        else
+        {
+            $model->addError('username', 'Username sudah terdaftar. Gunakan username yang lain');
+            return $this->render('register', [
+                'model' => $model,
+            ]);
+        }
     }
 }

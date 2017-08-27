@@ -130,6 +130,16 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+    
+    public function actionProfil()
+    {
+        return $this->render('profil');
+    }
+    
+    public function actionLayanan()
+    {
+        return $this->render('layanan');
+    }
 
     public function actionRegister()
     {

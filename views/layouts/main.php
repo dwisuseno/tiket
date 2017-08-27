@@ -43,6 +43,13 @@ AppAsset::register($this);
             'items' => [
                 ['label' => 'Beranda', 'url' => ['/site']],
                 ['label' => 'Event', 'url' => ['/tiket/lihatevent']],
+                [
+                    'label' => 'About',
+                    'items' => [
+                        '<li>'. Html::a('Profil','index.php?r=site/profil') .'</li>',
+                        '<li>'. Html::a('Pemesanan Layanan','index.php?r=site/layanan') .'</li>',
+                    ],
+                ],
                 //['label' => 'Tentang', 'url' => ['site/about']],
                 Yii::$app->user->isGuest ? (
                     ['label' => 'Login', 'url' => ['/site/login']]
@@ -69,9 +76,16 @@ AppAsset::register($this);
                 ['label' => 'Tiket Pemesanan', 'url' => ['/tiket']],
                 ['label' => 'Event', 'url' => ['/tiket/lihatevent']],
                 //['label' => 'Tentang', 'url' => ['site/about']],
-                 ['label' => 'Hasil Likert', 'url' => ['/likert']],
+                ['label' => 'Hasil Likert', 'url' => ['/likert']],
                 ['label' => 'User', 'url' => ['/login']],
                 ['label' => 'User Setting', 'url' => ['/login/user']],
+                [
+                    'label' => 'About',
+                    'items' => [
+                        '<li>'. Html::a('Profil','index.php?r=site/profil') .'</li>',
+                        '<li>'. Html::a('Pemesanan Layanan','index.php?r=site/layanan') .'</li>',
+                    ],
+                ],
                 Yii::$app->user->isGuest ? (
                     ['label' => 'Login', 'url' => ['/site/login']]
                     
@@ -97,6 +111,13 @@ AppAsset::register($this);
                 //['label' => 'Tentang', 'url' => ['site/about']],
                 ['label' => 'Tiket Anda', 'url' => ['/tiket/cektiket']],
                 ['label' => 'User Setting', 'url' => ['/login/user']],
+                [
+                    'label' => 'About',
+                    'items' => [
+                        '<li>'. Html::a('Profil','index.php?r=site/profil') .'</li>',
+                        '<li>'. Html::a('Pemesanan Layanan','index.php?r=site/layanan') .'</li>',
+                    ],
+                ],
                 Yii::$app->user->isGuest ? (
                     ['label' => 'Login', 'url' => ['/site/login']]
                     

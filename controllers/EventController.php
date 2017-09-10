@@ -121,6 +121,7 @@ class EventController extends Controller
                 $model->path_gambar = 'uploads/foto/'.$imagename.'.'.$model->file->extension;
             }
             $model->saveAll();
+            clearstatcache();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

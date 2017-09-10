@@ -14,7 +14,7 @@ $this->title = "Choose Event";
 	<?php $form = ActiveForm::begin(); ?>
 	  <div class="col-sm-12 col-md-4">
 	    <div class="thumbnail">
-	      <img style="height:200px" src="<?= $model[$i]['path_gambar'] ?>" alt="<?= $model[$i]['nama_event'] ?>">
+	      <img style="height:200px" src="<?= $model[$i]['path_gambar'] ?>?cache=<?php echo time(); ?>" alt="<?= $model[$i]['nama_event'] ?>">
 	      <div class="caption">
 	        <h4><?= $model[$i]['nama_event'] ?></h4>
 	        <p><?= $model[$i]['jumlah_tiket'] ?> tickets</p>

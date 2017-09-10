@@ -1,4 +1,5 @@
 <?php
+
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use kartik\grid\GridView;
@@ -34,7 +35,7 @@ $this->params['breadcrumbs'][] = $model->nama_event;
         </div>-->
     </div>
     <div class="row">    
-        <img style="height:200px" src="<?= $model['path_gambar'] ?>" alt="<?= $model['path_gambar'] ?>">
+        <img style="height:200px" src="<?= $model['path_gambar'] ?>?cache=<?php echo time(); ?>" alt="<?= $model['path_gambar'] ?>">
     </div>
 	</br><div class="row">
 <?php 

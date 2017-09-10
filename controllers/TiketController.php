@@ -49,7 +49,7 @@ class TiketController extends Controller
                     ],
                     [
                         'allow' => true,
-                        'actions' => ['lihatevent'],
+                        'actions' => ['lihatevent', 'preview'],
                         'roles' => ['?'],
                     ]
                 ]
@@ -287,7 +287,7 @@ class TiketController extends Controller
         $c->count = $c->count + 1;
         $c->save();
 
-        if(Yii::$app->user->identity->role != 'admin')
+        if(Yii::$app->user->identity != null && Yii::$app->user->identity->role != 'admin')
         {
             $likert = Likert::findOne(1);
             $likert->kelas_d = $likert->kelas_d + 1;

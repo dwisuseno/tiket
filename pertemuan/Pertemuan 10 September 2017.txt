@@ -1,0 +1,12 @@
+- Error ketika buka Menu "Event" Ketika User = guest {sudah}
+- Guest bisa melihat detail event (tetpi tidak bisa membeli dan me-review event) {sudah}
+- Error ketika update gambar event {sudah}
+
+- Menambahkan fitur galery (upload foto) untuk setiap event 
+- Buku, menambahkan aktor menjadi admin, user, guest
+- Generate kode pembayaran dan kode tiket berupa angka (4 digit) untuk mempermudah ketika transfer di ATM
+- Menambahkan informasi kode pembayaran ketika akan mentransfer biaya pembelian tiket (Informasi kode pembayaran ditampilkan pada notifikasi berhasil membeli tiket)
+- Menambahkan informasi harga tiket (pre-sale dan on the spot) 
+
+
+Go Show (Pembukaan 1 jam sebelum keberangkatan): KA. Rangga Jati 100k eksekutif; 80k bisnis

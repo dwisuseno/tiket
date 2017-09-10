@@ -264,8 +264,10 @@ class TiketController extends Controller
 
     public function actionLihatevent(){
         $model = Event::find()->asArray()->orderBy(['tgl_event' => SORT_DESC])->all();
-
-        if(Yii::$app->user->identity->role != 'admin')
+        
+        //var_dump(Yii::$app->user->identity->role);
+        
+        if(Yii::$app->user->identity != null && Yii::$app->user->identity->role != 'admin')
         {
             $likert = Likert::findOne(1);
             $likert->kelas_e = $likert->kelas_e + 1;

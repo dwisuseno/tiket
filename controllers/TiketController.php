@@ -14,20 +14,40 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 function hasil_likert($a, $b, $c, $d, $e, $total)
-    {
-        $Y = $total * 5;
-        $Sa = $a * 5;
-        $Sb = $b * 4;
-        $Sc = $c * 3;
-        $Sd = $d * 2;
-        $Se = $e * 1;
+{
+    $Y = $total * 5;
+    $Sa = $a * 5;
+    $Sb = $b * 4;
+    $Sc = $c * 3;
+    $Sd = $d * 2;
+    $Se = $e * 1;
 
-        $TS = $Sa + $Sb + $Sc + $Sd + $Se;
+    $TS = $Sa + $Sb + $Sc + $Sd + $Se;
 
-        $index = $TS * 100 / $Y;
+    $index = $TS * 100 / $Y;
 
-        return $index;
-    }
+    return $index;
+}
+
+function generateKodePembayaran($digits)
+{
+    $randNumber = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
+    $model = Tiket::find()->where(['kode_pembayaran' => $randNumber])->count();
+    if($model == "0")
+        return $randNumber;
+    else
+        return $this->randGenerator( $digits);
+}
+
+function generateKodeTiket($digits)
+{
+    $randNumber = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
+    $model = Tiket::find()->where(['kode_tiket' => $randNumber])->count();
+    if($model == "0")
+        return $randNumber;
+    else
+        return $this->randGenerator( $digits);
+}
 
 /**
  * TiketController implements the CRUD actions for Tiket model.
@@ -143,7 +163,7 @@ class TiketController extends Controller
 
         if ($model->loadAll(Yii::$app->request->post())) {
             if($model->status == 1){
-                $model->kode_tiket = $this->generateUniqueRandomString(5);
+                $model->kode_tiket = generateKodeTiket(4);
             }
             $model->saveAll();
             return $this->redirect(['view', 'id' => $model->id]);
@@ -372,9 +392,9 @@ class TiketController extends Controller
             $likert->hasil = hasil_likert($likert->kelas_a, $likert->kelas_b, $likert->kelas_c, $likert->kelas_d, $likert->kelas_e, $likert->total);
             $likert->save();
         }
-		
-        $tiket->kode_pembayaran = $this->generateUniqueRandomString(5);
-
+		$kode_pembayaran = generateKodePembayaran(4);
+        $tiket->kode_pembayaran = $kode_pembayaran;
+        
         // mengupdate data tiket untuk dikurangi - 1
 		$event = Event::findOne($event_id);
         
@@ -397,8 +417,8 @@ class TiketController extends Controller
         return $this->render('pembayaran',[
             'model' => $event,
             'modelreview' => $modelreview,
+            'kode_pembayaran' => $kode_pembayaran,
             ]);
-
     }
 
     // fungsi pemesanan tiket langsung tanpa melalui Detail Event
@@ -418,9 +438,11 @@ class TiketController extends Controller
         $event->tiket_terjual = $event->tiket_terjual + 1;
         $event->save(false);
         $event->update();
-
+        
+        $kode_pembayaran = generateKodePembayaran(4);
         $tiket->event_id = $event_id;
         $tiket->user_id = Yii::$app->user->identity->id;
+        $tiket->kode_pembayaran = $kode_pembayaran;
         $flag = $tiket->save(false);
        
         $tiket->saveAll();
@@ -429,7 +451,9 @@ class TiketController extends Controller
         } else {
             Yii::$app->session->setFlash('warning', 'Tiket Belum Terbeli');
         }
-        return $this->render('success');
+        return $this->render('success', [
+                  'kode_pembayaran' => $kode_pembayaran,
+        ]);
     }
 
     public function generateUniqueRandomString( $length) {

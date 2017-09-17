@@ -17,7 +17,7 @@ class Event extends BaseEvent
         return array_replace_recursive(parent::rules(),
 	    [
             [['tgl_event', 'waktu_event'], 'safe'],
-            [['jumlah_tiket', 'count', 'tiket_terjual'], 'integer'],
+            [['jumlah_tiket', 'harga_ps', 'harga_ots', 'count', 'tiket_terjual'], 'integer'],
             [['deskripsi'], 'string'],
             [['file'],'file'],
             [['nama_event', 'path_gambar', 'created_at', 'updated_at'], 'string', 'max' => 255],

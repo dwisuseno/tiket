@@ -18,7 +18,7 @@ use app\models\Event;
     public function rules()
     {
         return [
-            [['id', 'jumlah_tiket', 'count', 'tiket_terjual'], 'integer'],
+            [['id', 'jumlah_tiket', 'harga_ps', 'harga_ots', 'count', 'tiket_terjual'], 'integer'],
             [['nama_event', 'alamat','tgl_event', 'waktu_event', 'created_at', 'updated_at'], 'safe'],
         ];
     }
@@ -61,6 +61,8 @@ use app\models\Event;
             'alamat' => $this->alamat,
             'waktu_event' => $this->waktu_event,
             'jumlah_tiket' => $this->jumlah_tiket,
+            'harga_ps' => $this->harga_ps, 
+            'harga_ots' => $this->harga_ots, 
         ]);
 
         $query->andFilterWhere(['like', 'nama_event', $this->nama_event])

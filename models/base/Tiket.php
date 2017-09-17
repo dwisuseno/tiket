@@ -13,6 +13,7 @@ use yii\behaviors\TimestampBehavior;
  * @property integer $user_id
  * @property string $kode_pembayaran
  * @property string $kode_tiket
+ * @property integer $harga
  * @property string $status
  * @property string $created_at
  * @property string $updated_at
@@ -30,7 +31,7 @@ class Tiket extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['event_id', 'user_id'], 'integer'],
+            [['event_id', 'user_id', 'harga'], 'integer'],
             [['status'], 'string'],
             [['kode_pembayaran', 'kode_tiket', 'created_at', 'updated_at'], 'string', 'max' => 255]
         ];
@@ -55,6 +56,7 @@ class Tiket extends \yii\db\ActiveRecord
             'user_id' => 'User ID',
             'kode_pembayaran' => 'Kode Pembayaran',
             'kode_tiket' => 'Kode Tiket',
+            'harga' => 'Harga',
             'status' => 'Status',
         ];
     }

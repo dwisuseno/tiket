@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <th>Kode Pembayaran</th>
         <th>Kode Tiket</th>
         <th>Status</th>
+        <th>Harga Tiket</th>
         <th>Tanggal Pembelian</th>
       </tr>
     </thead>
@@ -42,13 +43,15 @@ $this->params['breadcrumbs'][] = $this->title;
           else {
           echo $model[$i]['kode_tiket'];
         }?>
-          </td>
+        </td>
         <td><?php if($model[$i]['status'] == '0'){ 
           echo "Belum Dibayar"; }
           else {
           echo "Sudah Dibayar | ";
           echo "<a target='_blank' href='index.php?r=tiket/cetaktiket&id=".$model[$i]['id']."'>Cetak Tiket</a>";
         }?></td>
+        <td>Rp<?php echo number_format($model[$i]['harga'],2,",","."); ?>
+        </td>
         <td>
           <?php echo Yii::$app->formatter->asDate($model[$i]['created_at'], 'dd-MM-yyyy');?>
         </td>

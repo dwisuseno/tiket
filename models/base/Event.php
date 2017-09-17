@@ -14,6 +14,8 @@ use yii\behaviors\TimestampBehavior;
  * @property string $waktu_event
  * @property integer $jumlah_tiket
  * @property string $path_gambar
+ * @property string harga_ps
+ * @property string harga_ots
  * @property string $created_at
  * @property string $updated_at
  *
@@ -30,7 +32,7 @@ class Event extends \yii\db\ActiveRecord
     {
         return [
             [['tgl_event', 'waktu_event'], 'safe'],
-            [['jumlah_tiket', 'count', 'tiket_terjual'], 'integer'],
+            [['jumlah_tiket', 'harga_ps', 'harga_ots', 'count', 'tiket_terjual'], 'integer'],
             [['deskripsi'], 'string'],
             [['file'],'file'],
             [['nama_event', 'path_gambar', 'created_at', 'updated_at'], 'string', 'max' => 255],
@@ -57,12 +59,14 @@ class Event extends \yii\db\ActiveRecord
             'tgl_event' => 'Tgl Event',
             'waktu_event' => 'Waktu Event',
             'alamat' => 'Alamat', 
-            'jumlah_tiket' => 'Sisa Tiket',
+            'jumlah_tiket' => 'Jumlah Tiket',
             'path_gambar' => 'Path Gambar',
             'file' => 'Foto',
             'deskripsi' => 'Description',
             'count' => 'Viewed Detail',
             'tiket_terjual' => 'Sold',
+            'harga_ps' => 'Harga Tiket Pre-Sale', 
+            'harga_ots' => 'Harga Tiket On The Spot', 
         ];
     }
     

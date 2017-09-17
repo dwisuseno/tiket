@@ -3,10 +3,10 @@
 - Error ketika update gambar event {sudah}
 - Generate kode pembayaran dan kode tiket berupa angka (4 digit) untuk mempermudah ketika transfer di ATM {sudah}
 - Menambahkan informasi kode pembayaran ketika akan mentransfer biaya pembelian tiket (Informasi kode pembayaran ditampilkan pada notifikasi berhasil membeli tiket) {sudah}
+- Menambahkan informasi harga tiket (pre-sale dan on the spot) {sudah}
 
 - Menambahkan fitur galery (upload foto) untuk setiap event 
 - Buku, menambahkan aktor menjadi admin, user, guest
-- Menambahkan informasi harga tiket (pre-sale dan on the spot) 
 
 
 Go Show (Pembukaan 1 jam sebelum keberangkatan): KA. Rangga Jati 100k eksekutif; 80k bisnis

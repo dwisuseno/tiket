@@ -58,6 +58,14 @@ use yii\widgets\ActiveForm;
         </div>
     </div>
     <div class="row">
+        <div class="col-md-3">
+            <?= $form->field($model, 'harga_ps')->textInput(['placeholder' => 'Harga Tiket Pre-Sale']) ?>
+        </div>
+        <div class="col-md-3">
+            <?= $form->field($model, 'harga_ots')->textInput(['placeholder' => 'Harga Tiket On The Spot']) ?>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-6">
             <?= $form->field($model, 'alamat')->textInput(['placeholder' => 'Alamat']) ?>
         </div>           

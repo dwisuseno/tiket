@@ -88,8 +88,11 @@ class EventController extends Controller
                 // save the path in the db column
                 $model->path_gambar = 'uploads/foto/'.$imagename.'.'.$model->file->extension;
             }
-            $model->saveAll();
-            return $this->redirect(['view', 'id' => $model->id]);
+            echo "<pre>";
+            var_dump($model);
+            echo "</pre>";
+            //$model->saveAll();
+            //return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,

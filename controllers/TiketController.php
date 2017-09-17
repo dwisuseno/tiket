@@ -12,6 +12,7 @@ use app\models\Likert;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+//require('\vendor\phpoffice\PHPExcel.php');
 
 function hasil_likert($a, $b, $c, $d, $e, $total)
 {
@@ -405,6 +406,7 @@ class TiketController extends Controller
 
         $tiket->event_id = $event_id;
         $tiket->user_id = Yii::$app->user->identity->id;
+        $tiket->harga = $event->harga_ps;
         $flag = $tiket->save(false);
        
         $tiket->saveAll();
@@ -443,6 +445,7 @@ class TiketController extends Controller
         $tiket->event_id = $event_id;
         $tiket->user_id = Yii::$app->user->identity->id;
         $tiket->kode_pembayaran = $kode_pembayaran;
+        $tiket->harga = $event->harga_ps;
         $flag = $tiket->save(false);
        
         $tiket->saveAll();
@@ -472,7 +475,7 @@ class TiketController extends Controller
 
     public function actionCektiket(){
         //$model = Tiket::find()->asArray()->orderBy('created_at')->where(['user_id' => Yii::$app->user->identity->id])->all();
-        $model = Tiket::find()->asArray()->where(['user_id' => Yii::$app->user->identity->id])->leftJoin('event', 'tiket.event_id=event.id')->orderBy('tiket.created_at')->select("tiket.id as id, tiket.event_id as event_id, tiket.user_id as user_id, tiket.kode_pembayaran as kode_pembayaran, tiket.kode_tiket as kode_tiket, tiket.status as status, tiket.created_at as created_at, event.nama_event as nama_event, event.tgl_event as tgl_event")->all();
+        $model = Tiket::find()->asArray()->where(['user_id' => Yii::$app->user->identity->id])->leftJoin('event', 'tiket.event_id=event.id')->orderBy('tiket.created_at')->select("tiket.id as id, tiket.event_id as event_id, tiket.user_id as user_id, tiket.kode_pembayaran as kode_pembayaran, tiket.kode_tiket as kode_tiket, tiket.harga as harga,tiket.status as status, tiket.created_at as created_at, event.nama_event as nama_event, event.tgl_event as tgl_event")->all();
           // echo "<pre>";
           // var_dump($model);
           // echo "</pre>";

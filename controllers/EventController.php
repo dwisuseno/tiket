@@ -79,21 +79,79 @@ class EventController extends Controller
         $model = new Event();
 
         if ($model->loadAll(Yii::$app->request->post())) {
-
-            $imagename = $model->nama_event;
+            $index = Event::find()->max('id');
+            $index++;
+            $imagename = $model->nama_event.'_'.$index;
+            //create directory to save file picture
+            $dir = 'uploads/event/'.$model->nama_event.'_'.$index;
+            mkdir($dir);
+            
             $model->file = UploadedFile::getInstance($model,'file');
+            $model->file_gambar1 = UploadedFile::getInstance($model,'file_gambar1');
+            $model->file_gambar2 = UploadedFile::getInstance($model,'file_gambar2');
+            $model->file_gambar3 = UploadedFile::getInstance($model,'file_gambar3');
+            $model->file_gambar4 = UploadedFile::getInstance($model,'file_gambar4');
+            $model->file_gambar5 = UploadedFile::getInstance($model,'file_gambar5');
+            $model->file_gambar6 = UploadedFile::getInstance($model,'file_gambar6');
+            $model->file_gambar7 = UploadedFile::getInstance($model,'file_gambar7');
+            $model->file_gambar8 = UploadedFile::getInstance($model,'file_gambar8');
+            $model->file_gambar9 = UploadedFile::getInstance($model,'file_gambar9');
+            
             if($model->file){
-                $model->file->saveAs('uploads/foto/'.$imagename.'.'.$model->file->extension); 
-
+                $model->file->saveAs('uploads/foto/'.$imagename.'.'.$model->file->extension);
                 // save the path in the db column
                 $model->path_gambar = 'uploads/foto/'.$imagename.'.'.$model->file->extension;
             }
-            echo "<pre>";
-            var_dump($model);
-            echo "</pre>";
-            //$model->saveAll();
-            //return $this->redirect(['view', 'id' => $model->id]);
-        } else {
+            if($model->file_gambar1){
+                $model->file_gambar1->saveAs($dir.'/'.$imagename.'_1.'.$model->file_gambar1->extension);
+                // save the path in the db column
+                $model->gambar1 = $dir.'/'.$imagename.'_1.'.$model->file_gambar1->extension;
+            }
+            if($model->file_gambar2){
+                $model->file_gambar2->saveAs($dir.'/'.$imagename.'_2.'.$model->file_gambar2->extension);
+                // save the path in the db column
+                $model->gambar2 = $dir.'/'.$imagename.'_2.'.$model->file_gambar2->extension;
+            }
+            if($model->file_gambar3){
+                $model->file_gambar3->saveAs($dir.'/'.$imagename.'_3.'.$model->file_gambar3->extension);
+                // save the path in the db column
+                $model->gambar3 = $dir.'/'.$imagename.'_3.'.$model->file_gambar3->extension;
+            }
+            if($model->file_gambar4){
+                $model->file_gambar4->saveAs($dir.'/'.$imagename.'_4.'.$model->file_gambar4->extension);
+                // save the path in the db column
+                $model->gambar4 = $dir.'/'.$imagename.'_4.'.$model->file_gambar4->extension;
+            }
+            if($model->file_gambar5){
+                $model->file_gambar5->saveAs($dir.'/'.$imagename.'_5.'.$model->file_gambar5->extension);
+                // save the path in the db column
+                $model->gambar5 = $dir.'/'.$imagename.'_5.'.$model->file_gambar5->extension;
+            }
+            if($model->file_gambar6){
+                $model->file_gambar6->saveAs($dir.'/'.$imagename.'_6.'.$model->file_gambar6->extension);
+                // save the path in the db column
+                $model->gambar6 = $dir.'/'.$imagename.'_6.'.$model->file_gambar6->extension;
+            }
+            if($model->file_gambar7){
+                $model->file_gambar7->saveAs($dir.'/'.$imagename.'_7.'.$model->file_gambar7->extension);
+                // save the path in the db column
+                $model->gambar7 = $dir.'/'.$imagename.'_7.'.$model->file_gambar7->extension;
+            }
+            if($model->file_gambar8){
+                $model->file_gambar8->saveAs($dir.'/'.$imagename.'_8.'.$model->file_gambar8->extension);
+                // save the path in the db column
+                $model->gambar8 = $dir.'/'.$imagename.'_8.'.$model->file_gambar8->extension;
+            }
+            if($model->file_gambar9){
+                $model->file_gambar9->saveAs($dir.'/'.$imagename.'_9.'.$model->file_gambar9->extension);
+                // save the path in the db column
+                $model->gambar9 = $dir.'/'.$imagename.'_9.'.$model->file_gambar9->extension;
+            }
+            
+            $model->saveAll();
+            return $this->redirect(['view', 'id' => $model->id]);
+        } 
+        else {
             return $this->render('create', [
                 'model' => $model,
             ]);
@@ -110,23 +168,140 @@ class EventController extends Controller
     {
         if (Yii::$app->request->post('_asnew') == '1') {
             $model = new Event();
-        }else{
+        }
+        else{
             $model = $this->findModel($id);
         }
-
         if ($model->loadAll(Yii::$app->request->post())) {
-            $imagename = $model->nama_event;
+            
             $model->file = UploadedFile::getInstance($model,'file');
-            if($model->file){
-                $model->file->saveAs('uploads/foto/'.$imagename.'.'.$model->file->extension); 
-
+            $model->file_gambar1 = UploadedFile::getInstance($model,'file_gambar1');
+            $model->file_gambar2 = UploadedFile::getInstance($model,'file_gambar2');
+            $model->file_gambar3 = UploadedFile::getInstance($model,'file_gambar3');
+            $model->file_gambar4 = UploadedFile::getInstance($model,'file_gambar4');
+            $model->file_gambar5 = UploadedFile::getInstance($model,'file_gambar5');
+            $model->file_gambar6 = UploadedFile::getInstance($model,'file_gambar6');
+            $model->file_gambar7 = UploadedFile::getInstance($model,'file_gambar7');
+            $model->file_gambar8 = UploadedFile::getInstance($model,'file_gambar8');
+            $model->file_gambar9 = UploadedFile::getInstance($model,'file_gambar9');
+                
+            $imagename = $model->nama_event.'_'.$id;
+            $dir = 'uploads/event/'.$model->nama_event.'_'.$id;
+            //echo "$imagename";
+            //echo "$dir";
+            
+            if(is_dir($dir))
+            {
+                if($model->file){
+                $model->file->saveAs('uploads/foto/'.$imagename.'.'.$model->file->extension);
                 // save the path in the db column
                 $model->path_gambar = 'uploads/foto/'.$imagename.'.'.$model->file->extension;
+                }
+                if($model->file_gambar1){
+                    $model->file_gambar1->saveAs($dir.'/'.$imagename.'_1.'.$model->file_gambar1->extension);
+                    // save the path in the db column
+                    $model->gambar1 = $dir.'/'.$imagename.'_1.'.$model->file_gambar1->extension;
+                }
+                if($model->file_gambar2){
+                    $model->file_gambar2->saveAs($dir.'/'.$imagename.'_2.'.$model->file_gambar2->extension);
+                    // save the path in the db column
+                    $model->gambar2 = $dir.'/'.$imagename.'_2.'.$model->file_gambar2->extension;
+                }
+                if($model->file_gambar3){
+                    $model->file_gambar3->saveAs($dir.'/'.$imagename.'_3.'.$model->file_gambar3->extension);
+                    // save the path in the db column
+                    $model->gambar3 = $dir.'/'.$imagename.'_3.'.$model->file_gambar3->extension;
+                }
+                if($model->file_gambar4){
+                    $model->file_gambar4->saveAs($dir.'/'.$imagename.'_4.'.$model->file_gambar4->extension);
+                    // save the path in the db column
+                    $model->gambar4 = $dir.'/'.$imagename.'_4.'.$model->file_gambar4->extension;
+                }
+                if($model->file_gambar5){
+                    $model->file_gambar5->saveAs($dir.'/'.$imagename.'_5.'.$model->file_gambar5->extension);
+                    // save the path in the db column
+                    $model->gambar5 = $dir.'/'.$imagename.'_5.'.$model->file_gambar5->extension;
+                }
+                if($model->file_gambar6){
+                    $model->file_gambar6->saveAs($dir.'/'.$imagename.'_6.'.$model->file_gambar6->extension);
+                    // save the path in the db column
+                    $model->gambar6 = $dir.'/'.$imagename.'_6.'.$model->file_gambar6->extension;
+                }
+                if($model->file_gambar7){
+                    $model->file_gambar7->saveAs($dir.'/'.$imagename.'_7.'.$model->file_gambar7->extension);
+                    // save the path in the db column
+                    $model->gambar7 = $dir.'/'.$imagename.'_7.'.$model->file_gambar7->extension;
+                }
+                if($model->file_gambar8){
+                    $model->file_gambar8->saveAs($dir.'/'.$imagename.'_8.'.$model->file_gambar8->extension);
+                    // save the path in the db column
+                    $model->gambar8 = $dir.'/'.$imagename.'_8.'.$model->file_gambar8->extension;
+                }
+                if($model->file_gambar9){
+                    $model->file_gambar9->saveAs($dir.'/'.$imagename.'_9.'.$model->file_gambar9->extension);
+                    // save the path in the db column
+                    $model->gambar9 = $dir.'/'.$imagename.'_9.'.$model->file_gambar9->extension;
+                }
+            }
+            else
+            {
+                mkdir($dir);
+                if($model->file){
+                    $model->file->saveAs('uploads/foto/'.$imagename.'.'.$model->file->extension);
+                    // save the path in the db column
+                    $model->path_gambar = 'uploads/foto/'.$imagename.'.'.$model->file->extension;
+                }
+                if($model->file_gambar1){
+                    $model->file_gambar1->saveAs($dir.'/'.$imagename.'_1.'.$model->file->extension);
+                    // save the path in the db column
+                    $model->gambar1 = $dir.'/'.$imagename.'_1.'.$model->file->extension;
+                }
+                if($model->file_gambar2){
+                    $model->file_gambar2->saveAs($dir.'/'.$imagename.'_2.'.$model->file->extension);
+                    // save the path in the db column
+                    $model->gambar2 = $dir.'/'.$imagename.'_2.'.$model->file->extension;
+                }
+                if($model->file_gambar3){
+                    $model->file_gambar3->saveAs($dir.'/'.$imagename.'_3.'.$model->file->extension);
+                    // save the path in the db column
+                    $model->gambar3 = $dir.'/'.$imagename.'_3.'.$model->file->extension;
+                }
+                if($model->file_gambar4){
+                    $model->file_gambar4->saveAs($dir.'/'.$imagename.'_4.'.$model->file->extension);
+                    // save the path in the db column
+                    $model->gambar4 = $dir.'/'.$imagename.'_4.'.$model->file->extension;
+                }
+                if($model->file_gambar5){
+                    $model->file_gambar5->saveAs($dir.'/'.$imagename.'_5.'.$model->file->extension);
+                    // save the path in the db column
+                    $model->gambar5 = $dir.'/'.$imagename.'_5.'.$model->file->extension;
+                }
+                if($model->file_gambar6){
+                    $model->file_gambar6->saveAs($dir.'/'.$imagename.'_6.'.$model->file->extension);
+                    // save the path in the db column
+                    $model->gambar6 = $dir.'/'.$imagename.'_6.'.$model->file->extension;
+                }
+                if($model->file_gambar7){
+                    $model->file_gambar7->saveAs($dir.'/'.$imagename.'_7.'.$model->file->extension);
+                    // save the path in the db column
+                    $model->gambar7 = $dir.'/'.$imagename.'_7.'.$model->file->extension;
+                }
+                if($model->file_gambar8){
+                    $model->file_gambar8->saveAs($dir.'/'.$imagename.'_8.'.$model->file->extension);
+                    // save the path in the db column
+                    $model->gambar8 = $dir.'/'.$imagename.'_8.'.$model->file->extension;
+                }
+                if($model->file_gambar9){
+                    $model->file_gambar9->saveAs($dir.'/'.$imagename.'_9.'.$model->file->extension);
+                    // save the path in the db column
+                    $model->gambar9 = $dir.'/'.$imagename.'_9.'.$model->file->extension;
+                }
             }
             $model->saveAll();
             clearstatcache();
             return $this->redirect(['view', 'id' => $model->id]);
-        } else {
+        } 
+        else {
             return $this->render('update', [
                 'model' => $model,
             ]);

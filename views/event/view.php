@@ -37,41 +37,120 @@ $this->params['breadcrumbs'][] = $model->nama_event;
     <div class="row">    
         <img style="height:200px" src="<?= $model['path_gambar'] ?>?cache=<?php echo time(); ?>" alt="<?= $model['path_gambar'] ?>">
     </div>
-	</br><div class="row">
-<?php 
-    $gridColumn = [
-        ['attribute' => 'id', 'visible' => false],
-        'nama_event',
-        'tgl_event',
-        'waktu_event',
-        'alamat',
-        'jumlah_tiket',
-        'deskripsi',
-    ];
-    echo DetailView::widget([
-        'model' => $model,
-        'attributes' => $gridColumn
-    ]); 
-?>
-    </div><div class="row">
-<?php
-if($providerTiket->totalCount){
-    $gridColumnTiket = [
-        ['class' => 'yii\grid\SerialColumn'],
-            ['attribute' => 'id', 'visible' => false],
-            'kode_tiket',
-            'status',
-    ];
-    echo Gridview::widget([
-        'dataProvider' => $providerTiket,
-        'pjax' => true,
-        'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-tiket']],
-        'panel' => [
-            'type' => GridView::TYPE_PRIMARY,
-            'heading' => '<span class="glyphicon glyphicon-book"></span> ' . Html::encode('Tiket'),
-        ],
-        'columns' => $gridColumnTiket
-    ]);
-}
-?>  
-    </div></div>
+	</br>
+    <div class="row">
+        <?php 
+            $gridColumn = [
+                ['attribute' => 'id', 'visible' => false],
+                'nama_event',
+                'tgl_event',
+                'waktu_event',
+                'alamat',
+                'jumlah_tiket',
+                'deskripsi',
+            ];
+            echo DetailView::widget([
+                'model' => $model,
+                'attributes' => $gridColumn
+            ]); 
+        ?>
+    </div>
+    <div class="row">
+        <?php
+            if($providerTiket->totalCount){
+                $gridColumnTiket = [
+                    ['class' => 'yii\grid\SerialColumn'],
+                        ['attribute' => 'id', 'visible' => false],
+                        'kode_tiket',
+                        'status',
+                ];
+                echo Gridview::widget([
+                    'dataProvider' => $providerTiket,
+                    'pjax' => true,
+                    'pjaxSettings' => ['options' => ['id' => 'kv-pjax-container-tiket']],
+                    'panel' => [
+                        'type' => GridView::TYPE_PRIMARY,
+                        'heading' => '<span class="glyphicon glyphicon-book"></span> ' . Html::encode('Tiket'),
+                    ],
+                    'columns' => $gridColumnTiket
+                ]);
+            }
+        ?>  
+    </div>
+    </div>
+    
+    <?php if($model['gambar1'] != NULL || $model['gambar2'] != NULL || $model['gambar3'] != NULL) { ?>
+    <div class="row">
+        <?php if($model['gambar1'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar1'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar2'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar2'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar3'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar3'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+    <?php } ?>
+    <?php if($model['gambar4'] != NULL || $model['gambar5'] != NULL || $model['gambar6'] != NULL) { ?>
+    <div class="row">
+        <?php if($model['gambar4'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar4'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar5'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar5'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar6'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar6'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+    <?php } ?>
+    <?php if($model['gambar7'] != NULL || $model['gambar8'] != NULL || $model['gambar9'] != NULL) { ?>
+    <div class="row">
+        <?php if($model['gambar7'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar7'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar8'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar8'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar9'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar9'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+    <?php } ?>

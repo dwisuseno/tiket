@@ -16,6 +16,17 @@ use yii\behaviors\TimestampBehavior;
  * @property string $path_gambar
  * @property string harga_ps
  * @property string harga_ots
+ * @property integer $count
+ * @property integer $tiket_terjual
+ * @property string $gambar1
+ * @property string $gambar2
+ * @property string $gambar3
+ * @property string $gambar4
+ * @property string $gambar5
+ * @property string $gambar6
+ * @property string $gambar7
+ * @property string $gambar8
+ * @property string $gambar9
  * @property string $created_at
  * @property string $updated_at
  *
@@ -25,6 +36,15 @@ class Event extends \yii\db\ActiveRecord
 {
     use \mootensai\relation\RelationTrait;
     public $file;
+    public $file_gambar1;
+    public $file_gambar2;
+    public $file_gambar3;
+    public $file_gambar4;
+    public $file_gambar5;
+    public $file_gambar6;
+    public $file_gambar7;
+    public $file_gambar8;
+    public $file_gambar9;
     /**
      * @inheritdoc
      */
@@ -34,8 +54,8 @@ class Event extends \yii\db\ActiveRecord
             [['tgl_event', 'waktu_event'], 'safe'],
             [['jumlah_tiket', 'harga_ps', 'harga_ots', 'count', 'tiket_terjual'], 'integer'],
             [['deskripsi'], 'string'],
-            [['file'],'file'],
-            [['nama_event', 'path_gambar', 'created_at', 'updated_at'], 'string', 'max' => 255],
+            [['file', 'file_gambar1', 'file_gambar2', 'file_gambar3', 'file_gambar4', 'file_gambar5', 'file_gambar6', 'file_gambar7', 'file_gambar8', 'file_gambar9'],'file'],
+            [['nama_event', 'path_gambar', 'gambar1', 'gambar2', 'gambar3', 'gambar4', 'gambar5', 'gambar6', 'gambar7', 'gambar8', 'gambar9', 'created_at', 'updated_at'], 'string', 'max' => 255],
             [['alamat'], 'string', 'max' => 300]
         ];
     }
@@ -67,6 +87,15 @@ class Event extends \yii\db\ActiveRecord
             'tiket_terjual' => 'Sold',
             'harga_ps' => 'Harga Tiket Pre-Sale', 
             'harga_ots' => 'Harga Tiket On The Spot', 
+            'gambar1' => 'Gambar1',
+            'gambar2' => 'Gambar2',
+            'gambar3' => 'Gambar3',
+            'gambar4' => 'Gambar4',
+            'gambar5' => 'Gambar5',
+            'gambar6' => 'Gambar6',
+            'gambar7' => 'Gambar7',
+            'gambar8' => 'Gambar8',
+            'gambar9' => 'Gambar9',
         ];
     }
     

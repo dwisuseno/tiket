@@ -12,12 +12,12 @@ $this->title = "Pemesanan";
 		<div class="col-md-7">
 			<font size="6"><b><?= $model['nama_event'] ?></b></font><br>
 			<font size="3"><b><?= $model['deskripsi'] ?> </b></font><br>
-			<font size="3"><?= $model['jumlah_tiket'] ?> tickets</font><br>
+			<font size="3"><b><?= $model['jumlah_tiket'] ?> tickets</b></font><br>
 			<font size="3"><b>Harga Tiket Pre-Sale: Rp<?php echo number_format($model['harga_ps'],2,",","."); ?></b></font><br>
 			<font size="3"><b>Harga Tiket On The Spot: Rp<?php echo number_format($model['harga_ots'],2,",","."); ?></b></font><br>
-			<font size="4"><b>Date: <?= date("D, j F Y", strtotime($model['tgl_event'])) ?></b></font><br>
+			<!--<font size="4"><b>Date: <?= date("D, j F Y", strtotime($model['tgl_event'])) ?></b></font><br>
 			<font size="3">Open Gate: <?= date("g:i a", strtotime($model['waktu_event'])) ?></font><br>
-            <font size="3"><?= $model['alamat'] ?> </font><br>
+            <font size="3"><?= $model['alamat'] ?> </font><br> -->
             <!--<?php //$form = ActiveForm::begin([
 				//'layout' => 'horizontal',
 			    //'method' => 'post',
@@ -90,6 +90,82 @@ $this->title = "Pemesanan";
 		</div>
         <?php }?>
 	</div>
+    <?php if($model['gambar1'] != NULL || $model['gambar2'] != NULL || $model['gambar3'] != NULL) { ?>
+    <div class="row">
+        <?php if($model['gambar1'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar1'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar2'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar2'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar3'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar3'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+    <?php } ?>
+    <?php if($model['gambar4'] != NULL || $model['gambar5'] != NULL || $model['gambar6'] != NULL) { ?>
+    <div class="row">
+        <?php if($model['gambar4'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar4'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar5'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar5'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar6'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar6'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+    <?php } ?>
+    <?php if($model['gambar7'] != NULL || $model['gambar8'] != NULL || $model['gambar9'] != NULL) { ?>
+    <div class="row">
+        <?php if($model['gambar7'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar7'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar8'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar8'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+        <?php if($model['gambar9'] != NULL) { ?>
+        <div class="col-sm-12 col-md-4">
+            <div class="thumbnail">
+                <img style="height:200px" src="<?= $model['gambar9'] ?>">
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+    <?php } ?>
+    <br>
     <?php if(Yii::$app->user->identity != null) {?>
 	<div class="row">
 		<div class="col-md-12">

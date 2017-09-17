@@ -75,7 +75,44 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'deskripsi')->textArea(['rows' => '6','placeholder' => 'Description']) ?>
         </div>
     </div>
-    <?= $form->field($model, 'file') -> fileInput(); ?>
+    <div class="row">
+        <div class="col-md-6">
+            <?= $form->field($model, 'file')->fileInput(); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <?= $form->field($model, 'file_gambar1')->fileInput(); ?>
+        </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'file_gambar2')->fileInput(); ?>
+        </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'file_gambar3')->fileInput(); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <?= $form->field($model, 'file_gambar4')->fileInput(); ?>
+        </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'file_gambar5')->fileInput(); ?>
+        </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'file_gambar6')->fileInput(); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <?= $form->field($model, 'file_gambar7')->fileInput(); ?>
+        </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'file_gambar8')->fileInput(); ?>
+        </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'file_gambar9')->fileInput(); ?>
+        </div>
+    </div>
     <div class="form-group">
     <?php if(Yii::$app->controller->action->id != 'save-as-new'): ?>
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

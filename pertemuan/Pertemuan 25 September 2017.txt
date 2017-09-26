@@ -1,6 +1,6 @@
 Program:
-- Detail event tidak bisa diakses untuk user guest 
-- Setelah update foto, di kelola event foto masih belum ter-update
+- Detail event tidak bisa diakses untuk user guest {sudah}
+- Setelah update foto, di kelola event foto masih belum ter-update {sudah}
 
 Buku:
 - Bab 4. dari Usecase sampai Sequence yang ditampilkan cuma fitur (usecase) yang utama yaitu: melihat event->diganti melihat detail event; melihat hasil likert; mereview event. Usecase / fitur yg lainnya dipindah ke LAMPIRAN

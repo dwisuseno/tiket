@@ -47,7 +47,7 @@ $this->registerJs($search);
             'attribute' => 'path_gambar',
             'format' => 'html',
             'value' => function($model) {
-                return Html::img($model->path_gambar."?cache=<?php echo time(); ?>",['width'=>100]);
+                return Html::img($model->path_gambar."?cache=<?php echo time(); ?>", ['width'=>100]);
             },
         ],
         [

@@ -1,0 +1,8 @@
+Program:
+- Detail event tidak bisa diakses untuk user guest 
+- Setelah update foto, di kelola event foto masih belum ter-update
+
+Buku:
+- Bab 4. dari Usecase sampai Sequence yang ditampilkan cuma fitur (usecase) yang utama yaitu: melihat event->diganti melihat detail event; melihat hasil likert; mereview event. Usecase / fitur yg lainnya dipindah ke LAMPIRAN
+- Tampilan ERD diganti menggunakan Power Designer
+- Pada Bab I Latar Belakang ditambahkan penelitian yang sudah pernah ada berkaitan dengan tiket online (File Jurnal sdh dikirim lewat WA)

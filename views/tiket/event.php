@@ -21,6 +21,7 @@ $this->title = "Choose Event";
 	        <p><?= date("D, j F Y", strtotime($model[$i]['tgl_event'])) ?></p>
 	        <p><?= date("g:i a", strtotime($model[$i]['waktu_event'])) ?></p>
             <p><?= $model[$i]['alamat'] ?></p> 
+            <?php if(Yii::$app->user->identity != null){?>
             <?php $id = $model[$i]['id'];?>
 	        <p><a href="<?= Url::to(['tiket/preview', 'id' => $model[$i]['id']])?>" class="btn btn-success" role="button" >Detail Event</a></p>
 			<?php
@@ -30,7 +31,7 @@ $this->title = "Choose Event";
 					<p><a class="btn btn-primary" role="button" onclick="getConfirmation('<?php echo $model[$i]['id']?>');">Beli Tiket</a></p>
 				<?php
 				}
-			?>
+			}?>
 	      </div>
 	    </div>
 	  </div>

@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="tiket-index">
-
+<div class="alert alert-info" role="alert">
 	<table id='test' class="table table-striped table-bordered">
     <thead>
       <tr>
@@ -59,5 +59,5 @@ $this->params['breadcrumbs'][] = $this->title;
       <?php } ?>
     </tbody>
   </table>
-  
+  </div>
 </div>

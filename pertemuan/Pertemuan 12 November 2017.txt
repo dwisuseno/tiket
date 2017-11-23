@@ -1,4 +1,4 @@
-- White Box Testing Untuk Fitur Melihat Event/Preview
-- Sequence Diagram untuk fitur Likert
-- Cek Semua Diagram (Sequence, Activity)
-- Blac Box Testing
+- White Box Testing Untuk Fitur Melihat Event/Preview [sudah]
+- Sequence Diagram untuk fitur Likert [sudah]
+- Cek Semua Diagram (Sequence, Activity) [sudah]
+- Black Box Testing

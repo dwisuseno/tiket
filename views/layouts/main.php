@@ -72,13 +72,27 @@ AppAsset::register($this);
             //'activateParents' => true,
             'items' => [
                 ['label' => 'Beranda', 'url' => ['/site']],
-                ['label' => 'Event  Detail', 'url' => ['/event']],
-                ['label' => 'Tiket Pemesanan', 'url' => ['/tiket']],
-                ['label' => 'Event', 'url' => ['/tiket/lihatevent']],
-                //['label' => 'Tentang', 'url' => ['site/about']],
-                ['label' => 'Hasil Likert', 'url' => ['/likert']],
-                ['label' => 'User', 'url' => ['/login']],
-                ['label' => 'User Setting', 'url' => ['/login/user']],
+                [
+                    'label' => 'Event',
+                    'items' => [
+                        '<li>'. Html::a('Event  Detail','index.php?r=event/index') .'</li>',
+                        '<li>'. Html::a('Event','index.php?r=tiket/lihatevent') .'</li>',
+                    ],
+                ],
+                [
+                    'label' => 'Tiket',
+                    'items' => [
+                        '<li>'. Html::a('Tiket Pemesanan','index.php?r=tiket/index') .'</li>',
+                        '<li>'. Html::a('Tiket Anda','index.php?r=tiket/cektiket') .'</li>',
+                    ],
+                ],
+                [
+                    'label' => 'Setting User',
+                    'items' => [
+                        '<li>'. Html::a('User','index.php?r=login/index') .'</li>',
+                        '<li>'. Html::a('User Setting','index.php?r=login/user') .'</li>',
+                    ],
+                ],
                 [
                     'label' => 'About',
                     'items' => [
@@ -86,6 +100,7 @@ AppAsset::register($this);
                         '<li>'. Html::a('Pemesanan Layanan','index.php?r=site/layanan') .'</li>',
                     ],
                 ],
+                ['label' => 'Hasil Likert', 'url' => ['/likert']],
                 Yii::$app->user->isGuest ? (
                     ['label' => 'Login', 'url' => ['/site/login']]
                     

@@ -2,3 +2,9 @@
 2. Edit gamar white box [sudah]
 3. Black box [sudah]
 4. Sequence Diagram di Lampiran, jika masih dalam satu UI/Form maka batang.nya dijadikan satu [sudah]
+
+
+=====================================================================================================================
+1. Sequence Diagram di Lampiran, jika masih dalam satu UI/Form maka batang.nya dijadikan satu (panah tipe return)
+2. Implementasi diperbaiki (terutama fitur registrasi user)
+3. Kodingan diperbaiki

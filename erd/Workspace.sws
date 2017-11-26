@@ -6,8 +6,9 @@
 	<Local Expanded="Yes">
 		<Model Expanded="Yes" ID="{536852F5-325C-43E3-9649-19E72D5D6EEF}" Loaded="No" Name="CDM_Tiket" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="CDM_Tiket.cdm"/>
 		<Model Expanded="Yes" ID="{F0BD0605-3717-4E72-BD1B-C69909FA49E0}" Loaded="No" Name="PDM_Tiket" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="PDM_Tiket.pdm"/>
-		<Model Expanded="Yes" ID="{536852F5-325C-43E3-9649-19E72D5D6EEF}" Name="CDM_Tiket" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="../CDM_Tiket.cdm"/>
-		<Model Expanded="Yes" ID="{F0BD0605-3717-4E72-BD1B-C69909FA49E0}" Name="PDM_Tiket" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="../ERD.pdm"/>
+		<Model Expanded="Yes" ID="{536852F5-325C-43E3-9649-19E72D5D6EEF}" Loaded="No" Name="CDM_Tiket" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="../CDM_Tiket.cdm"/>
+		<Model Expanded="Yes" ID="{F0BD0605-3717-4E72-BD1B-C69909FA49E0}" Loaded="No" Name="PDM_Tiket" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="../ERD.pdm"/>
+		<Model Expanded="Yes" ID="{536852F5-325C-43E3-9649-19E72D5D6EEF}" Name="CDM_Tiket" Selected="Yes" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="../CDM_Tiket.cdm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>

@@ -1,0 +1,4 @@
+1. Class Diagram diuat ERD dengan ditambahkan metode [sudah]
+2. Edit gamar white box [sudah]
+3. Black box [sudah]
+4. Sequence Diagram di Lampiran, jika masih dalam satu UI/Form maka batang.nya dijadikan satu [sudah]

@@ -5,6 +5,6 @@
 
 
 =====================================================================================================================
-1. Sequence Diagram di Lampiran, jika masih dalam satu UI/Form maka batang.nya dijadikan satu (panah tipe return)
+1. Sequence Diagram di Lampiran, jika masih dalam satu UI/Form maka batang.nya dijadikan satu (panah tipe return) [sudah]
 2. Implementasi diperbaiki (terutama fitur registrasi user)
 3. Kodingan diperbaiki

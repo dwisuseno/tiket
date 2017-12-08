@@ -1,6 +1,4 @@
 <?php
-/* @var $this yii\web\View */
-
 $this->title = 'SIDE STORY FAMILY';
 ?>
 <div class="site-index" >

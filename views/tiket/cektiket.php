@@ -1,18 +1,13 @@
 <?php
-
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\TiketSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-
 use yii\helpers\Html;
 use kartik\export\ExportMenu;
 use kartik\grid\GridView;
-
 $this->title = 'Tiket';
 $this->params['breadcrumbs'][] = $this->title;
-
 ?>
-
 <div class="tiket-index">
 <div class="alert alert-info" role="alert">
 	<table id='test' class="table table-striped table-bordered">

@@ -1,13 +1,10 @@
 <?php
-
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EventSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-
 use yii\helpers\Html;
 use kartik\export\ExportMenu;
 use kartik\grid\GridView;
-
 $this->title = 'Event';
 $this->params['breadcrumbs'][] = $this->title;
 $search = "$('.search-button').click(function(){

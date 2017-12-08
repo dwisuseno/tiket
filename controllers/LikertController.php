@@ -1,7 +1,5 @@
 <?php
-
 namespace app\controllers;
-
 use Yii;
 use app\models\Likert;
 use app\models\LikertSearch;
@@ -9,9 +7,6 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
-/**
- * LikertController implements the CRUD actions for Likert model.
- */
 class LikertController extends Controller
 {
     public function behaviors()
@@ -38,11 +33,6 @@ class LikertController extends Controller
             ]
         ];
     }
-
-    /**
-     * Lists all Likert models.
-     * @return mixed
-     */
     public function actionIndex()
     {
         $searchModel = new LikertSearch();
@@ -53,12 +43,6 @@ class LikertController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
-
-    /**
-     * Displays a single Likert model.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionView($id)
     {
         $model = $this->findModel($id);
@@ -66,12 +50,6 @@ class LikertController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
-
-    /**
-     * Creates a new Likert model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
     public function actionCreate()
     {
         $model = new Likert();
@@ -84,13 +62,6 @@ class LikertController extends Controller
             ]);
         }
     }
-
-    /**
-     * Updates an existing Likert model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionUpdate($id)
     {
         if (Yii::$app->request->post('_asnew') == '1') {
@@ -107,26 +78,12 @@ class LikertController extends Controller
             ]);
         }
     }
-
-    /**
-     * Deletes an existing Likert model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionDelete($id)
     {
         $this->findModel($id)->deleteWithRelated();
 
         return $this->redirect(['index']);
     }
-    
-    /**
-     * 
-     * Export Likert information into PDF format.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionPdf($id) {
         $model = $this->findModel($id);
 
@@ -151,15 +108,6 @@ class LikertController extends Controller
 
         return $pdf->render();
     }
-
-    /**
-    * Creates a new Likert model by another data,
-    * so user don't need to input all field from scratch.
-    * If creation is successful, the browser will be redirected to the 'view' page.
-    *
-    * @param type $id
-    * @return type
-    */
     public function actionSaveAsNew($id) {
         $model = new Likert();
 
@@ -175,14 +123,6 @@ class LikertController extends Controller
             ]);
         }
     }
-    
-    /**
-     * Finds the Likert model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Likert the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     protected function findModel($id)
     {
         if (($model = Likert::findOne($id)) !== null) {

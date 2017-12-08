@@ -1,7 +1,5 @@
 <?php
-
 namespace app\controllers;
-
 use Yii;
 use app\models\Event;
 use app\models\EventSearch;
@@ -10,9 +8,6 @@ use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 use yii\filters\VerbFilter;
 
-/**
- * EventController implements the CRUD actions for Event model.
- */
 class EventController extends Controller
 {
     public function behaviors()
@@ -34,11 +29,6 @@ class EventController extends Controller
             ]
         ];
     }
-
-    /**
-     * Lists all Event models.
-     * @return mixed
-     */
     public function actionIndex()
     {
         $searchModel = new EventSearch();
@@ -51,12 +41,6 @@ class EventController extends Controller
             'budi' => $nama,
         ]);
     }
-
-    /**
-     * Displays a single Event model.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionView($id)
     {
         $model = $this->findModel($id);
@@ -68,16 +52,9 @@ class EventController extends Controller
             'providerTiket' => $providerTiket,
         ]);
     }
-
-    /**
-     * Creates a new Event model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
     public function actionCreate()
     {
         $model = new Event();
-
         if ($model->loadAll(Yii::$app->request->post())) {
             $index = Event::find()->max('id');
             $index++;
@@ -85,7 +62,6 @@ class EventController extends Controller
             //create directory to save file picture
             $dir = 'uploads/event/'.$model->nama_event.'_'.$index;
             mkdir($dir);
-            
             $model->file = UploadedFile::getInstance($model,'file');
             $model->file_gambar1 = UploadedFile::getInstance($model,'file_gambar1');
             $model->file_gambar2 = UploadedFile::getInstance($model,'file_gambar2');
@@ -96,7 +72,6 @@ class EventController extends Controller
             $model->file_gambar7 = UploadedFile::getInstance($model,'file_gambar7');
             $model->file_gambar8 = UploadedFile::getInstance($model,'file_gambar8');
             $model->file_gambar9 = UploadedFile::getInstance($model,'file_gambar9');
-            
             if($model->file){
                 $model->file->saveAs('uploads/foto/'.$imagename.'.'.$model->file->extension);
                 // save the path in the db column
@@ -147,7 +122,6 @@ class EventController extends Controller
                 // save the path in the db column
                 $model->gambar9 = $dir.'/'.$imagename.'_9.'.$model->file_gambar9->extension;
             }
-            
             $model->saveAll();
             return $this->redirect(['view', 'id' => $model->id]);
         } 
@@ -157,13 +131,6 @@ class EventController extends Controller
             ]);
         }
     }
-
-    /**
-     * Updates an existing Event model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionUpdate($id)
     {
         if (Yii::$app->request->post('_asnew') == '1') {
@@ -173,7 +140,6 @@ class EventController extends Controller
             $model = $this->findModel($id);
         }
         if ($model->loadAll(Yii::$app->request->post())) {
-            
             $model->file = UploadedFile::getInstance($model,'file');
             $model->file_gambar1 = UploadedFile::getInstance($model,'file_gambar1');
             $model->file_gambar2 = UploadedFile::getInstance($model,'file_gambar2');
@@ -184,12 +150,10 @@ class EventController extends Controller
             $model->file_gambar7 = UploadedFile::getInstance($model,'file_gambar7');
             $model->file_gambar8 = UploadedFile::getInstance($model,'file_gambar8');
             $model->file_gambar9 = UploadedFile::getInstance($model,'file_gambar9');
-                
             $imagename = $model->nama_event.'_'.$id;
             $dir = 'uploads/event/'.$model->nama_event.'_'.$id;
             //echo "$imagename";
             //echo "$dir";
-            
             if(is_dir($dir))
             {
                 if($model->file){
@@ -307,26 +271,12 @@ class EventController extends Controller
             ]);
         }
     }
-
-    /**
-     * Deletes an existing Event model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionDelete($id)
     {
         $this->findModel($id)->deleteWithRelated();
 
         return $this->redirect(['index']);
     }
-    
-    /**
-     * 
-     * Export Event information into PDF format.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionPdf($id) {
         $model = $this->findModel($id);
         $providerTiket = new \yii\data\ArrayDataProvider([
@@ -355,15 +305,6 @@ class EventController extends Controller
 
         return $pdf->render();
     }
-
-    /**
-    * Creates a new Event model by another data,
-    * so user don't need to input all field from scratch.
-    * If creation is successful, the browser will be redirected to the 'view' page.
-    *
-    * @param type $id
-    * @return type
-    */
     public function actionSaveAsNew($id) {
         $model = new Event();
 
@@ -379,14 +320,6 @@ class EventController extends Controller
             ]);
         }
     }
-    
-    /**
-     * Finds the Event model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Event the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     protected function findModel($id)
     {
         if (($model = Event::findOne($id)) !== null) {
@@ -395,15 +328,6 @@ class EventController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-    
-    /**
-    * Action to load a tabular form grid
-    * for Tiket
-    * @author Yohanes Candrajaya <moo.tensai@gmail.com>
-    * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
-    *
-    * @return mixed
-    */
     public function actionAddTiket()
     {
         if (Yii::$app->request->isAjax) {
@@ -415,7 +339,6 @@ class EventController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-
     public function add()
     {
         return;

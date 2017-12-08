@@ -213,7 +213,6 @@ $this->title = "Pemesanan";
 	</div>
     <?php }?>
 </div>
-
 <script type="text/javascript">
 function getConfirmation(id){
    var retVal = confirm("Do you want to continue ?");

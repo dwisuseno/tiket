@@ -1,9 +1,6 @@
 <?php
-
 namespace app\models;
-
 use \app\models\base\Login as BaseLogin;
-
 /**
  * This is the model class for table "login".
  */
@@ -21,5 +18,5 @@ class Login extends BaseLogin
             [['role'], 'string', 'max' => 10]
         ]);
     }
-	
 }
+

@@ -1,11 +1,8 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\url;
-
 $this->title = "Success";
-
 ?>
 <?php if(Yii::$app->session->getFlash('warning')){ ?>
 <div class="alert alert-success">
@@ -16,3 +13,5 @@ $this->title = "Success";
   <strong>Kode Pembayaran Tiket anda: <?php echo $kode_pembayaran?></strong>
 </div>
 <?php }?>
+
+

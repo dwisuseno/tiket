@@ -1,7 +1,5 @@
 <?php
-
 namespace app\models;
-
 /**
  * This is the ActiveQuery class for [[Event]].
  *
@@ -14,7 +12,6 @@ class EventQuery extends \yii\db\ActiveQuery
         $this->andWhere('[[status]]=1');
         return $this;
     }*/
-
     /**
      * @inheritdoc
      * @return Event[]|array
@@ -23,7 +20,6 @@ class EventQuery extends \yii\db\ActiveQuery
     {
         return parent::all($db);
     }
-
     /**
      * @inheritdoc
      * @return Event|array|null
@@ -33,3 +29,4 @@ class EventQuery extends \yii\db\ActiveQuery
         return parent::one($db);
     }
 }
+

@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use kartik\grid\GridView;
@@ -78,7 +77,6 @@ $this->params['breadcrumbs'][] = $model->nama_event;
         ?>  
     </div>
     </div>
-    
     <?php if($model['gambar1'] != NULL || $model['gambar2'] != NULL || $model['gambar3'] != NULL) { ?>
     <div class="row">
         <?php if($model['gambar1'] != NULL) { ?>

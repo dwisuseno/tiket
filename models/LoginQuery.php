@@ -1,7 +1,5 @@
 <?php
-
 namespace app\models;
-
 /**
  * This is the ActiveQuery class for [[Login]].
  *
@@ -14,7 +12,6 @@ class LoginQuery extends \yii\db\ActiveQuery
         $this->andWhere('[[status]]=1');
         return $this;
     }*/
-
     /**
      * @inheritdoc
      * @return Login[]|array
@@ -23,7 +20,6 @@ class LoginQuery extends \yii\db\ActiveQuery
     {
         return parent::all($db);
     }
-
     /**
      * @inheritdoc
      * @return Login|array|null
@@ -33,3 +29,4 @@ class LoginQuery extends \yii\db\ActiveQuery
         return parent::one($db);
     }
 }
+

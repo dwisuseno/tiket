@@ -1,7 +1,5 @@
 <?php
-
 namespace app\controllers;
-
 use Yii;
 use app\models\Tiket;
 use app\models\Event;
@@ -12,7 +10,6 @@ use app\models\Likert;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-//require('\vendor\phpoffice\PHPExcel.php');
 
 function hasil_likert($a, $b, $c, $d, $e, $total)
 {
@@ -29,7 +26,6 @@ function hasil_likert($a, $b, $c, $d, $e, $total)
 
     return $index;
 }
-
 function generateKodePembayaran($digits)
 {
     $randNumber = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
@@ -39,7 +35,6 @@ function generateKodePembayaran($digits)
     else
         return $this->randGenerator( $digits);
 }
-
 function generateKodeTiket($digits)
 {
     $randNumber = str_pad(rand(0, pow(10, $digits)-1), $digits, '0', STR_PAD_LEFT);
@@ -50,12 +45,8 @@ function generateKodeTiket($digits)
         return $this->randGenerator( $digits);
 }
 
-/**
- * TiketController implements the CRUD actions for Tiket model.
- */
 class TiketController extends Controller
 {
-
     public function behaviors()
     {
         return [
@@ -77,14 +68,12 @@ class TiketController extends Controller
             ]
         ];
     }
-
     public function actionUser(){
         $model = Login::findOne(Yii::$app->user->identity->id);
         return $this->render('user_update', [
             'model' => $model,
         ]);
     }
-
     public function actionUpdateuser(){
         $model = Login::findOne(Yii::$app->user->identity->id);
         if ($model->loadAll(Yii::$app->request->post()) && $model->saveAll()) {
@@ -97,11 +86,6 @@ class TiketController extends Controller
             ]);
         }
     }
-
-    /**
-     * Lists all Tiket models.
-     * @return mixed
-     */
     public function actionIndex()
     {
         $searchModel = new TiketSearch();
@@ -112,12 +96,6 @@ class TiketController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
-
-    /**
-     * Displays a single Tiket model.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionView($id)
     {
         $model = $this->findModel($id);
@@ -129,12 +107,6 @@ class TiketController extends Controller
             'providerJenisTiket' => $providerJenisTiket,
         ]);
     }
-
-    /**
-     * Creates a new Tiket model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
     public function actionCreate()
     {
         $model = new Tiket();
@@ -147,13 +119,6 @@ class TiketController extends Controller
             ]);
         }
     }
-
-    /**
-     * Updates an existing Tiket model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionUpdate($id)
     {
         if (Yii::$app->request->post('_asnew') == '1') {
@@ -174,26 +139,12 @@ class TiketController extends Controller
             ]);
         }
     }
-
-    /**
-     * Deletes an existing Tiket model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionDelete($id)
     {
         $this->findModel($id)->deleteWithRelated();
 
         return $this->redirect(['index']);
     }
-    
-    /**
-     * 
-     * Export Tiket information into PDF format.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionPdf($id) {
         $model = $this->findModel($id);
         $providerJenisTiket = new \yii\data\ArrayDataProvider([
@@ -222,15 +173,6 @@ class TiketController extends Controller
 
         return $pdf->render();
     }
-
-    /**
-    * Creates a new Tiket model by another data,
-    * so user don't need to input all field from scratch.
-    * If creation is successful, the browser will be redirected to the 'view' page.
-    *
-    * @param type $id
-    * @return type
-    */
     public function actionSaveAsNew($id) {
         $model = new Tiket();
 
@@ -246,14 +188,6 @@ class TiketController extends Controller
             ]);
         }
     }
-    
-    /**
-     * Finds the Tiket model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Tiket the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     protected function findModel($id)
     {
         if (($model = Tiket::findOne($id)) !== null) {
@@ -262,15 +196,6 @@ class TiketController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-    
-    /**
-    * Action to load a tabular form grid
-    * for JenisTiket
-    * @author Yohanes Candrajaya <moo.tensai@gmail.com>
-    * @author Jiwantoro Ndaru <jiwanndaru@gmail.com>
-    *
-    * @return mixed
-    */
     public function actionAddJenisTiket()
     {
         if (Yii::$app->request->isAjax) {
@@ -285,9 +210,6 @@ class TiketController extends Controller
 
     public function actionLihatevent(){
         $model = Event::find()->asArray()->orderBy(['tgl_event' => SORT_DESC])->all();
-        
-        //var_dump(Yii::$app->user->identity->role);
-        
         if(Yii::$app->user->identity != null && Yii::$app->user->identity->role != 'admin')
         {
             $likert = Likert::findOne(1);
@@ -301,7 +223,6 @@ class TiketController extends Controller
                 'model' => $model,
             ]);
     }
-
     public function actionPreview($id){
         $model = Event::find()->where(['id' => $id])->asArray()->one();
         $c = Event::findOne($id);
@@ -316,11 +237,9 @@ class TiketController extends Controller
             $likert->hasil = hasil_likert($likert->kelas_a, $likert->kelas_b, $likert->kelas_c, $likert->kelas_d, $likert->kelas_e, $likert->total);
             $likert->save();
         }
-		
         $tiket = new Tiket();
         $reviewContent =Review::find()->where(['event_id' => $id])->asArray()->all();
         $modelreview = new Review();
-
         return $this->render('pemesanan',[
                 'model' => $model,
                 'tiket' => $tiket,
@@ -328,7 +247,6 @@ class TiketController extends Controller
                 'modelreview' => $modelreview,
             ]);
     }
-
     public function actionReview($id){
         $model = new Review();
         $likert = Likert::findOne(1);
@@ -342,7 +260,6 @@ class TiketController extends Controller
                 $likert->hasil = hasil_likert($likert->kelas_a, $likert->kelas_b, $likert->kelas_c, $likert->kelas_d, $likert->kelas_e, $likert->total);
                 $likert->save();
             }
-
             $model->event_id = $id;
             $model->save();
             $flag = $model->save(false);
@@ -357,9 +274,7 @@ class TiketController extends Controller
             }   
         }
         return $this->render('reviewsubmitted');
-        //return $this->redirect(['preview', 'id' => $id]);
     }
-
     public function actionReviewsubmitted($id){
         $model = new Review();
 
@@ -380,7 +295,6 @@ class TiketController extends Controller
         }
         return $this->render('reviewsubmitted');
     }
-    
     // fungsi pemesanan tiket melalui Detail Event
     public function actionPesantiket($event_id){		
         $tiket = new Tiket();
@@ -398,7 +312,6 @@ class TiketController extends Controller
         
         // mengupdate data tiket untuk dikurangi - 1
 		$event = Event::findOne($event_id);
-        
         $event->jumlah_tiket = $event->jumlah_tiket - 1;
         $event->tiket_terjual = $event->tiket_terjual + 1;
         $event->save(false);
@@ -462,23 +375,15 @@ class TiketController extends Controller
     public function generateUniqueRandomString( $length) {
             
         $randomString = Yii::$app->getSecurity()->generateRandomString($length);
-        //$model = Tiket::findOne($randomString);
         $model = Tiket::find()->where(['kode_tiket' => $randomString])->count(); 
-        // var_dump($model);
-        // exit();
         if($model == "0")
             return $randomString;
         else
             return $this->generateUniqueRandomString( $length);
-                
     }
 
     public function actionCektiket(){
-        //$model = Tiket::find()->asArray()->orderBy('created_at')->where(['user_id' => Yii::$app->user->identity->id])->all();
         $model = Tiket::find()->asArray()->where(['user_id' => Yii::$app->user->identity->id])->leftJoin('event', 'tiket.event_id=event.id')->orderBy('tiket.created_at')->select("tiket.id as id, tiket.event_id as event_id, tiket.user_id as user_id, tiket.kode_pembayaran as kode_pembayaran, tiket.kode_tiket as kode_tiket, tiket.harga as harga,tiket.status as status, tiket.created_at as created_at, event.nama_event as nama_event, event.tgl_event as tgl_event")->all();
-          // echo "<pre>";
-          // var_dump($model);
-          // echo "</pre>";
           return $this->render('cektiket',[
                   'model' => $model,
               ]);

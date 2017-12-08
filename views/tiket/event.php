@@ -2,10 +2,8 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
-
 $this->title = "Choose Event";
 ?>
-
 <div class="site-index">
 	<div class="row">
 	<?php 
@@ -39,7 +37,6 @@ $this->title = "Choose Event";
 	 <?php } ?>
 	</div>
 </div>
-
 <script type="text/javascript">
 function getConfirmation(id){
 	var retVal = confirm("Do you want to continue ?");

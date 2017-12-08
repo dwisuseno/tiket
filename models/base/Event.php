@@ -1,10 +1,7 @@
 <?php
-
 namespace app\models\base;
-
 use Yii;
 use yii\behaviors\TimestampBehavior;
-
 /**
  * This is the base model class for table "event".
  *
@@ -59,7 +56,6 @@ class Event extends \yii\db\ActiveRecord
             [['alamat'], 'string', 'max' => 300]
         ];
     }
-    
     /**
      * @inheritdoc
      */
@@ -67,7 +63,6 @@ class Event extends \yii\db\ActiveRecord
     {
         return 'event';
     }
-
     /**
      * @inheritdoc
      */
@@ -98,7 +93,6 @@ class Event extends \yii\db\ActiveRecord
             'gambar9' => 'Gambar9',
         ];
     }
-    
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -106,7 +100,6 @@ class Event extends \yii\db\ActiveRecord
     {
         return $this->hasMany(\app\models\Tiket::className(), ['event_id' => 'id']);
     }
-    
 /**
      * @inheritdoc
      * @return array mixed
@@ -122,7 +115,6 @@ class Event extends \yii\db\ActiveRecord
             ],
         ];
     }
-
     /**
      * @inheritdoc
      * @return \app\models\EventQuery the active query used by this AR class.

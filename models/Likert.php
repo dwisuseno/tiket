@@ -1,17 +1,11 @@
 <?php
-
 namespace app\models;
-
 use \app\models\base\Likert as BaseLikert;
-
 /**
  * This is the model class for table "likert".
  */
 class Likert extends BaseLikert
 {
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return array_replace_recursive(parent::rules(),
@@ -20,5 +14,5 @@ class Likert extends BaseLikert
             [['hasil'], 'double']
         ]);
     }
-	
 }
+

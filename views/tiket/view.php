@@ -1,12 +1,9 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use kartik\grid\GridView;
-
 /* @var $this yii\web\View */
 /* @var $model app\models\Tiket */
-
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Tiket', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -18,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <h2><?= 'Tiket'.' '. Html::encode($this->title) ?></h2>
         </div>
         <div class="col-sm-4" style="margin-top: 15px">
-<?=             
+        <?=             
              Html::a('<i class="fa glyphicon glyphicon-hand-up"></i> ' . 'PDF', 
                 ['pdf', 'id' => $model->id],
                 [
@@ -37,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'method' => 'post',
                 ],
             ])
-            ?>
+        ?>
         </div>
     </div>
 
@@ -60,7 +57,6 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); 
 ?>
     </div>
-    
     <div class="row">
 <?php
 if($providerJenisTiket->totalCount){

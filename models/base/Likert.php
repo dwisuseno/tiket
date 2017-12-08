@@ -1,10 +1,7 @@
 <?php
-
 namespace app\models\base;
-
 use Yii;
 use yii\behaviors\TimestampBehavior;
-
 /**
  * This is the base model class for table "likert".
  *
@@ -19,10 +16,6 @@ use yii\behaviors\TimestampBehavior;
 class Likert extends \yii\db\ActiveRecord
 {
     use \mootensai\relation\RelationTrait;
-
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -30,18 +23,10 @@ class Likert extends \yii\db\ActiveRecord
             [['hasil'], 'double']
         ];
     }
-    
-    /**
-     * @inheritdoc
-     */
     public static function tableName()
     {
         return 'likert';
     }
-
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels()
     {
         return [
@@ -55,11 +40,6 @@ class Likert extends \yii\db\ActiveRecord
             'hasil' => 'Hasil (%)',
         ];
     }
-
-/**
-     * @inheritdoc
-     * @return array mixed
-     */ 
     public function behaviors()
     {
         return [
@@ -71,11 +51,6 @@ class Likert extends \yii\db\ActiveRecord
             ],
         ];
     }
-
-    /**
-     * @inheritdoc
-     * @return \app\modules\tiket\models\LikertQuery the active query used by this AR class.
-     */
     public static function find()
     {
         return new \app\models\LikertQuery(get_called_class());

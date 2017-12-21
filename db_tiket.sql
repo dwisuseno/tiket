@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2017 at 12:49 PM
+-- Generation Time: Dec 21, 2017 at 01:19 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -93,7 +93,7 @@ CREATE TABLE `counter` (
 --
 
 INSERT INTO `counter` (`id`, `count_home`, `created_at`, `updated_at`) VALUES
-(1, 248, NULL, '2017-12-20 14:36:36');
+(1, 303, NULL, '2017-12-21 07:18:25');
 
 -- --------------------------------------------------------
 
@@ -132,8 +132,8 @@ CREATE TABLE `event` (
 --
 
 INSERT INTO `event` (`id`, `nama_event`, `tgl_event`, `waktu_event`, `alamat`, `deskripsi`, `jumlah_tiket`, `path_gambar`, `harga_ps`, `harga_ots`, `count`, `tiket_terjual`, `gambar1`, `gambar2`, `gambar3`, `gambar4`, `gambar5`, `gambar6`, `gambar7`, `gambar8`, `gambar9`, `created_at`, `updated_at`) VALUES
-(1, 'Surya Professional Mild Tour', '2020-12-05', '20:00:00', 'Lapangan Kodam V Brawijaya, Surabaya, Jawa Timur', 'Konser Musik Surya Professional Mild Tour menghadurkan grup band Indonesia antara lain: NOAH, DEWA 19, NIDJI, dan juga grup band internasional yaitu COLDPLAY', 1000, 'uploads/foto/Surya Professional Mild Tour_1.jpg', 300000, 500000, 1, 0, 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_1.png', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_2.png', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_3.jpg', '', '', '', NULL, NULL, NULL, '2017-12-20 14:59:12', '2017-12-20 15:45:41'),
-(2, 'Konser Musik Pro Mild Jam On The Road', '2021-02-06', '21:00:00', 'Jl. Soekarno Hatta, Jatimulyo, Malang (Depan Kampus Politeknik Negeri Malang)', 'Konser Musik Pro Mild On The Road merupakan konser musik yang disediakan setiap bulan keliling kota di Indonesia.', 2000, 'uploads/foto/Konser Musik Pro Mild On The Road_2.png', 150000, 300000, 1, 0, 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_1.png', 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_2.jpg', 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_3.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '2017-12-20 15:31:35', '2017-12-20 15:45:50'),
+(1, 'Surya Professional Mild Tour', '2020-12-05', '20:00:00', 'Lapangan Kodam V Brawijaya, Surabaya, Jawa Timur', 'Konser Musik Surya Professional Mild Tour menghadurkan grup band Indonesia antara lain: NOAH, DEWA 19, NIDJI, dan juga grup band internasional yaitu COLDPLAY', 986, 'uploads/foto/Surya Professional Mild Tour_1.jpg', 300000, 500000, 18, 14, 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_1.png', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_2.png', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_3.jpg', '', '', '', NULL, NULL, NULL, '2017-12-20 14:59:12', '2017-12-21 07:15:22'),
+(2, 'Konser Musik Pro Mild Jam On The Road', '2021-02-06', '21:00:00', 'Jl. Soekarno Hatta, Jatimulyo, Malang (Depan Kampus Politeknik Negeri Malang)', 'Konser Musik Pro Mild On The Road merupakan konser musik yang disediakan setiap bulan keliling kota di Indonesia.', 1990, 'uploads/foto/Konser Musik Pro Mild On The Road_2.png', 150000, 300000, 13, 10, 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_1.png', 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_2.jpg', 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_3.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '2017-12-20 15:31:35', '2017-12-21 06:52:36'),
 (3, 'Line Concert 2017', '2017-09-08', '20:00:00', 'Grand City Hall, Surabaya', 'Line Concert 2017 menghadirkan TULUS, ISYANA SARAWATI, GLENN FREDLY, SHEILA ON 7', 5000, 'uploads/foto/Line Concert 2017_3.jpg', 200000, 300000, 0, 0, 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_1.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_2.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_3.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_4.jpeg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_5.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_6.jpg', NULL, NULL, NULL, '2017-12-20 15:52:32', '2017-12-20 15:52:32');
 
 -- --------------------------------------------------------
@@ -184,7 +184,7 @@ CREATE TABLE `likert` (
 --
 
 INSERT INTO `likert` (`id`, `kelas_a`, `kelas_b`, `kelas_c`, `kelas_d`, `kelas_e`, `total`, `hasil`, `created_at`, `updated_at`) VALUES
-(1, 24, 72, 38, 62, 124, 200, 65, '', '2017-12-01 16:12:03');
+(1, 24, 72, 38, 62, 124, 200, 65, '', '2017-12-21 07:15:08');
 
 -- --------------------------------------------------------
 
@@ -458,6 +458,36 @@ CREATE TABLE `review` (
   `updated_at` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `review`
+--
+
+INSERT INTO `review` (`id`, `event_id`, `isi`, `created_at`, `updated_at`) VALUES
+(1, 2, 'Tahun kemarin dengan konser yang sama sangat seru banget, dijamin pasti akan terhibur', '2017-12-21 06:37:02', '2017-12-21 06:37:02'),
+(2, 2, 'Tahun sebelumnya pada konser yang sama menghadirkan grup band papan atas, keren banget pokoknya', '2017-12-21 06:39:22', '2017-12-21 06:39:22'),
+(3, 2, 'Konser musiknya unik karena lokasinya on the road', '2017-12-21 06:41:32', '2017-12-21 06:41:32'),
+(4, 2, 'Konser musik yang tiket pre-sale-nya sangat terjangau bagi kalangan pemuda khususnya pelajar', '2017-12-21 06:43:00', '2017-12-21 06:43:00'),
+(5, 2, 'Biasanya konser musik on the road seperti ini rawan akan terjadi tawuran', '2017-12-21 06:44:31', '2017-12-21 06:44:31'),
+(6, 2, 'Konser kali ini didakan di Malang, semoga saja konser berikutnya bisa diadakan di Jember', '2017-12-21 06:45:44', '2017-12-21 06:45:44'),
+(7, 2, 'Hati-hati bagi cewek yang nonton konser musik seperti ini, biasanya rawan tawuran', '2017-12-21 06:47:39', '2017-12-21 06:47:39'),
+(8, 2, 'Harga tiketnya murah, tempatnya deket kos lagi. Recomended bagi pemuda pemudi daerah Suhat', '2017-12-21 06:49:10', '2017-12-21 06:49:10'),
+(9, 2, 'Akhirnya konser musik on the road ini hadir di kota malang, nggak sabar pingin segera nonton', '2017-12-21 06:50:53', '2017-12-21 06:50:53'),
+(10, 2, 'Pas banget pas malam minggu bia buat kumpul-kumpul bareng komunitas pecinta musik', '2017-12-21 06:53:09', '2017-12-21 06:53:09'),
+(11, 1, 'Bintang tamunya asli kereen banget', '2017-12-21 06:54:16', '2017-12-21 06:54:16'),
+(12, 1, 'Wah ada COLDPLAY, band indo-nya juga nggak kalah keren, ada NOAH, DEWA19, NIDJI', '2017-12-21 06:55:35', '2017-12-21 06:55:35'),
+(13, 1, 'Para fans COLDPLAY segera merapat, tiketnya terbatas', '2017-12-21 06:56:43', '2017-12-21 06:56:43'),
+(14, 1, 'Bintang tamunya keren-keren banget, ngga sabar pingin segera melihat COLDPLAY live in Surabaya', '2017-12-21 06:58:04', '2017-12-21 06:58:04'),
+(15, 1, 'Baru kali ini konser musik yang biintang tamunya keren-keren tapi harga tiketnya sangat terjangkau', '2017-12-21 06:59:53', '2017-12-21 06:59:53'),
+(16, 1, 'Konser musik paling WOW yang pernah ada di Surabaya', '2017-12-21 07:01:15', '2017-12-21 07:01:15'),
+(17, 1, 'COLDPLAY im waiting for you', '2017-12-21 07:02:47', '2017-12-21 07:02:47'),
+(18, 1, 'Mega biintang banget yang hadir dalam konser musik ini, harap Surabaya dikondisikan', '2017-12-21 07:04:18', '2017-12-21 07:04:18'),
+(19, 1, 'Ayoo pemuda pemudi Surabaya kita ramaikan konser ini, jarang ada COLDPLAY mau ke sini', '2017-12-21 07:05:42', '2017-12-21 07:05:42'),
+(20, 1, 'Lokasinya deket rumah, bintang tamunya keren banget, harga tiketnya sangat terjangkau, pas banget deh..', '2017-12-21 07:07:01', '2017-12-21 07:07:01'),
+(21, 1, 'Hanya Surya Pro Mild yang bisa menghadirkan konser musik dengan bintang tamu seperti ini', '2017-12-21 07:08:25', '2017-12-21 07:08:25'),
+(22, 1, 'Bintang tamunya cool dan keren banget, pasti Surabaya padat banget dah pada waktu itu. Harap hati-hati yang mau ke Surabaya pada waktu konser ini berlangsung', '2017-12-21 07:10:04', '2017-12-21 07:10:04'),
+(23, 1, 'Semoga kedepannya Surya Pro Mild tetap mengadakan konser musik yang lebih besar dan WOW daripada ini', '2017-12-21 07:12:06', '2017-12-21 07:12:06'),
+(24, 1, 'Konser musik yang sangat keren, jangan lupa para penonton hrus tetap berhati-hati barangkali ada tawuran dan semacamnya', '2017-12-21 07:15:08', '2017-12-21 07:15:08');
+
 -- --------------------------------------------------------
 
 --
@@ -475,6 +505,36 @@ CREATE TABLE `tiket` (
   `created_at` varchar(255) DEFAULT NULL,
   `updated_at` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tiket`
+--
+
+INSERT INTO `tiket` (`id`, `event_id`, `user_id`, `kode_pembayaran`, `kode_tiket`, `harga`, `status`, `created_at`, `updated_at`) VALUES
+(1, 2, 9, '1295', NULL, 150000, '0', '2017-12-21 06:36:13', '2017-12-21 06:36:13'),
+(2, 2, 10, '9559', NULL, 150000, '0', '2017-12-21 06:38:26', '2017-12-21 06:38:26'),
+(3, 2, 21, '4944', NULL, 150000, '0', '2017-12-21 06:40:41', '2017-12-21 06:40:41'),
+(4, 2, 22, '4465', NULL, 150000, '0', '2017-12-21 06:42:24', '2017-12-21 06:42:24'),
+(5, 2, 12, '9757', NULL, 150000, '0', '2017-12-21 06:43:38', '2017-12-21 06:43:38'),
+(6, 2, 14, '6273', NULL, 150000, '0', '2017-12-21 06:45:16', '2017-12-21 06:45:16'),
+(7, 2, 25, '2492', NULL, 150000, '0', '2017-12-21 06:47:02', '2017-12-21 06:47:02'),
+(8, 2, 15, '7550', NULL, 150000, '0', '2017-12-21 06:48:26', '2017-12-21 06:48:26'),
+(9, 2, 7, '7269', NULL, 150000, '0', '2017-12-21 06:49:53', '2017-12-21 06:49:53'),
+(10, 2, 8, '4368', NULL, 150000, '0', '2017-12-21 06:52:36', '2017-12-21 06:52:36'),
+(11, 1, 27, '2908', NULL, 300000, '0', '2017-12-21 06:54:04', '2017-12-21 06:54:04'),
+(12, 1, 28, '0316', NULL, 300000, '0', '2017-12-21 06:54:57', '2017-12-21 06:54:57'),
+(13, 1, 29, '7868', NULL, 300000, '0', '2017-12-21 06:56:23', '2017-12-21 06:56:23'),
+(14, 1, 36, '6196', NULL, 300000, '0', '2017-12-21 06:57:27', '2017-12-21 06:57:27'),
+(15, 1, 51, '7316', NULL, 300000, '0', '2017-12-21 06:59:16', '2017-12-21 06:59:16'),
+(16, 1, 56, '3114', NULL, 300000, '0', '2017-12-21 07:00:40', '2017-12-21 07:00:40'),
+(17, 1, 57, '7756', NULL, 300000, '0', '2017-12-21 07:01:57', '2017-12-21 07:01:57'),
+(18, 1, 58, '6690', NULL, 300000, '0', '2017-12-21 07:03:33', '2017-12-21 07:03:33'),
+(19, 1, 61, '0368', NULL, 300000, '0', '2017-12-21 07:05:04', '2017-12-21 07:05:04'),
+(20, 1, 69, '0710', NULL, 300000, '0', '2017-12-21 07:06:21', '2017-12-21 07:06:21'),
+(21, 1, 40, '3226', NULL, 300000, '0', '2017-12-21 07:07:53', '2017-12-21 07:07:53'),
+(22, 1, 44, '1256', NULL, 300000, '0', '2017-12-21 07:08:59', '2017-12-21 07:08:59'),
+(23, 1, 46, '4988', NULL, 300000, '0', '2017-12-21 07:10:42', '2017-12-21 07:10:42'),
+(24, 1, 48, '5679', NULL, 300000, '0', '2017-12-21 07:13:51', '2017-12-21 07:13:51');
 
 -- --------------------------------------------------------
 
@@ -633,12 +693,12 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `tiket`
 --
 ALTER TABLE `tiket`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `user`
 --

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2017 at 08:05 PM
+-- Generation Time: Jan 29, 2018 at 01:34 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -93,7 +93,7 @@ CREATE TABLE `counter` (
 --
 
 INSERT INTO `counter` (`id`, `count_home`, `created_at`, `updated_at`) VALUES
-(1, 526, NULL, '2017-12-22 02:01:02');
+(1, 534, NULL, '2018-01-28 13:28:36');
 
 -- --------------------------------------------------------
 
@@ -132,9 +132,9 @@ CREATE TABLE `event` (
 --
 
 INSERT INTO `event` (`id`, `nama_event`, `tgl_event`, `waktu_event`, `alamat`, `deskripsi`, `jumlah_tiket`, `path_gambar`, `harga_ps`, `harga_ots`, `count`, `tiket_terjual`, `gambar1`, `gambar2`, `gambar3`, `gambar4`, `gambar5`, `gambar6`, `gambar7`, `gambar8`, `gambar9`, `created_at`, `updated_at`) VALUES
-(1, 'Surya Professional Mild Tour', '2020-12-05', '20:00:00', 'Lapangan Kodam V Brawijaya, Surabaya, Jawa Timur', 'Konser Musik Surya Professional Mild Tour menghadirkan grup band Indonesia antara lain: NOAH, DEWA 19, NIDJI, dan juga grup band internasional yaitu COLDPLAY', 931, 'uploads/foto/Surya Professional Mild Tour_1.jpg', 300000, 500000, 18, 69, 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_1.png', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_2.png', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_3.jpg', '', '', '', NULL, NULL, NULL, '2017-12-20 14:59:12', '2017-12-22 02:01:00'),
-(2, 'Konser Musik Pro Mild Jam On The Road', '2021-02-06', '21:00:00', 'Jl. Soekarno Hatta, Jatimulyo, Malang (Depan Kampus Politeknik Negeri Malang)', 'Konser Musik Pro Mild On The Road merupakan konser musik yang disediakan setiap bulan keliling kota di Indonesia.', 1935, 'uploads/foto/Konser Musik Pro Mild On The Road_2.png', 150000, 300000, 13, 65, 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_1.png', 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_2.jpg', 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_3.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '2017-12-20 15:31:35', '2017-12-22 01:39:31'),
-(3, 'Line Concert 2017', '2017-09-08', '20:00:00', 'Grand City Hall, Surabaya', 'Line Concert 2017 menghadirkan TULUS, ISYANA SARAWATI, GLENN FREDLY, SHEILA ON 7', 5000, 'uploads/foto/Line Concert 2017_3.jpg', 200000, 300000, 0, 0, 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_1.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_2.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_3.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_4.jpeg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_5.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_6.jpg', NULL, NULL, NULL, '2017-12-20 15:52:32', '2017-12-20 15:52:32');
+(1, 'Surya Professional Mild Tour', '2020-12-05', '20:00:00', 'Lapangan Kodam V Brawijaya, Surabaya, Jawa Timur', 'Konser Musik Surya Professional Mild Tour menghadirkan grup band Indonesia antara lain: NOAH, DEWA 19, NIDJI, dan juga grup band internasional yaitu COLDPLAY. Dalam konser ini, setiap band atau bintang tamu akan berkumpul dalam satu panggung, dan menampilkan beberapa lagu andalannya dengan aransemen baru yang belum pernah ditampilkan di Indonesia. konser ini rencananya akan dimulai pada pukul 20.00 WIB hingga selesai. Konser ini akan berlangsung secara non-stop, dan menampilkan musik yang berbeda, semoga dapat menghibur warga Surabaya dan sekitarnya', 931, 'uploads/foto/Surya Professional Mild Tour_1.jpg', 300000, 500000, 22, 69, 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_1.png', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_2.png', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_3.jpg', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_4.jpg', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_5.jpg', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_6.jpg', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_7.jpg', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_8.jpg', 'uploads/event/Surya Professional Mild Tour_1/Surya Professional Mild Tour_1_9.jpg', '2017-12-20 14:59:12', '2018-01-28 13:39:15'),
+(2, 'Konser Musik Pro Mild Jam On The Road', '2021-02-06', '21:00:00', 'Jl. Soekarno Hatta, Jatimulyo, Malang (Depan Kampus Politeknik Negeri Malang)', 'Konser Musik Pro Mild On The Road merupakan konser musik yang disediakan setiap bulan keliling kota di Indonesia. Jika Pada konser umumnya, konser musik Berkonsep Indoor Maka Dalam Konser Tour Ini Akan Berkonsep Outdoor tepatnya di area jalan. Konser Outdoor Dimana Akan Dilangsungkan Di Jl. Soekarno Hatta, Jatimulyo, Malang (Depan Kampus Politeknik Negeri Malang). Harga Masuk Untuk Tiket Konser Ini Berkisar 150.000 – 300.000 Rupiah', 1935, 'uploads/foto/Konser Musik Pro Mild On The Road_2.png', 150000, 300000, 22, 65, 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_1.png', 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_2.jpg', 'uploads/event/Konser Musik Pro Mild On The Road_2/Konser Musik Pro Mild On The Road_2_3.jpg', 'uploads/event/Konser Musik Pro Mild Jam On The Road_2/Konser Musik Pro Mild Jam On The Road_2_4.jpg', 'uploads/event/Konser Musik Pro Mild Jam On The Road_2/Konser Musik Pro Mild Jam On The Road_2_5.jpg', 'uploads/event/Konser Musik Pro Mild Jam On The Road_2/Konser Musik Pro Mild Jam On The Road_2_6.png', 'uploads/event/Konser Musik Pro Mild Jam On The Road_2/Konser Musik Pro Mild Jam On The Road_2_7.jpg', 'uploads/event/Konser Musik Pro Mild Jam On The Road_2/Konser Musik Pro Mild Jam On The Road_2_8.jpg', 'uploads/event/Konser Musik Pro Mild Jam On The Road_2/Konser Musik Pro Mild Jam On The Road_2_9.jpg', '2017-12-20 15:31:35', '2018-01-28 14:03:10'),
+(3, 'Line Concert 2017', '2017-09-08', '20:00:00', 'Grand City Hall, Surabaya', 'Line Concert 2017 menghadirkan TULUS, ISYANA SARAWATI, GLENN FREDLY, dan juga band legenda Indonesia yaitu SHEILA ON 7. Untuk pertama kalinya SHEILA ON 7 menjadi guest star pada acara Line Concert ini. Untuk kamu para pengguna setia LINE di Surabaya! Kamu sudah bisa membeli tiket LINE Concert Surabaya loh. Jangan lupa untuk add akun resmi LINE Concert sekarang https://goo.gl/AsCacp untuk tahu informasi lengkap mengenai LINE Concert Surabaya! Sampai jumpa di sana ya!', 5000, 'uploads/foto/Line Concert 2017_3.jpg', 200000, 300000, 3, 0, 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_1.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_2.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_3.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_4.jpeg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_5.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_6.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_7.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_8.jpg', 'uploads/event/Line Concert 2017_3/Line Concert 2017_3_9.jpg', '2017-12-20 15:52:32', '2018-01-28 13:56:44');
 
 -- --------------------------------------------------------
 
@@ -506,131 +506,6 @@ CREATE TABLE `tiket` (
   `updated_at` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `tiket`
---
-
-INSERT INTO `tiket` (`id`, `event_id`, `user_id`, `kode_pembayaran`, `kode_tiket`, `harga`, `status`, `created_at`, `updated_at`) VALUES
-(1, 2, 9, '1295', NULL, 150000, '0', '2017-12-21 06:36:13', '2017-12-21 06:36:13'),
-(2, 2, 10, '9559', NULL, 150000, '0', '2017-12-21 06:38:26', '2017-12-21 06:38:26'),
-(3, 2, 21, '4944', NULL, 150000, '0', '2017-12-21 06:40:41', '2017-12-21 06:40:41'),
-(4, 2, 22, '4465', NULL, 150000, '0', '2017-12-21 06:42:24', '2017-12-21 06:42:24'),
-(5, 2, 12, '9757', NULL, 150000, '0', '2017-12-21 06:43:38', '2017-12-21 06:43:38'),
-(6, 2, 14, '6273', NULL, 150000, '0', '2017-12-21 06:45:16', '2017-12-21 06:45:16'),
-(7, 2, 25, '2492', NULL, 150000, '0', '2017-12-21 06:47:02', '2017-12-21 06:47:02'),
-(8, 2, 15, '7550', NULL, 150000, '0', '2017-12-21 06:48:26', '2017-12-21 06:48:26'),
-(9, 2, 7, '7269', NULL, 150000, '0', '2017-12-21 06:49:53', '2017-12-21 06:49:53'),
-(10, 2, 8, '4368', NULL, 150000, '0', '2017-12-21 06:52:36', '2017-12-21 06:52:36'),
-(11, 2, 6, '0257', NULL, 150000, '0', '2017-12-22 01:12:48', '2017-12-22 01:12:48'),
-(12, 2, 11, '8691', NULL, 150000, '0', '2017-12-22 01:13:13', '2017-12-22 01:13:13'),
-(13, 2, 13, '0928', NULL, 150000, '0', '2017-12-22 01:13:42', '2017-12-22 01:13:42'),
-(14, 2, 16, '6601', NULL, 150000, '0', '2017-12-22 01:14:10', '2017-12-22 01:14:10'),
-(15, 2, 17, '7434', NULL, 150000, '0', '2017-12-22 01:14:32', '2017-12-22 01:14:32'),
-(16, 2, 18, '6380', NULL, 150000, '0', '2017-12-22 01:14:56', '2017-12-22 01:14:56'),
-(17, 2, 19, '3092', NULL, 150000, '0', '2017-12-22 01:15:17', '2017-12-22 01:15:17'),
-(18, 2, 20, '4014', NULL, 150000, '0', '2017-12-22 01:15:37', '2017-12-22 01:15:37'),
-(19, 2, 23, '3475', NULL, 150000, '0', '2017-12-22 01:16:03', '2017-12-22 01:16:03'),
-(20, 2, 24, '3413', NULL, 150000, '0', '2017-12-22 01:16:30', '2017-12-22 01:16:30'),
-(21, 2, 26, '3638', NULL, 150000, '0', '2017-12-22 01:16:52', '2017-12-22 01:16:52'),
-(22, 2, 30, '7846', NULL, 150000, '0', '2017-12-22 01:17:22', '2017-12-22 01:17:22'),
-(23, 2, 31, '5573', NULL, 150000, '0', '2017-12-22 01:17:49', '2017-12-22 01:17:49'),
-(24, 2, 32, '6336', NULL, 150000, '0', '2017-12-22 01:18:27', '2017-12-22 01:18:27'),
-(25, 2, 33, '7211', NULL, 150000, '0', '2017-12-22 01:18:46', '2017-12-22 01:18:46'),
-(26, 2, 34, '0096', NULL, 150000, '0', '2017-12-22 01:19:08', '2017-12-22 01:19:08'),
-(27, 2, 35, '9918', NULL, 150000, '0', '2017-12-22 01:19:28', '2017-12-22 01:19:28'),
-(28, 2, 37, '0022', NULL, 150000, '0', '2017-12-22 01:19:58', '2017-12-22 01:19:58'),
-(29, 2, 38, '5999', NULL, 150000, '0', '2017-12-22 01:20:19', '2017-12-22 01:20:19'),
-(30, 2, 39, '4201', NULL, 150000, '0', '2017-12-22 01:20:39', '2017-12-22 01:20:39'),
-(31, 2, 41, '6196', NULL, 150000, '0', '2017-12-22 01:23:37', '2017-12-22 01:23:37'),
-(32, 2, 42, '5406', NULL, 150000, '0', '2017-12-22 01:23:58', '2017-12-22 01:23:58'),
-(33, 2, 43, '7189', NULL, 150000, '0', '2017-12-22 01:24:19', '2017-12-22 01:24:19'),
-(34, 2, 45, '8599', NULL, 150000, '0', '2017-12-22 01:24:42', '2017-12-22 01:24:42'),
-(35, 2, 47, '9095', NULL, 150000, '0', '2017-12-22 01:25:08', '2017-12-22 01:25:08'),
-(36, 2, 49, '8428', NULL, 150000, '0', '2017-12-22 01:25:30', '2017-12-22 01:25:30'),
-(37, 2, 50, '2969', NULL, 150000, '0', '2017-12-22 01:25:51', '2017-12-22 01:25:51'),
-(38, 2, 52, '6728', NULL, 150000, '0', '2017-12-22 01:26:15', '2017-12-22 01:26:15'),
-(39, 2, 53, '8303', NULL, 150000, '0', '2017-12-22 01:26:36', '2017-12-22 01:26:36'),
-(40, 2, 54, '0023', NULL, 150000, '0', '2017-12-22 01:26:57', '2017-12-22 01:26:57'),
-(41, 2, 55, '0526', NULL, 150000, '0', '2017-12-22 01:27:17', '2017-12-22 01:27:17'),
-(42, 2, 59, '5163', NULL, 150000, '0', '2017-12-22 01:29:21', '2017-12-22 01:29:21'),
-(43, 2, 60, '3394', NULL, 150000, '0', '2017-12-22 01:29:43', '2017-12-22 01:29:43'),
-(44, 2, 62, '4592', NULL, 150000, '0', '2017-12-22 01:30:04', '2017-12-22 01:30:04'),
-(45, 2, 63, '7288', NULL, 150000, '0', '2017-12-22 01:30:29', '2017-12-22 01:30:29'),
-(46, 2, 64, '5334', NULL, 150000, '0', '2017-12-22 01:30:54', '2017-12-22 01:30:54'),
-(47, 2, 65, '7797', NULL, 150000, '0', '2017-12-22 01:31:16', '2017-12-22 01:31:16'),
-(48, 2, 66, '5602', NULL, 150000, '0', '2017-12-22 01:31:36', '2017-12-22 01:31:36'),
-(49, 2, 67, '1603', NULL, 150000, '0', '2017-12-22 01:31:58', '2017-12-22 01:31:58'),
-(50, 2, 68, '0357', NULL, 150000, '0', '2017-12-22 01:32:20', '2017-12-22 01:32:20'),
-(51, 2, 70, '8822', NULL, 150000, '0', '2017-12-22 01:32:42', '2017-12-22 01:32:42'),
-(52, 2, 71, '4248', NULL, 150000, '0', '2017-12-22 01:33:07', '2017-12-22 01:33:07'),
-(53, 2, 72, '0508', NULL, 150000, '0', '2017-12-22 01:33:26', '2017-12-22 01:33:26'),
-(54, 2, 73, '9111', NULL, 150000, '0', '2017-12-22 01:33:44', '2017-12-22 01:33:44'),
-(55, 2, 74, '6154', NULL, 150000, '0', '2017-12-22 01:34:03', '2017-12-22 01:34:03'),
-(56, 2, 75, '1468', NULL, 150000, '0', '2017-12-22 01:34:23', '2017-12-22 01:34:23'),
-(57, 2, 76, '1190', NULL, 150000, '0', '2017-12-22 01:34:43', '2017-12-22 01:34:43'),
-(58, 2, 77, '0032', NULL, 150000, '0', '2017-12-22 01:35:03', '2017-12-22 01:35:03'),
-(59, 2, 78, '9340', NULL, 150000, '0', '2017-12-22 01:35:37', '2017-12-22 01:35:37'),
-(60, 2, 79, '8473', NULL, 150000, '0', '2017-12-22 01:35:57', '2017-12-22 01:35:57'),
-(61, 2, 80, '0490', NULL, 150000, '0', '2017-12-22 01:38:14', '2017-12-22 01:38:14'),
-(62, 2, 81, '1197', NULL, 150000, '0', '2017-12-22 01:38:34', '2017-12-22 01:38:34'),
-(63, 2, 82, '3802', NULL, 150000, '0', '2017-12-22 01:38:53', '2017-12-22 01:38:53'),
-(64, 2, 83, '6806', NULL, 150000, '0', '2017-12-22 01:39:12', '2017-12-22 01:39:12'),
-(65, 2, 84, '0332', NULL, 150000, '0', '2017-12-22 01:39:31', '2017-12-22 01:39:31'),
-(66, 1, 85, '8533', NULL, 300000, '0', '2017-12-22 01:42:01', '2017-12-22 01:42:01'),
-(67, 1, 86, '4605', NULL, 300000, '0', '2017-12-22 01:42:22', '2017-12-22 01:42:22'),
-(68, 1, 87, '5959', NULL, 300000, '0', '2017-12-22 01:43:05', '2017-12-22 01:43:05'),
-(69, 1, 88, '8186', NULL, 300000, '0', '2017-12-22 01:43:27', '2017-12-22 01:43:27'),
-(70, 1, 89, '7638', NULL, 300000, '0', '2017-12-22 01:43:47', '2017-12-22 01:43:47'),
-(71, 1, 90, '5883', NULL, 300000, '0', '2017-12-22 01:44:05', '2017-12-22 01:44:05'),
-(72, 1, 91, '6344', NULL, 300000, '0', '2017-12-22 01:44:25', '2017-12-22 01:44:25'),
-(73, 1, 92, '4376', NULL, 300000, '0', '2017-12-22 01:44:42', '2017-12-22 01:44:42'),
-(74, 1, 93, '7037', NULL, 300000, '0', '2017-12-22 01:44:59', '2017-12-22 01:44:59'),
-(75, 1, 94, '6199', NULL, 300000, '0', '2017-12-22 01:45:19', '2017-12-22 01:45:19'),
-(76, 1, 95, '6725', NULL, 300000, '0', '2017-12-22 01:45:38', '2017-12-22 01:45:38'),
-(77, 1, 96, '9248', NULL, 300000, '0', '2017-12-22 01:46:01', '2017-12-22 01:46:01'),
-(78, 1, 97, '3782', NULL, 300000, '0', '2017-12-22 01:46:17', '2017-12-22 01:46:17'),
-(79, 1, 98, '4365', NULL, 300000, '0', '2017-12-22 01:46:36', '2017-12-22 01:46:36'),
-(80, 1, 99, '5156', NULL, 300000, '0', '2017-12-22 01:46:55', '2017-12-22 01:46:55'),
-(81, 1, 100, '0165', NULL, 300000, '0', '2017-12-22 01:47:14', '2017-12-22 01:47:14'),
-(82, 1, 101, '7990', NULL, 300000, '0', '2017-12-22 01:47:32', '2017-12-22 01:47:32'),
-(83, 1, 102, '1699', NULL, 300000, '0', '2017-12-22 01:48:18', '2017-12-22 01:48:18'),
-(84, 1, 103, '6904', NULL, 300000, '0', '2017-12-22 01:48:44', '2017-12-22 01:48:44'),
-(85, 1, 104, '3671', NULL, 300000, '0', '2017-12-22 01:49:04', '2017-12-22 01:49:04'),
-(86, 1, 105, '1223', NULL, 300000, '0', '2017-12-22 01:49:24', '2017-12-22 01:49:24'),
-(87, 1, 106, '0013', NULL, 300000, '0', '2017-12-22 01:49:43', '2017-12-22 01:49:43'),
-(88, 1, 107, '4306', NULL, 300000, '0', '2017-12-22 01:50:01', '2017-12-22 01:50:01'),
-(89, 1, 108, '4436', NULL, 300000, '0', '2017-12-22 01:50:20', '2017-12-22 01:50:20'),
-(90, 1, 109, '0020', NULL, 300000, '0', '2017-12-22 01:50:39', '2017-12-22 01:50:39'),
-(91, 1, 110, '0339', NULL, 300000, '0', '2017-12-22 01:50:59', '2017-12-22 01:50:59'),
-(92, 1, 111, '3171', NULL, 300000, '0', '2017-12-22 01:51:21', '2017-12-22 01:51:21'),
-(93, 1, 112, '8307', NULL, 300000, '0', '2017-12-22 01:51:40', '2017-12-22 01:51:40'),
-(94, 1, 113, '7001', NULL, 300000, '0', '2017-12-22 01:51:59', '2017-12-22 01:51:59'),
-(95, 1, 114, '3614', NULL, 300000, '0', '2017-12-22 01:52:18', '2017-12-22 01:52:18'),
-(96, 1, 115, '0690', NULL, 300000, '0', '2017-12-22 01:52:37', '2017-12-22 01:52:37'),
-(97, 1, 116, '3721', NULL, 300000, '0', '2017-12-22 01:52:56', '2017-12-22 01:52:56'),
-(98, 1, 117, '6854', NULL, 300000, '0', '2017-12-22 01:53:18', '2017-12-22 01:53:18'),
-(99, 1, 118, '5776', NULL, 300000, '0', '2017-12-22 01:53:37', '2017-12-22 01:53:37'),
-(100, 1, 119, '9048', NULL, 300000, '0', '2017-12-22 01:53:58', '2017-12-22 01:53:58'),
-(101, 1, 120, '4115', NULL, 300000, '0', '2017-12-22 01:54:15', '2017-12-22 01:54:15'),
-(102, 1, 121, '9265', NULL, 300000, '0', '2017-12-22 01:54:33', '2017-12-22 01:54:33'),
-(103, 1, 122, '7762', NULL, 300000, '0', '2017-12-22 01:54:51', '2017-12-22 01:54:51'),
-(104, 1, 123, '5433', NULL, 300000, '0', '2017-12-22 01:55:09', '2017-12-22 01:55:09'),
-(105, 1, 124, '7928', NULL, 300000, '0', '2017-12-22 01:55:27', '2017-12-22 01:55:27'),
-(106, 1, 125, '8922', NULL, 300000, '0', '2017-12-22 01:55:42', '2017-12-22 01:55:42'),
-(107, 1, 126, '5510', NULL, 300000, '0', '2017-12-22 01:56:00', '2017-12-22 01:56:00'),
-(108, 1, 127, '2034', NULL, 300000, '0', '2017-12-22 01:56:18', '2017-12-22 01:56:18'),
-(109, 1, 128, '8595', NULL, 300000, '0', '2017-12-22 01:56:44', '2017-12-22 01:56:44'),
-(110, 1, 129, '2853', NULL, 300000, '0', '2017-12-22 01:57:15', '2017-12-22 01:57:15'),
-(111, 1, 130, '7739', NULL, 300000, '0', '2017-12-22 01:57:32', '2017-12-22 01:57:32'),
-(112, 1, 131, '6030', NULL, 300000, '0', '2017-12-22 01:58:22', '2017-12-22 01:58:22'),
-(113, 1, 132, '0786', NULL, 300000, '0', '2017-12-22 01:58:41', '2017-12-22 01:58:41'),
-(114, 1, 133, '1401', NULL, 300000, '0', '2017-12-22 01:59:00', '2017-12-22 01:59:00'),
-(115, 1, 134, '9909', NULL, 300000, '0', '2017-12-22 01:59:17', '2017-12-22 01:59:17'),
-(116, 1, 135, '8329', NULL, 300000, '0', '2017-12-22 01:59:45', '2017-12-22 01:59:45'),
-(117, 1, 136, '6234', NULL, 300000, '0', '2017-12-22 02:00:04', '2017-12-22 02:00:04'),
-(118, 1, 137, '8025', NULL, 300000, '0', '2017-12-22 02:00:23', '2017-12-22 02:00:23'),
-(119, 1, 138, '1129', NULL, 300000, '0', '2017-12-22 02:01:00', '2017-12-22 02:01:00');
-
 -- --------------------------------------------------------
 
 --
@@ -793,7 +668,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `tiket`
 --
 ALTER TABLE `tiket`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `user`
 --

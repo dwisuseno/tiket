@@ -11,7 +11,7 @@ $this->title = "Pemesanan";
 		</div>
 		<div class="col-md-7">
 			<font size="6"><b><?= $model['nama_event'] ?></b></font><br>
-			<font size="3"><b><?= $model['deskripsi'] ?> </b></font><br>
+			<p align="justify"><font size="3"><b><?= $model['deskripsi'] ?> </b></font></p><br>
 			<font size="3"><b><?= $model['jumlah_tiket'] ?> tickets</b></font><br>
 			<font size="3"><b>Harga Tiket Pre-Sale: Rp<?php echo number_format($model['harga_ps'],2,",","."); ?></b></font><br>
 			<font size="3"><b>Harga Tiket On The Spot: Rp<?php echo number_format($model['harga_ots'],2,",","."); ?></b></font><br>
